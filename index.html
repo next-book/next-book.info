@@ -58,6 +58,7 @@
     }
 
     .perex {
+      text-align: left;
       font-size: 2rem;
     }
 
@@ -65,6 +66,31 @@
       max-width: 27rem;
       padding: 4rem 2rem;
       margin: 1rem auto;
+    }
+
+    .container .container {
+      padding: 0;
+      margin: 0;
+    }
+
+    @media only screen and (min-width: 50rem) {
+      .container {
+        max-width: 50rem;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 3rem;
+        align-items: center;
+      }
+
+      .container .container {
+        align-items: start;
+      }
+
+      .full,
+      footer {
+        grid-column: 1 / -1;
+      }
     }
 
     .need b, #change.need {
@@ -81,7 +107,15 @@
       transform: translateZ(0);
     }
 
-    .button button {
+    input[type="email"] {
+      font-family: 'Alegreya', serif;
+      font-size: 1rem;
+      border: 1px solid rgba(10, 10, 10, 0.8);
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+    }
+
+    .button button, input[type="submit"] {
       font-family: 'Alegreya', serif;
       font-size: 1rem;
       color: rgba(255, 251, 243, 1);
@@ -95,13 +129,13 @@
       margin: 0 0 0.5rem -0.05rem;
     }
 
-    .button button:hover { 
+    .button button:hover, input[type="submit"]:hover { 
       transform: translateY(-2px);
       box-shadow: 4px 4px 2px rgba(100, 0, 31, 0.7);
     }
 
-    .button button:active {
-      transform: translateY(1px);
+    .button button:active, input[type="submit"]:active {
+      transform: translateY(1px) rotate(10deg);
       box-shadow: 1px 1px 2px rgba(100, 0, 31, 0.7); 
     }
 
@@ -245,194 +279,170 @@
     </svg>
 
     <div class="container" lang="en">
-    <p class="perex">
-      When people ask me <em>don't you miss something when reading a book in digital?</em> my answer is <em>yes!</em>
-    </p>
+      <p class="perex full">
+        When people ask me — <em>don't you miss something when reading a&nbsp;book in digital?</em> — my answer is <em>yes!</em>
+      </p>
+      <section>
+        <p>
+          I don't miss <em>that</em> scent and texture though.<br> <em>That’s what paper books are for.</em>
+        </p>
 
-    <p>
-      I don't miss <em>that</em> scent and texture though. <em>That’s what paper books are for.</em>
-    </p>
+        <p class="missing">
+          <b data-kind="doing">I&nbsp;miss</b> leaving a digital book open on the kitchen table.
+          <b data-kind="doing">I&nbsp;miss</b> borrowing a digital book with some curious marginalia.
+          <b data-kind="doing">I&nbsp;miss</b> sharing my notes on my blog.
+          <b data-kind="thing">I&nbsp;miss</b> meaningful organization of my books.
+          <b data-kind="thing">I&nbsp;miss</b> my books on many devices I own.
+          <b data-kind="doing">I&nbsp;miss</b> scanning their library when visiting a friend.
+          <b data-kind="thing">I&nbsp;miss</b> distinctive typography embracing book’s form.
+          <b data-kind="doing">I&nbsp;miss</b> owning my books and doing anything I want with them.
+          <b data-kind="thing">I&nbsp;miss</b> an ability to parse and analyze my books with any program.
+          <b data-kind="thing">I&nbsp;miss</b> my own curated reading profile that makes me smarter.
+          <b data-kind="thing">I&nbsp;miss</b> the ideals of early open web.
+          <b data-kind="doing">I&nbsp;miss</b> source viewing.
+          <b data-kind="thing">I&nbsp;miss</b> the mighty abilities of modern browsers.
+          <b data-kind="doing">I&nbsp;miss</b> reading extensions that help with a specific kind of text.
+          <b data-kind="thing">I&nbsp;miss</b> books written for the web.
+          <b data-kind="thing">I&nbsp;miss</b> the future that did not arrive yet.
+        </p>
 
-    <p class="missing">
-      <b data-kind="doing">I&nbsp;miss</b> leaving a digital book open on the kitchen table.
-      <b data-kind="doing">I&nbsp;miss</b> borrowing a digital book with some curious marginalia.
-      <b data-kind="doing">I&nbsp;miss</b> sharing my notes on my blog.
-      <b data-kind="thing">I&nbsp;miss</b> meaningful organization of my books.
-      <b data-kind="thing">I&nbsp;miss</b> my books on many devices I own.
-      <b data-kind="doing">I&nbsp;miss</b> scanning their library when visiting a friend.
-      <b data-kind="thing">I&nbsp;miss</b> distinctive typography embracing book’s form.
-      <b data-kind="doing">I&nbsp;miss</b> owning my books and doing anything I want with them.
-      <b data-kind="thing">I&nbsp;miss</b> an ability to parse and analyze my books with any program.
-      <b data-kind="thing">I&nbsp;miss</b> my own curated reading profile that makes me smarter.
-      <b data-kind="thing">I&nbsp;miss</b> the ideals of early open web.
-      <b data-kind="doing">I&nbsp;miss</b> source viewing.
-      <b data-kind="thing">I&nbsp;miss</b> the mighty abilities of modern browsers.
-      <b data-kind="doing">I&nbsp;miss</b> reading extensions that help with a specific kind of text.
-      <b data-kind="thing">I&nbsp;miss</b> books written for the web.
-      <b data-kind="thing">I&nbsp;miss</b> the future that did not arrive yet.
-    </p>
+        <p>
+          Paper books are still better in many ways than currently published ebooks.
+          Computers and networks are still no challenge for the printing press.
+          <b id="change"> </b>
+        </p>
 
-    <p>
-      Paper books are still better in many ways than currently published ebooks.
-      Computers and networks are still no challenge for the printing press.
-      <b id="change"> </b>
-    </p>
+        <p class="button">
+          <button onclick="setPhrase()">bring change!</button><br> click on this button to change the world
+        </p>
+      </section>
+      <section>
+        <h1>next-book</h1>
 
-    <p class="button">
-      <button onclick="setPhrase()">bring change!</button><br> click on this button to change the world
-    </p>
+        <p>
+          Next-book is a way of thinking about books on the web.
+        </p>
+
+        <p>
+          Next-book is a vision of tools, formats and affordances for reading, sharing
+          and writing books.
+        </p>
+
+        <p>
+          Next-book does not assume any reading device, publishing process or business model.
+          It assumes only the use of a modern web browser and tries to think about the book 
+          experience first, technology second and everything else only after that.
+        </p>
+
+        <p>
+          After 30 years of the World Wide Web we might be ready to make it good for serious reading.
+        </p>
+      </section>
+      <section class="full newsletter">
+        <h2>next-book newsletter</h2>
+        <div class="container">
+          <div id="mc_embed_signup">
+            <form action="https://next-book.us20.list-manage.com/subscribe/post?u=f81ac979da2d23765713d081e&amp;id=89f546e1fd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <p>Short update every two weeks — <b>books included</b>.</p>
+              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f81ac979da2d23765713d081e_89f546e1fd" tabindex="-1" value=""></div>
+            </form>
+          </div>
+          <div style="font-size: 80%">
+            <p>You can unsubscribe at any time by clicking the link in the footer of our emails. For information about our privacy practices, please visit our website.</p>
+        
+            <p>We use Mailchimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing. <a href="https://mailchimp.com/legal/" target="_blank">Learn more about Mailchimp's privacy practices here.</a></p>
+          </div>
+
+          <!--End mc_embed_signup-->
+      </div>      
+    </section>
+
 
     
+    <div class="full container">
+      <h2 class="full">what's out there</h2>
+      <section class="top">
+        <h3>articles</h3>
+        <ul>
+          <li>
+            <a href="https://www.jan-martinek.com/archive/wpub-next-book/">WPUB and the future of 
+            digital publishing</a> — an introduction to next-book through a comparison with W3C’s
+            effort to standardize Web Publications that was shelved in early summer 2019
+          </li>
+          <li>
+            <a href="https://www.jan-martinek.com/archive/next-book-cloud/">Next-book’s 
+            open cloud</a> — a short design brief for the cloud architecture that allows 
+            advanced functionality (device switching, data sharing) using books based on
+            next-book
+          </li>
+          <li>
+            <a href="https://github.com/next-book/free-culture/blob/master/README.md">README of 
+            Free Culture's repo</a> — a thorough description of project's ideas 
+            (and its status in summer 2017)</li>
+          </li>
+          <li>
+            <a href="https://www.jan-martinek.com/archive/talkin-bout-pagination/">Talkin' bout 
+            pagination and digital books</a> — more on relationships between the old and new media</li>
+          <li>
+            <a href="https://www.jan-martinek.com/archive/the-next-book/">The Next Book</a>
+            — an early next-book summary from 2017
+          </li>
+        </ul>
+      </section>
+      <section class="top">
+        <h3>tools</h3>
 
-    <script type="text/javascript">
-      var setPhrase = function() {
-        var cur = 0;
-        var phrases = {
-          thing: [
-            "I&nbsp;miss", 
-            "I&nbsp;need", 
-            "Let's create something that brings",
-          ],
-          doing: [
-            "I&nbsp;miss",
-            "I&nbsp;look forward to",
-            "Let's create something that allows",
-          ]
-        };
+        <ul> 
+          <li>
+            <a href="https://github.com/next-book/nb-mapper">nb-mapper</a> — a tool that maps
+            the text so that additional functionaly may work with its parts
+          </li>
+          <li>
+            <a href="https://github.com/next-book/nb-base">nb-base</a> – React+redux-based app that
+            provides reading UI and additional functionality
+          </li>
+          <li>
+            <a href="https://github.com/next-book/nb-builder">nb-builder (2017)</a> — a prototype
+            builder that completes a book from source files (markdown, templates, dictionary etc.), 
+            currently being reworked into independent components (nb-mapper, browser scripts, etc.)
+          </li>
+        </ul>
 
-        return function() {
-          var change = document.querySelector('#change');
-          var missing = document.querySelector('.missing');
-          var nodes = document.querySelectorAll('.missing b');
-          var join = document.createElement("SPAN");
-          join.innerHTML = 'Explore <a href="https://github.com/next-book/">our exploratory repos</a> or <a href="https://www.jan-martinek.com/contact/">ping Jan with an e-mail</a>.';
-          cur = (cur + 1) % 3;
-          
-          if (cur == 1) change.innerHTML = 'Let’s change that!';
-          else if (cur == 2) {
-            change.innerHTML = 'Let’s change that!';
-            change.parentNode.appendChild(join);
-          }
+        <h3>books</h3>
 
-          if (cur == 0) { 
-            missing.classList.remove('need');
-            missing.classList.remove('create');
-            change.classList.remove('need');
-            change.classList.remove('create');
-          } else if (cur == 1) {
-            missing.classList.add('need');
-            change.classList.add('need');
-          } else if (cur == 2) {
-            missing.classList.add('create');
-            change.classList.add('create');
-          }
-
-          for(let i = 0; i < nodes.length; i++) {
-            nodes[i].innerHTML = phrases[nodes[i].dataset.kind][cur];
-          }
-        }
-      }();
-    </script>
-
-    <h1>next-book</h1>
-
-    <p>
-      Next-book is a way of thinking about books on the web.
-    </p>
-
-    <p>
-      Next-book is a vision of tools, formats and affordances for reading, sharing
-      and writing books.
-    </p>
-
-    <p>
-      Next-book does not assume any reading device, publishing process or business model.
-      It assumes only the use of a modern web browser and tries to think about the book 
-      experience first, technology second and everything else only after that.
-    </p>
-
-    <p>
-      After 30 years of the World Wide Web we might be ready to make it good for serious reading.
-    </p>
-
-    <h2>what's out there</h2>
-
-    <h3>articles</h3>
-
-    <ul>
-      <li>
-        <a href="https://www.jan-martinek.com/archive/wpub-next-book/">WPUB and the future of 
-        digital publishing</a> — an introduction to next-book through a comparison with W3C’s
-        effort to standardize Web Publications that was shelved in early summer 2019
-      </li>
-      <li>
-        <a href="https://www.jan-martinek.com/archive/next-book-cloud/">Next-book’s 
-        open cloud</a> — a short design brief for the cloud architecture that allows 
-        advanced functionality (device switching, data sharing) using books based on
-        next-book
-      </li>
-      <li>
-        <a href="https://github.com/next-book/free-culture/blob/master/README.md">README of 
-        Free Culture's repo</a> — a thorough description of project's ideas 
-        (and its status in summer 2017)</li>
-      </li>
-      <li>
-        <a href="https://www.jan-martinek.com/archive/talkin-bout-pagination/">Talkin' bout 
-        pagination and digital books</a> — more on relationships between the old and new media</li>
-      <li>
-        <a href="https://www.jan-martinek.com/archive/the-next-book/">The Next Book</a>
-        — an early next-book summary from 2017
-      </li>
-    </ul>
-
-    <h3>tools</h3>
-
-    <ul> 
-      <li>
-        <a href="https://github.com/next-book/nb-mapper">nb-mapper</a> — a tool that maps
-        the text so that additional functionaly may work with its parts
-      </li>
-      <li>
-        <a href="https://github.com/next-book/nb-base">nb-base</a> – React+redux-based app that
-        provides reading UI and additional functionality
-      </li>
-      <li>
-        <a href="https://github.com/next-book/nb-builder">nb-builder (2017)</a> — a prototype
-        builder that completes a book from source files (markdown, templates, dictionary etc.), 
-        currently being reworked into independent components (nb-mapper, browser scripts, etc.)
-      </li>
-    </ul>
-
-    <h3>books</h3>
-
-    <ul>
-      <li>
-        <a href="https://github.com/next-book/free-culture">Free Culture</a> — an early prototype
-        of next-book that adds several improvements — return to last position, pagination, 
-        chapter/book position visualization, vector illustrations, exploration easing
-      </li>
-    </ul>
-
-    <h2>team</h2>
-    <p>
-      The original team in 2017 were <a href="https://github.com/orgs/next-book/people/IvanaRybanska">Ivana Lukeš Rybanská</a> and <a href="http://jan-martinek.com">Jan Martinek</a> from Czech Republic. <b>In September 2019 a new team formed and will be announced in few weeks.</b>
-     </p>
-    <p>
-      Since Jan 2019, there’s an 18-month project led by Prague-based publishing house <a href="https://www.novabeseda.cz/page/english">Nová beseda</a> and funded by Technology Agency of the Czech Republic. In it, Masaryk and Palacký Universities work together towards applied research goals in publishing, experimenting with the medium and transferring annotation affordances from print to digital academic reading.
-    </p>
-    <p>
-      Through Feb-Dec 2018, publishers from Slovakia, Poland, Hungary joined forces in a project led by Prague-based publishing house <a href="https://www.novabeseda.cz/page/english">Nová beseda</a> and funded by Visegrad Fund. Those teams created several prototypes presented at <a href="https://next-book.eu/en/">next-book.eu</a>.
-    </p>
-    <p>
-      If you'd like to join the effort in any way, <a href="https://www.jan-martinek.com/contact/">contact Jan</a>.
-    </p>
-    
-    <h2>thanks!</h2>
-    <ul>
-      <li>Publishing house <a href="https://www.novabeseda.cz/page/english" rel="nofollow">Nová Beseda</a> allowed initial research and experimental development of the first ideas.</li>
-      <li>Many thanks go to <a href="https://borisanthony.net" rel="nofollow">Boris Anthony</a> for discussions and encouragement!</li>
-    </ul>
-
+        <ul>
+          <li>
+            <a href="https://github.com/next-book/free-culture">Free Culture</a> — an early prototype
+            of next-book that adds several improvements — return to last position, pagination, 
+            chapter/book position visualization, vector illustrations, exploration easing
+          </li>
+        </ul>
+      </section>
+    </div>
+    <section>
+      <h2>team</h2>
+      <p>
+        The original team in 2017 were <a href="https://github.com/orgs/next-book/people/IvanaRybanska">Ivana Lukeš Rybanská</a> and <a href="http://jan-martinek.com">Jan Martinek</a> from Czech Republic. <b>In September 2019 a new team formed and will be announced in a few weeks.</b>
+       </p>
+      <p>
+        Since Jan 2019, there’s an 18-month project led by Prague-based publishing house <a href="https://www.novabeseda.cz/page/english">Nová beseda</a> and funded by Technology Agency of the Czech Republic. In it, Masaryk and Palacký Universities work together towards applied research goals in publishing, experimenting with the medium and transferring annotation affordances from print to digital academic reading.
+      </p>
+      <p>
+        Through Feb-Dec 2018, publishers from Slovakia, Poland, Hungary joined forces in a project led by Prague-based publishing house <a href="https://www.novabeseda.cz/page/english">Nová beseda</a> and funded by Visegrad Fund. Those teams created several prototypes presented at <a href="https://next-book.eu/en/">next-book.eu</a>.
+      </p>
+      <p>
+        If you'd like to join the effort in any way, <a href="https://www.jan-martinek.com/contact/">contact Jan</a>.
+      </p>
+    </section>
+    <section>
+      <h2>thanks!</h2>
+      <ul>
+        <li>Publishing house <a href="https://www.novabeseda.cz/page/english" rel="nofollow">Nová Beseda</a> allowed initial research and experimental development of the first ideas.</li>
+        <li>Many thanks go to <a href="https://borisanthony.net" rel="nofollow">Boris Anthony</a> for discussions and encouragement!</li>
+      </ul>
+    </section>
     <footer>
       <p>
         <a style="box-shadow: none" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc80x15.png"></a><br>
@@ -701,6 +711,54 @@
     }());
 
     hyphenate(Array.prototype.slice.call(document.querySelectorAll('p, li')), 'en-us');
+
+    var setPhrase = function() {
+      var cur = 0;
+      var phrases = {
+        thing: [
+          "I&nbsp;miss", 
+          "I&nbsp;need", 
+          "Let's create something that brings",
+        ],
+        doing: [
+          "I&nbsp;miss",
+          "I&nbsp;look forward to",
+          "Let's create something that allows",
+        ]
+      };
+
+      return function() {
+        var change = document.querySelector('#change');
+        var missing = document.querySelector('.missing');
+        var nodes = document.querySelectorAll('.missing b');
+        var join = document.createElement("SPAN");
+        join.innerHTML = 'Explore <a href="https://github.com/next-book/">our exploratory repos</a> or <a href="https://www.jan-martinek.com/contact/">ping Jan with an e-mail</a>.';
+        cur = (cur + 1) % 3;
+        
+        if (cur == 1) change.innerHTML = 'Let’s change that!';
+        else if (cur == 2) {
+          change.innerHTML = 'Let’s change that!';
+          change.parentNode.appendChild(join);
+        }
+
+        if (cur == 0) { 
+          missing.classList.remove('need');
+          missing.classList.remove('create');
+          change.classList.remove('need');
+          change.classList.remove('create');
+        } else if (cur == 1) {
+          missing.classList.add('need');
+          change.classList.add('need');
+        } else if (cur == 2) {
+          missing.classList.add('create');
+          change.classList.add('create');
+        }
+
+        for(let i = 0; i < nodes.length; i++) {
+          nodes[i].innerHTML = phrases[nodes[i].dataset.kind][cur];
+        }
+      }
+    }();
   </script>
 </body>
 </html>
