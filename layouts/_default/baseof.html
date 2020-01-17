@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="./favicon.png" />
+
+  <title>{{ .Title }}</title>
+  <meta name="description" content="Web-based books for open digital publishing.">
+
+  <meta property="og:title" content="next-book">
+  <meta property="og:description" content="Web-based books for open digital publishing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.next-book.info/">
+  <meta property="og:image" content="https://www.next-book.info/next-book-logo.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Alegreya:400,400i,700|Alegreya+Sans:900" rel="stylesheet">
+
+  {{ $style := resources.Get "styles/style.scss" | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+</head>
+<body class="{{ block "bodyclass" . }}{{ end }}">
+  <header class="container">
+    <div>
+      <a href="/" class="logo-link">
+          {{ partial "logo.html" . }}
+          <h1>
+            next-book
+          </h1>
+          <p class="subtitle">book publishing on the web</p>
+      </a>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="/concept/">Concept</a></li>
+        <li><a href="/articles/">Articles</a></li>
+        <li><a href="/docs/">Docs</a></li>
+        <li><a href="/about-us/">About us</a></li>
+        <li><a href="/cs/">česky</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <div class="container container-gold">
+    <footer>
+      <div>
+        &copy; next-book 2016–2020
+      </div>
+    </footer>
+  </div>
+
+  <script src="{{ (resources.Get "scripts/app.js" | fingerprint).RelPermalink | relURL }}"></script>
+</body>
+</html>

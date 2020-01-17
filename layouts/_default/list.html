@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="container container-gold-left">
+  <h1 class="full">{{ .Title }}</h1>
+
+  {{ .Content }}
+
+  {{ $year := 0 }}
+  <main>
+    {{ range .Pages }}
+    <article class="preview">
+        {{ $thisYear := dateFormat "2006" .Date }}
+        {{ if ne $thisYear $year }}
+          {{ $year = $thisYear }}
+          <h2>{{ $thisYear }}</h2>
+        {{ end }}
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>
+          <b>{{ .Date | dateFormat "January 2, 2006" }}</b>
+          {{ .Params.description | markdownify }}
+        </p>
+    </article>
+    {{ end }}
+  </main>
+</div>
+{{ end }}

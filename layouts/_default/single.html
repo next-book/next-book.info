@@ -1,0 +1,38 @@
+{{ define "main" }}
+
+<div class="container container-gold-left">
+  <h1 class="full">
+    {{ .Title }}
+  </h1>
+  <div>
+    {{ with .Params.description }}
+      <div class="perex">
+        {{ . | markdownify}}
+      </div>
+    {{ end }}
+    {{ with .Params.perex }}
+      <div class="perex">
+        {{ . | markdownify}}
+      </div>
+    {{ end }}
+    {{ with .Params.link }}
+      <p>
+        Read at:<br> <a href="{{ . }}">
+          {{ . | markdownify}}
+        </a>
+      </p>
+    {{ end }}
+    {{ .Content }}
+  </div>
+  <div>
+    <img src="{{ .Params.asidePic }}" width="30%">
+    {{ .Params.aside | markdownify }}
+  </div>
+</div>
+<div class="full padded">
+  <div class="newsletter">
+    <h2>our newsletter</h2>
+    {{ partial "newsletter.html" . }}
+  </div>
+</div>
+{{ end }}

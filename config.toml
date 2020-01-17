@@ -1,0 +1,6 @@
+baseURL = "https://next-book.info"
+defaultContentLanguage = "en"
+title = "next-book"
+
+[markup.goldmark.renderer]
+unsafe = true
