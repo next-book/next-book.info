@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://www.next-book.info/">
   <meta property="og:image" content="https://www.next-book.info/next-book-logo.png">
 
-  <link href="https://fonts.googleapis.com/css?family=Alegreya:400,400i,700|Alegreya+Sans:900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya:400,400i,700,700i|Alegreya+Sans:900" rel="stylesheet">
 
   {{ $style := resources.Get "styles/style.scss" | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">

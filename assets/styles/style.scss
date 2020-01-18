@@ -183,6 +183,14 @@ form {
   font-weight: 900;
 }
 
+.me {
+  display: block;
+  float: right;
+  width: 100px;
+  border-radius: 9px 4px / 10px 6px;
+  margin: 0 0 1rem 1rem;
+}
+
 input,
 button,
 .button {
