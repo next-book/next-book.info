@@ -2,7 +2,7 @@
 @import "_logo";
 
 :root {
-  font-size: 20px;
+  font-size: calc(20px);
   font-family: 'Alegreya', serif;
   color: $primary;
   background: $gold2;
@@ -117,7 +117,7 @@ blockquote {
 .table-wrapper {
   border: 1px solid $blue2;
   border-radius: 3px;
-  overflow: hidden;
+  overflow: auto;
 }
 
 table {
@@ -304,12 +304,27 @@ header {
   display: none;
 }
 
-@media only screen and (min-width: 50rem) {
+.newsletter {
+  background: url(/bg.png);
+  background-position: 50% 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 3rem 0;
+  margin: 1rem 0;
+  text-shadow: 0 0 2px white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 35rem) {
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
     align-items: start;
+  }
+
+  .aside-end {
+    align-items: end;
   }
 
   nav ul {
@@ -340,17 +355,5 @@ header {
   .full,
   footer {
     grid-column: 1 / -1;
-  }
-
-  .newsletter {
-    background: url(/bg.png);
-    height: 100%;
-    background-position: 50% 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin: -3rem 0;
-    padding: 3rem 0;
-
-    text-align: center;
   }
 }

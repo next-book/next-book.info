@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<div class="container container-gold-left">
+<div class="container container-gold-left aside-end">
   <h1 class="full">
     {{ .Title }}
   </h1>
@@ -29,7 +29,7 @@
     {{ .Params.aside | markdownify }}
   </div>
 </div>
-<div class="full padded">
+<div class="full">
   <div class="newsletter">
     <h2>our newsletter</h2>
     {{ partial "newsletter.html" . }}
