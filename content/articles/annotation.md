@@ -1,5 +1,5 @@
 ---
-title: Annotation principles (research draft)
+title: Annotation principles (design brief draft)
 date: 2020-01-13
 description: |
   Design brief for annotation functionality in next-book.
