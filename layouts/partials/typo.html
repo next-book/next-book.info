@@ -1,1 +1,1 @@
-{{ . | replaceRE " (\\S+)\\s*$" "&nbsp;$1" | markdownify }}
+{{ . | replaceRE "(\\s\\S) (\\S) " "$1&nbsp;$2&nbsp;" | replaceRE "(\\s\\S) " "$1&nbsp;" | replaceRE " (\\S+)\\s*$" "&nbsp;$1" | markdownify }}

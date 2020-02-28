@@ -1,0 +1,56 @@
+{{ define "bodyclass" }}home{{ end }}
+
+{{ define "main" }}
+  {{ with .Params.sellingPoints }}
+    <div class="container container-halves">
+      <h2 class="full">Posuňte digitální čtení na další úroveň</h2>
+      <p class="large full">Next-book přináší výhody pro nakladateli i čtenáře.</p>
+      {{ range . }}
+      <div>
+        <h3>{{ partial "typo.html" .title }}</h3>
+        <p>{{ partial "typo.html" .content }}</p>
+      </div>
+      {{ end }}
+    </div>
+  {{ end }}
+
+
+  {{ with .Params.offers }}
+    <div class="container container-halves">
+      <h2 class="full">Chci knihu v next-book formátu</h2>
+      <p class="large full">Ať už máte knihu vydanou nebo se na publikaci chystáte, pomůžeme vám je převést do next-book formátů. Samozřejmě s patřičnou vizuální úpravou, aby knihy bavily vaše čtenáře.</p>
+      {{ range . }}
+      <div>
+        <img src="X" width=100 height=100 style="margin: 2rem 0 -1.5rem">
+        <h3>{{ partial "typo.html" .title }}</h3>
+        <ul>
+          {{ range .pros }}
+            <li>{{ partial "typo.html" . }}</li>
+          {{ end }}
+        </ul>
+        <button>Prohlédnout ukázku</button>
+      </div>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  {{ with .Params.services }}
+    <div class="container container-thirds">
+      <h2 class="full">Pomůžeme s nasazením na web i údržbou</h2>
+      {{ range . }}
+        <p>{{ partial "typo.html" . }}</p>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  <div class="container">
+    <div class="full">
+      {{ .Content }}
+
+      <button>Chci vědět víc</button>
+    </div>
+  </div>
+
+
+
+{{ end }}

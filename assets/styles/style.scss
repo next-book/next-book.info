@@ -3,28 +3,31 @@
 
 :root {
   font-size: calc(20px);
-  font-family: 'Alegreya', serif;
+  font-family: "Alegreya", serif;
   color: $primary;
   background: $gold2;
   -webkit-font-smoothing: antialiased;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
 
 body {
   padding: 1rem 0;
-  background-image: url('/bg.png');
+  background-image: url("/bg.png");
   background-position: 50% -23rem;
   background-repeat: no-repeat;
   background-size: 30rem;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 1.5rem 0 0.5rem;
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: "Alegreya Sans", sans-serif;
   font-weight: 900;
 }
 
@@ -58,7 +61,8 @@ h3:first-child {
   font-size: 0.75rem;
 }
 
-p, li {
+p,
+li {
   hyphens: auto;
   position: relative;
   line-height: 1.4;
@@ -114,6 +118,10 @@ blockquote {
   font-style: italic;
 }
 
+.large {
+  font-size: 1.4rem;
+}
+
 .table-wrapper {
   border: 1px solid $blue2;
   border-radius: 3px;
@@ -128,7 +136,8 @@ table {
   width: 100%;
 }
 
-td, th {
+td,
+th {
   text-align: center;
   padding: 0.5rem;
 }
@@ -179,7 +188,7 @@ form {
 }
 
 .title {
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: "Alegreya Sans", sans-serif;
   font-weight: 900;
 }
 
@@ -204,7 +213,7 @@ button,
   line-height: 30px;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Alegreya', sans-serif;
+  font-family: "Alegreya", sans-serif;
   text-decoration: none;
 }
 
@@ -213,7 +222,7 @@ button,
   color: $white;
   background: $secondary;
   border-color: $pink4;
-  font-family: 'Alegreya Sans', serif;
+  font-family: "Alegreya Sans", serif;
   font-weight: 900;
 }
 
@@ -244,7 +253,7 @@ article {
 
 .preview h3 {
   margin-bottom: 0;
-  font-family: 'Alegreya', serif;
+  font-family: "Alegreya", serif;
 }
 
 .padded {
@@ -345,6 +354,16 @@ header {
 
   .container-thirds {
     grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+
+  .container-halves {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+
+  .container-fourths {
+    grid-template-columns: repeat(4, 1fr);
     align-items: start;
   }
 
