@@ -332,6 +332,12 @@ header {
   text-align: center;
 }
 
+.offer-icon {
+  display: block;
+  height: 150px;
+  margin: 2rem 0 -0.5rem;
+}
+
 @media only screen and (min-width: 35rem) {
   .container {
     display: grid;
