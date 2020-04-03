@@ -1,59 +1,84 @@
 {{ define "bodyclass" }}home{{ end }}
 
 {{ define "main" }}
-<div class="container container-halves">
-  <h1 class="full">{{ partial "typo.html" .Title }}</h1>
-  <p class="large full">{{ partial "typo.html" .Params.subtitle }} </p>
-</div>
+  <div class="container container-halves">
+    <h1 class="full">{{ partial "typo.html" .Title }}</h1>
+    <p class="large full">{{ partial "typo.html" .Params.subtitle }}</p>
+  </div>
 
   {{ with .Params.sellingPoints }}
-    <div class="container container-halves">
-      <h2 class="full">Posuňte digitální čtení na další úroveň</h2>
-      <p class="large full">Next-book přináší výhody pro nakladateli i čtenáře.</p>
+    <div class="container container-thirds selling-points">
+      <h2 class="full">Posuňte digitální čtení na&nbsp;další&nbsp;úroveň</h2>
+      <p class="large full">Next-book přináší výhody pro nakladatele i&nbsp;čtenáře.</p>
       {{ range . }}
       <div>
         <h3>{{ partial "typo.html" .title }}</h3>
-        <p>{{ partial "typo.html" .content }}</p>
+        {{ partial "typo.html" .content }}
         <br> <!-- bad joke -->
       </div>
       {{ end }}
     </div>
   {{ end }}
 
+  <div class="container container-gold">
+    <h2 class="full">Chci knihu v next-book&nbsp;formátu</h2>
+    <p class="large full">Ať už máte knihu vydanou nebo se na publikaci chystáte, pomůžeme vám ji&nbsp;vydat.</p>
 
-  {{ with .Params.offers }}
-    <div class="container container-halves">
-      <h2 class="full">Chci knihu v next-book formátu</h2>
-      <p class="large full">Ať už máte knihu vydanou nebo se na publikaci chystáte, pomůžeme vám je převést do next-book formátů. Samozřejmě s patřičnou vizuální úpravou, aby knihy bavily vaše čtenáře.</p>
-      {{ range . }}
+      <div class="features">
+        {{ range .Params.features}}
+          <div>
+            <h3>{{ partial "typo.html" .title }}</h3>
+            <p>{{ partial "typo.html" .text }}</p>
+          </div>
+        {{ end }}
+      </div>
+
+      <div class="offers">
+      {{ range .Params.offers }}
+        <div>
+          <img class="offer-icon" src="/production/{{ .img }}">
+          <h3>{{ partial "typo.html" .title }}</h3>
+          <p>{{ partial "typo.html" .text }}</p>
+        </div>
+      {{ end }}
+    </div>
+
+  </div>
+
+  <div class="container container-halves">
+    {{ with .Params.steps }}
       <div>
-        <img class="offer-icon" src="/production/{{ .img }}">
-        <h3>{{ partial "typo.html" .title }}</h3>
+        <h2>Jak se do toho&nbsp;pustíme</h2>
+        <ol>
+          {{ range . }}
+            <li>
+              <strong>{{ partial "typo.html" .title }}</strong>
+              <br>
+              {{ partial "typo.html" .text }}
+            </li>
+          {{ end }}
+        </ol>
+      </div>
+    {{ end }}
+
+    {{ with .Params.services }}
+      <div>
+        <h2>Pomůžeme s&nbsp;nasazením na&nbsp;web i&nbsp;údržbou</h2>
         <ul>
-          {{ range .pros }}
+          {{ range . }}
             <li>{{ partial "typo.html" . }}</li>
           {{ end }}
         </ul>
-        <!-- <button>Prohlédnout ukázku</button> -->
       </div>
-      {{ end }}
-    </div>
-  {{ end }}
+    {{ end }}
+  </div>
 
-  {{ with .Params.services }}
-    <div class="container container-thirds">
-      <h2 class="full">Pomůžeme s nasazením na web i údržbou</h2>
-      {{ range . }}
-        <p>{{ partial "typo.html" . }}</p>
-      {{ end }}
-    </div>
-  {{ end }}
+
+
 
   <div class="container">
     <div class="full">
       {{ .Content }}
-
-      <a class="button" href="mailto:chci@next-book.info">Chci vědět víc</a>
     </div>
   </div>
 

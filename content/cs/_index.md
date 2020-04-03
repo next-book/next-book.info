@@ -1,58 +1,79 @@
 ---
 title: Vydávejte čtenářsky přívětivé a vizuálně působivé e-knihy
-subtitle: Next-book je formát pro publikování knih na webu. Přiblíží vaše e-knihy těm tištěným. Nejviditelnější předností webu je unikátní grafická úprava každé knihy, ale tím to nekončí.
+subtitle: Next-book je formát pro publikování knih na webu. Přiblíží vaše e-knihy těm tištěným. Nejviditelnější předností webu je unikátní grafická úprava každé knihy, ale tím to *zdaleka* nekončí.
 sellingPoints:
   - title: Tvořte zapamatovatelné e-knihy
     content: |
-      Cokoli jste viděli na webu je teď možné i v knize. Každá kniha může být jiná – s vlastní grafickou úpravou, typografií, specifickým fontem i obálkou. Díky webu můžete přidávat odkazy, animace, videa nebo interaktivní prvky.
+      Každá kniha může mít vlastní grafickou úpravu, typografii či obálku. 
+
+      Cokoli jste viděli na webu, je teď možné i v knize — odkazy, animace, videa nebo interaktivní prvky.
   - title: Oslovte širší skupinu čtenářů
     content: |
-      Knihy v next-book formátu otevřete na jakémkoliv zařízení s prohlížečem. Vaše čtenáři nepotřebují speciální zařízení (čtečku) ani instalaci nových aplikací. Samozřejmostí je responzivní zobrazení pro všechny velikosti obrazovek.
-  - title: Digitální čtení bude zážitek
+      Knihy otevřete na jakémkoliv zařízení s prohlížečem. Vaše čtenáři nepotřebují speciální výbavu (čtečku) ani instalaci nových aplikací. 
+
+      Samozřejmostí je responzivní zobrazení na mobilu, tabletu i počítači.
+  - title: Využijte potenciál digitálního čtení
     content: |
-      Konec ztrácení v textu. Prohlížeč si automaticky zapamatuje, kde jste přestali číst. Každá věta má vlastní identifikátor – pro lepší poznámkování, listování i sdílení. Čtenáři mohou bez obav číst online, offline nebo si snadno stáhnout knihu do vlastního zařízení. Web též podporuje nástroje pro lidi se specifickými potřebami.
+      *Konec ztrácení v textu.* Prohlížeč si automaticky zapamatuje, kde jste přestali číst. 
+
+      Namísto stránek číslujeme věty; orientace v knize je tak snadnější při listování, poznámkování i sdílení.
+
+      Čtenáři mohou bez obav číst online nebo offline. Lidé se specifickými potřebami mohou využít všech nástrojů, které usnadňují čtení webu.
   - title: Usnadněte si práci
     content: |
-      Knihy ochráníte před nelegálním šířením díky sociálnímu DRM. Ostatní formáty nemusíte hned zavrhnout – next-book vám na pár kliků vygeneruje EPUB a formát pro čtečku Kindle. Vaše knihy budou žít na webu, můžete pracovat s propojování knih, edicí nebo nabídkami na další nákup.
+      Ostatní formáty nemusíte zavrhnout – vytvoříme vám i EPUB a formát pro čtečku Kindle. 
+
+      Vaše knihy budou žít na webu – propojte je s vaším e-shopem, pracujte s provázáním knih, edicemi nebo nabídkami na další nákup. Můžete využít sociální DRM pro prevenci nelegálního šíření knih.
 services:
   - Spolu s vašimi programátory najdeme nejlepší způsob, jak knihy v next-book formátu implementovat na váš web.
-  - Proškolíme vaše programátory i sazeče, abyste mohli sami případné revize e-knih mohli provádět sami.
+  - Proškolíme vaše programátory i sazeče, abyste mohli tvořit nové knihy nebo měli pod kontrolou případné revize vašich e-knih.
   - Konzultujeme případné problémy nebo zapeklité případy. Pomoct umíme i s novými verzemi next-booku.
+steps:
+  - title: Potkáme se (třeba i online)
+    text: Představíme vám next-book a dohodneme se, jak můžeme spolupracovat.
+  - title: Dodáte nám podklady
+    text: Připravený text knihy, obrázky, ISBN a další materiály.
+  - title: Vytvoříme první návrh
+    text: Společně si jej schválíme, zda jdeme správným směrem.
+  - title: Dostanete hotovou e-knihu
+    text: Váš korektor ji zkontroluje a my případné podněty zapracujeme.
+  - title: Publikujete na webu
+    text: Můžeme vám s tím pomoct, ale zvládne to taky váš programátor.
+features:
+  - title: S patřičnou grafickou úpravou
+    text: Aby e-knihy bavily vaše čtenáře a odlišovaly se.
+  - title: V dalších formátech
+    text: K next-booku vám dodáme e-knihu v EPUB a ve formátu pro čtečky Kindle.
+  - title: Bez závislosti na dodavateli
+    text: Otevřená platforma vám sníží byznysová rizika.
 offers:
-  - title: Základní úprava e-knihy v next-booku
+  - title: Chci převést vydanou e-knihu do next-booku
     link: X
     img: simple.png
-    pros:
-      - Převedení knihy z digitálních formátů (EPUB, .doc(x), Kindle, apod.) do next-book formátu.
-      - Základní typografická pravidla.
-      - Bez speciální grafické a vizuální úpravy
-  - title: Převedení tištěné knihy do e-formátů
+    text: |
+      E-knihu vám převedeme z digitálních formátů. Vytvoříme ji v základní šabloně s dobrou typografií. Případně se domluvíme na specifické grafické úpravě.
+
+  - title: Chci převést tištěnou knihu do e-formátů
     link: X
     img: translation.png
-    pros:
-      - Převedení knihy do next-book formátu.
-      - Grafická a vizuální podoba respektuje tištěnou předlohu.
-      - Formáty Kindle a EPUB.
-  - title: Navržení nové e-knihy
+    text: |
+      Z tiskových podkladů vám vytvoříme e-knihu. Grafická podoba knihy bude respektovat tištěnou předlohu.
+
+  - title: Chci novou e-knihu
     link: X
     img: visual.png
-    pros:
-      - Vnitřní grafická úprava.
-      - Návrh obálky.
-      - Ilustrace.
-      - E-kniha v next-book formátu.
-      - Formáty Kindle a EPUB.
-  - title: Navržení nové tištěné knihy a e-knihy
+    text: |
+      Navrhneme vnitřní grafickou úpravu e-knihy, obálku i ilustrace.
+  - title: Chci novou tištěnou knihu a e-knihu
     link: X
     img: both.png
-    pros:
-      - Vnitřní grafická úprava
-      - Návrh obálky.
-      - Ilustrace.
-      - E-kniha v next-book formátu a tiskové podklady
-      - Formáty Kindle a EPUB
+    text: |
+      Navrhneme vnitřní grafickou úpravu knihy a e-knihy, obálku i ilustrace. Dostanete od nás e-knihu a tiskové podklady.
 ---
 
 ## Zajímá vás next-book?
 
-Pojďte se s námi potkat nebo nám napište!
+Rádi si s vámi dáme videohovor.  
+Napište nám na [chci@next-book.info](mailto:chci@next-book.info) nebo pomocí [formuláře][form] (proklik).
+
+[form]: xyz
