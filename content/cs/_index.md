@@ -74,6 +74,12 @@ offers:
 ## Zajímá vás next-book?
 
 Rádi si s vámi dáme videohovor.  
-Napište nám na [chci@next-book.info](mailto:chci@next-book.info) nebo pomocí [formuláře][form] (proklik).
+Napište nám na [chci@next-book.info](mailto:chci@next-book.info) nebo pomocí [formuláře][form].
 
-[form]: xyz
+[form]: https://docs.google.com/forms/d/e/1FAIpQLSfdv5zjHvAsDHFDnonsb37poFND6-jFLmDuO5JplYqWBwQUlQ/viewform?usp=sf_link
+
+## Kdo jsme?
+
+Krom toho jsme zatím čtyři nadšenci z Brna — Josef Kocurek, Matěj Málek, Honza Martinek a Lukáš Porsche. Společně máme zázemí v knihovnictví, informační vědě, webovém vývoji, marketingu, grafickém designu a mediálních studiích.
+
+Založili jsme neziskovou organizaci _next-book z. s._, jejímž cílem je tvorba otevřené platformy pro digitální publikování na webu.

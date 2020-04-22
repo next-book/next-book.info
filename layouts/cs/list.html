@@ -7,24 +7,25 @@
   </div>
 
   {{ with .Params.sellingPoints }}
-    <div class="container container-thirds selling-points">
+    <div class="container">
       <h2 class="full">Posuňte digitální čtení na&nbsp;další&nbsp;úroveň</h2>
       <p class="large full">Next-book přináší výhody pro nakladatele i&nbsp;čtenáře.</p>
+    </div>
+    <div class="container container-halves relaxed-grid">
       {{ range . }}
       <div>
         <h3>{{ partial "typo.html" .title }}</h3>
         {{ partial "typo.html" .content }}
-        <br> <!-- bad joke -->
       </div>
       {{ end }}
     </div>
   {{ end }}
 
-  <div class="container container-gold">
+  <div class="features container container-gold">
     <h2 class="full">Chci knihu v next-book&nbsp;formátu</h2>
     <p class="large full">Ať už máte knihu vydanou nebo se na publikaci chystáte, pomůžeme vám ji&nbsp;vydat.</p>
 
-      <div class="features">
+    <div class=" full container container-thirds">
         {{ range .Params.features}}
           <div>
             <h3>{{ partial "typo.html" .title }}</h3>
@@ -32,20 +33,20 @@
           </div>
         {{ end }}
       </div>
+  </div>
 
-      <div class="offers">
-      {{ range .Params.offers }}
-        <div>
-          <img class="offer-icon" src="/production/{{ .img }}">
+  <div class="full container container-halves relaxed-grid">
+    {{ range .Params.offers }}
+
+        <div class="">
           <h3>{{ partial "typo.html" .title }}</h3>
           <p>{{ partial "typo.html" .text }}</p>
         </div>
-      {{ end }}
-    </div>
 
+    {{ end }}
   </div>
 
-  <div class="container container-halves">
+  <div class="features container container-halves">
     {{ with .Params.steps }}
       <div>
         <h2>Jak se do toho&nbsp;pustíme</h2>
@@ -73,15 +74,10 @@
     {{ end }}
   </div>
 
-
-
-
   <div class="container">
     <div class="full">
       {{ .Content }}
     </div>
   </div>
-
-
 
 {{ end }}

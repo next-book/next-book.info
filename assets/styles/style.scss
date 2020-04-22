@@ -28,11 +28,12 @@ h2,
 h3 {
   margin: 1.5rem 0 0.5rem;
   font-family: "Alegreya Sans", sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 h1 {
   font-size: 2rem;
+  font-weight: 900;
 }
 
 h2 {
@@ -191,7 +192,7 @@ form {
 
 .title {
   font-family: "Alegreya Sans", sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .me {
@@ -225,7 +226,7 @@ button,
   background: $secondary;
   border-color: $pink4;
   font-family: "Alegreya Sans", serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 button:hover,
@@ -352,9 +353,9 @@ header {
 
 .features {
   background-image: url("/bg.png");
-  background-position: 70% 70%;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: 40rem;
+  background-size: 65rem;
   padding: 1rem 1rem 0.1rem;
   margin-top: 0.3rem;
   border-radius: 3px;
@@ -367,6 +368,10 @@ header {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 3rem;
     align-items: start;
+  }
+
+  .relaxed-grid {
+    grid-row-gap: 2rem;
   }
 
   .aside-end {
