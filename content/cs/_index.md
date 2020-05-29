@@ -83,3 +83,5 @@ Napište nám na [chci@next-book.info](mailto:chci@next-book.info) nebo pomocí 
 Krom toho jsme zatím čtyři nadšenci z Brna — Josef Kocurek, Matěj Málek, Honza Martinek a Lukáš Porsche. Společně máme zázemí v knihovnictví, informační vědě, webovém vývoji, marketingu, grafickém designu a mediálních studiích.
 
 Založili jsme neziskovou organizaci _next-book z. s._, jejímž cílem je tvorba otevřené platformy pro digitální publikování na webu.
+
+Proč zrovna technologická neziskovka? Chceme dát najevo, že naším cílem nejsou rychlé peníze, ale tvorba udržitelné platformy, jejíž stabilita pomáhá všem, kteří ji užívají — vydavatelům, čtenářům a dalším institucím, které dělají svět knih tak zajímavým. Chceme vytvořit organizaci, která si na sebe vydělá, a zároveň dokáže nezávisle garantovat kvalitu a rozvoj webových knih.

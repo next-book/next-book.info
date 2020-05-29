@@ -10,24 +10,29 @@ aside: |
   - [Boris Anthony](https://borisanthony.net) for discussions and encouragement
   - [Jan Vlček](https://twitter.com/vlki) for code reviews
 ---
+
 ## Inventing books
+
 We’re a non-profit based in Brno, Czech Republic. We work on the next-book platform, trying to make it a well documented platform and open standard in the long-term.
+
+## Why a non-profit?
+
+We dont want to be another startup that sucks out the money that’s left in a crisis-stricken market. We want te create a platform that helps all its users — publishers, readers and other institutions that make the book world so interesting. We want to establish a sustainable organization working towards great web books.
 
 ## Team
 
-**Josef Kocurek** (design research)  \
-**Matěj Málek** (graphic design)  \
-**Jan Martinek** (design, development)  \
+**Josef Kocurek** (design research) \
+**Matěj Málek** (graphic design) \
+**Jan Martinek** (design, development) \
 **Lukáš Porsche** (self-publishing, marketing)
 
-Our goal is to become more diverse as soon as possible and sustainable by April 2020.
+Our goal is to become more diverse as soon as possible and sustainable by <del>April</del> December 2020. (Planning in 2020 is complicated!)
 
 We’re looking for new team members — if you like what we do, please [get in touch](mailto:contact@next-book.info) with us! We need someone to work on:
 
 - EPUB best practices transfer
 - accessibility research
 - fundraising
-
 
 ## Projects
 
