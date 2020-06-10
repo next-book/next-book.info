@@ -3,16 +3,19 @@ title: Vydávejte čtenářsky přívětivé a vizuálně působivé e-knihy
 subtitle: Next-book je formát pro publikování knih na webu. Přiblíží vaše e-knihy těm tištěným. Nejviditelnější předností webu je unikátní grafická úprava každé knihy, ale tím to *zdaleka* nekončí.
 sellingPoints:
   - title: Tvořte zapamatovatelné e-knihy
+    icon: 01-memorable.svg
     content: |
       Každá kniha může mít vlastní grafickou úpravu, typografii či obálku. 
 
       Cokoli jste viděli na webu, je teď možné i v knize — odkazy, animace, videa nebo interaktivní prvky.
   - title: Oslovte širší skupinu čtenářů
+    icon: 02-readers.svg
     content: |
       Knihy otevřete na jakémkoliv zařízení s prohlížečem. Vaše čtenáři nepotřebují speciální výbavu (čtečku) ani instalaci nových aplikací. 
 
       Samozřejmostí je responzivní zobrazení na mobilu, tabletu i počítači.
   - title: Využijte potenciál digitálního čtení
+    icon: 03-potential.svg
     content: |
       *Konec ztrácení v textu.* Prohlížeč si automaticky zapamatuje, kde jste přestali číst. 
 
@@ -20,6 +23,7 @@ sellingPoints:
 
       Čtenáři mohou bez obav číst online nebo offline. Lidé se specifickými potřebami mohou využít všech nástrojů, které usnadňují čtení webu.
   - title: Usnadněte si práci
+    icon: 04-simplify.svg
     content: |
       Ostatní formáty nemusíte zavrhnout – vytvoříme vám i EPUB a formát pro čtečku Kindle. 
 
@@ -49,24 +53,24 @@ features:
 offers:
   - title: Chci převést vydanou e-knihu do next-booku
     link: X
-    img: simple.png
+    img: 05-e-book_to_next-book.svg
     text: |
       E-knihu vám převedeme z digitálních formátů. Vytvoříme ji v základní šabloně s dobrou typografií. Případně se domluvíme na specifické grafické úpravě.
 
   - title: Chci převést tištěnou knihu do e-formátů
     link: X
-    img: translation.png
+    img: 06-book_to_next-book.svg
     text: |
       Z tiskových podkladů vám vytvoříme e-knihu. Grafická podoba knihy bude respektovat tištěnou předlohu.
 
   - title: Chci novou e-knihu
     link: X
-    img: visual.png
+    img: 07-new_next-book.svg
     text: |
       Navrhneme vnitřní grafickou úpravu e-knihy, obálku i ilustrace.
   - title: Chci novou tištěnou knihu a e-knihu
     link: X
-    img: both.png
+    img: 08-book_and_next-book.svg
     text: |
       Navrhneme vnitřní grafickou úpravu knihy a e-knihy, obálku i ilustrace. Dostanete od nás e-knihu a tiskové podklady.
 ---

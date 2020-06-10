@@ -22,6 +22,7 @@
     <div class="container container-halves relaxed-grid">
       {{ range . }}
       <div>
+        <img class="icon" src="/icons/{{ .icon }}">
         <h3>{{ partial "typo.html" .title }}</h3>
         {{ partial "typo.html" .content }}
       </div>
@@ -47,6 +48,7 @@
     {{ range .Params.offers }}
 
         <div class="">
+          <img class="icon" src="/icons/{{ .img }}">
           <h3>{{ partial "typo.html" .title }}</h3>
           <p>{{ partial "typo.html" .text }}</p>
         </div>
