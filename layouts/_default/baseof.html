@@ -55,7 +55,9 @@
   <div class="container container-gold">
     <footer>
       <div>
-        &copy; 2016–2020 next-book, z. s. (<a href="/about-us">Why a non-profit?</a>)
+        <p>&copy; 2016–2020 next-book, z. s. (<a href="/about-us">Why a non-profit?</a>)</p>
+
+        {{ block "assocInfo" . }}{{ end }}
       </div>
     </footer>
   </div>
