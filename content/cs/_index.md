@@ -77,7 +77,7 @@ offers:
 
 ## Zajímá vás next-book?
 
-Rádi si s vámi dáme videohovor.  
+Rádi se s vámi potkáme naživo nebo přes videohovor.  
 Napište nám na [chci@next-book.info](mailto:chci@next-book.info) nebo pomocí [formuláře][form].
 
 [form]: https://docs.google.com/forms/d/e/1FAIpQLSfdv5zjHvAsDHFDnonsb37poFND6-jFLmDuO5JplYqWBwQUlQ/viewform?usp=sf_link
