@@ -352,14 +352,11 @@ header {
 }
 
 .features {
-  background-image: url("/bg.png");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: 65rem;
-  padding: 1rem 1rem 0.1rem;
+  background: #fbfbfb;
+  padding: 2rem 2rem 1rem;
   margin-top: 0.3rem;
-  border-radius: 3px;
-  margin-bottom: 1rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
 }
 
 @media only screen and (min-width: 35rem) {
