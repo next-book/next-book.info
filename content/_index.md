@@ -9,7 +9,7 @@ perex: |
   An open platform for publishing and reading on the web.
   Defining the standard for book reading in Q2 of 21st century and beyond.
 books:
-  - "[Thoreau’s Walden](https://jan-martinek.github.io/henry-david-thoreau_walden/) published with current version of next-book."
+  - "[Examples of web books](https://library.next-book.info) published using next-book."
 comparison:
   - title: "built for screens"
     nb: "yes"
@@ -35,12 +35,12 @@ comparison:
     nb: "yes"
     epub: "no"
     mobi: "no"
-    pdf: "no"     
+    pdf: "no"
   - title: "social DRM"
     nb: "yes"
     epub: "yes"
     mobi: "yes"
-    pdf: "yes"  
+    pdf: "yes"
 
 sellingPoints:
   - title: Readers
@@ -58,5 +58,3 @@ sellingPoints:
 ---
 
 ## Read more
-
-
