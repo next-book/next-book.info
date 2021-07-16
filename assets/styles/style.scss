@@ -299,6 +299,7 @@ header {
   }
 
   .subtitle {
+    white-space: nowrap;
     margin-top: 0;
   }
 
@@ -362,7 +363,7 @@ header {
 @media only screen and (min-width: 35rem) {
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
     grid-column-gap: 3rem;
     align-items: start;
   }
