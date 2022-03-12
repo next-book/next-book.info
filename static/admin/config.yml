@@ -1,0 +1,488 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: content/media
+public_folder: /media
+display_url: "https://geografieznevyhodneni.cz"
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "_"
+collections:
+  - name: pages
+    label: Stránky
+    label_singular: "Stránka"
+    editor:
+      preview: false
+    files:
+      - label: "Úvodní stránka"
+        name: "index"
+        file: "content/_index.md"
+        fields:
+          - label: Mise jednou větou
+            name: motto
+            widget: markdown
+            hint: "Poslání jednou větou."
+          - label: Naše mise
+            name: intro
+            widget: markdown
+            hint: "Rozepsáno na 3–5 vět, neopakovat úplně misi z předchozího pole."
+          - label: Naše aktivity (obecně)
+            name: activities
+            widget: list
+            hint: Nabídka pro cílovky, pro které můžeme fungovat jako konzultanti nebo spolupracovníci.
+            fields:
+              - { label: Titulek, name: title, widget: string }
+              - { label: Krátký popis, name: text, widget: markdown }
+          - label: Přidejte se k nám
+            name: join-us
+            widget: object
+            hint: Nabídka pro výzkumníky, které téma zajímá.
+            fields:
+              - { label: Titulek, name: title, widget: string }
+              - { label: Krátký text pro cílovky, name: text, widget: markdown }
+      - label: "Kontakt"
+        name: "kontakt"
+        file: "content/kontakt.md"
+        fields:
+          - { label: Titulek, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - { label: Text, name: body, widget: markdown }
+  - name: canon
+    label: Kánon oboru
+    label_singular: "Text"
+    folder: content/canon
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    extension: md
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Název textu
+        name: title
+        widget: string
+      - label: Autor/ka
+        name: author
+        widget: string
+      - label: Bibliografický údaj
+        widget: markdown
+        name: bib
+      - label: DOI
+        name: doi
+        widget: string
+        required: false
+      - label: Link na full text
+        name: fulltext
+        widget: string
+        required: false
+      - label: "Obálka"
+        name: "cover"
+        widget: "image"
+        required: false
+      - label: Rok vydání
+        name: year
+        widget: number
+      - label: Popis textu
+        name: body
+        widget: markdown
+  - name: doporuceno
+    label: Doporučujeme
+    label_singular: "Doporučeno"
+    folder: content/doporuceno
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    extension: md
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Název díla
+        name: title
+        widget: string
+      - label: Tvůrci
+        name: authors
+        widget: markdown
+      - label: Rok vzniku
+        name: year
+        widget: number
+      - label: Stát vzniku
+        name: country
+        widget: string
+      - label: Link na více informací nebo celé dílo
+        name: link
+        widget: string
+        required: false
+      - label: Ilustrační obrázek
+        name: illustration
+        widget: object
+        fields:
+          - label: "Obrázek"
+            name: "name"
+            widget: "image"
+            required: false
+          - label: "Popis obsahu obrázku"
+            name: alt
+            hint: "Alternativa pro zrakově postižené čtenáře"
+            widget: string
+            required: false
+      - label: Popis
+        name: body
+        widget: markdown
+  - name: people
+    label: Lidé
+    label_singular: "Osoba"
+    folder: content/person
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    extension: md
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Jméno a příjmení
+        name: title
+        widget: string
+      - label: Tituly před
+        name: pre
+        required: false
+        widget: string
+      - label: Tituly po
+        name: post
+        widget: string
+        required: false
+      - label: Instituce
+        name: institution
+        widget: string
+      - label: Krátké bio
+        name: body
+        required: false
+        widget: markdown
+      - label: Kontaktní e-mail
+        name: email
+        widget: string
+        required: false
+      - label: Research Gate url
+        name: rgurl
+        widget: string
+        required: false
+      - label: ORCID
+        name: orcid
+        widget: string
+        required: false
+      - label: Fotka
+        name: illustration
+        widget: object
+        required: false
+        fields:
+          - label: "Fotka"
+            name: "name"
+            widget: "image"
+            required: false
+  - name: publications
+    label: Publikace
+    label_singular: "Publikace"
+    folder: content/publication
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    extension: md
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Název
+        name: title
+        widget: string
+      - label: Rok vydání
+        name: year
+        widget: string
+      - label: Bibliografický údaj
+        widget: markdown
+        name: bib
+      - label: DOI
+        name: doi
+        widget: string
+        required: false
+      - label: Autor (uvnitř DGcz)
+        name: author_in
+        widget: relation
+        collection: people
+        searchFields: ["title"]
+        valueField: "title"
+        displayFields: ["title"]
+        multiple: true
+        required: false
+      - label: Autor (mimo DGcz)
+        name: author_out
+        widget: string
+        required: false
+      - label: Abstrakt
+        name: abstract
+        widget: markdown
+      - label: Odkaz na podrobnosti
+        name: link
+        widget: string
+      - label: "Obálka nebo ilustrace"
+        name: "name"
+        widget: "image"
+        required: false
+  - name: news
+    label: Aktuality a zajímavosti
+    label_singular: "Aktualita"
+    folder: content/news
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    extension: md
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Titulek
+        name: title
+        widget: string
+      - label: Datum
+        name: date
+        widget: "datetime"
+        dateFormat: "DD.MM.YYYY"
+        timeFormat: false
+      - label: Podtitulek
+        name: subtitle
+        widget: string
+      - label: Popis
+        name: body
+        widget: markdown
+      - label: Ilustrační obrázek
+        name: illustration
+        widget: object
+        fields:
+          - label: "Obrázek"
+            name: "name"
+            widget: "image"
+            required: false
+          - label: "Popis obsahu obrázku"
+            name: alt
+            hint: "Alternativa pro zrakově postižené čtenáře"
+            widget: string
+            required: false
+  - name: events
+    label: Plánované eventy a pozvánky
+    label_singular: "Event"
+    folder: content/event
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    extension: md
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Název
+        name: title
+        widget: string
+      - label: Datum konání
+        name: dateStart
+        widget: "datetime"
+        dateFormat: "DD.MM.YYYY"
+        timeFormat: "HH:mm"
+        hint: Pro zobrazení data bez času zadejte čas 00:00.
+      - label: Datum konání (závěr, pokud se liší)
+        name: dateEnd
+        widget: "datetime"
+        dateFormat: "DD.MM.YYYY"
+        timeFormat: "HH:mm"
+        required: false
+        hint: Pro zobrazení data bez času zadejte čas 00:00.
+      - label: Kontaktní osoby uvnitř DGcz
+        name: contact
+        widget: relation
+        collection: people
+        searchFields: ["title"]
+        valueField: "title"
+        displayFields: ["title"]
+        multiple: true
+        required: false
+      - label: Krátký popis
+        name: subtitle
+        widget: string
+      - label: Popis akce
+        name: body
+        widget: markdown
+      - label: Ilustrační obrázek
+        name: illustration
+        widget: object
+        fields:
+          - label: "Obrázek"
+            name: "name"
+            widget: "image"
+            required: false
+          - label: "Popis obsahu obrázku"
+            name: alt
+            hint: "Alternativa pro zrakově postižené čtenáře"
+            widget: string
+            required: false
+  - name: theses
+    label: Zpracované diplomky
+    label_singular: Diplomka
+    folder: content/thesis
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    extension: md
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Název práce
+        name: title
+        widget: string
+      - label: Rok obhajoby
+        name: year
+        widget: date
+        format: YYYY
+        date_format: YYYY
+      - label: Abstrakt
+        name: body
+        widget: markdown
+      - label: Autor/ka
+        name: author
+        widget: string
+      - label: Klíčová slova
+        name: keywords
+        widget: string
+      - label: Odkaz
+        name: link
+        widget: string
+      - label: Ilustrační obrázek
+        name: illustration
+        widget: object
+        fields:
+          - label: "Obrázek"
+            name: "name"
+            widget: "image"
+            required: false
+          - label: "Popis obsahu obrázku"
+            name: alt
+            hint: "Alternativa pro zrakově postižené čtenáře"
+            required: false
+            widget: string
+  - name: topics
+    label: Nabídka témat diplomek
+    label_singular: "Téma diplomky"
+    folder: content/thesis-topic
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    extension: md
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Název tématu
+        name: title
+        widget: string
+      - label: Krátká charakteristika tématu
+        name: body
+        widget: markdown
+      - label: Kontaktní osoba
+        name: contact
+        widget: relation
+        collection: people
+        searchFields: ["title"]
+        valueField: "title"
+        displayFields: ["title"]
+      - label: Typ práce
+        name: kind
+        widget: select
+        multiple: true
+        options:
+          - disertační práce
+          - diplomová práce
+          - bakalářská práce
+          - středoškolská odborná činnost (SOČ)
+      - label: Ilustrační obrázek
+        name: illustration
+        widget: object
+        fields:
+          - label: "Obrázek"
+            name: "name"
+            widget: "image"
+            required: false
+          - label: "Popis obsahu obrázku"
+            name: alt
+            hint: "Alternativa pro zrakově postižené čtenáře"
+            required: false
+            widget: string
+  - name: activities
+    label: Projekty a aktivity
+    label_singular: "Aktivita"
+    folder: content/activity
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    extension: md
+    create: true
+    editor:
+      preview: false
+    fields:
+      - label: Titulek
+        name: title
+        widget: string
+      - label: Podtitulek
+        name: subtitle
+        widget: string
+      - label: Pořadí
+        name: order
+        widget: string
+        default: 0
+        hint: Čím vyšší číslo, tím výše je aktivita umístěna v seznamu na homepage.
+      - label: Aktivita ke dnešnímu datu stále probíhá
+        name: finished
+        widget: boolean
+        default: true
+      - label: Počátek aktivity
+        name: dateStart
+        widget: "datetime"
+        dateFormat: "DD.MM.YYYY"
+        timeFormat: false
+        hint: "Pomocí změny data můžete posunout popis výše."
+        required: false
+      - label: Závěr aktivity
+        name: dateEnd
+        widget: "datetime"
+        dateFormat: "DD.MM.YYYY"
+        timeFormat: false
+        hint: "Pomocí změny data můžete posunout popis výše."
+        required: false
+      - label: Kontaktní osoby uvnitř DGcz
+        name: contact
+        widget: relation
+        collection: people
+        searchFields: ["title"]
+        valueField: "title"
+        displayFields: ["title"]
+        multiple: true
+        required: false
+      - label: Popis
+        name: body
+        widget: markdown
+      - label: Ilustrační obrázek
+        name: illustration
+        widget: object
+        fields:
+          - label: "Obrázek"
+            name: "name"
+            widget: "image"
+            required: false
+          - label: "Popis obsahu obrázku"
+            name: alt
+            hint: "Alternativa pro zrakově postižené čtenáře"
+            required: false
+            widget: string
+      - label: Datum aktualizace informací
+        name: edited
+        widget: hidden

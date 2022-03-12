@@ -1,1 +1,9 @@
-{{ . | replaceRE "next-" "next&#8209;" | replaceRE "e-" "e&#8209;" | replaceRE "(\\s\\S) (\\S) " "$1&nbsp;$2&nbsp;" | replaceRE "(\\s\\S) " "$1&nbsp;" | replaceRE " (\\S+)\\s*$" "&nbsp;$1" | markdownify }}
+{{- $raw := replaceRE " - " " &mdash; " . -}}
+{{- $raw = replaceRE "§ " "§&nbsp;" $raw -}}
+{{- $raw = replaceRE " Kč" "&nbsp;Kč" $raw -}}
+{{- $raw = replaceRE "https://domek.netlify.com" "" $raw -}}
+{{- $raw = replaceRE "(\\s[AÁBCČDĎEÉĚFGHIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽaábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzž][AÁBCČDĎEÉĚFGHIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽaábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzž]?) " "$1&nbsp;" $raw -}}
+{{- $raw = replaceRE "(;[AÁBCČDĎEÉĚFGHIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽaábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzž][AÁBCČDĎEÉĚFGHIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽaábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzž]?) " "$1&nbsp;" $raw -}}
+{{- $raw = chomp $raw -}}
+{{- $raw = markdownify $raw -}}
+{{- $raw -}}

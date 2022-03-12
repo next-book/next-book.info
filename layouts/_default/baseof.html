@@ -1,68 +1,67 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="/favicon.png" />
-
   <title>{{ .Title }}</title>
-  <meta name="description" content="Web-based books for open digital publishing.">
-
-  <meta property="og:title" content="next-book">
-  <meta property="og:description" content="Web-based books for open digital publishing.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.next-book.info/">
-  <meta property="og:image" content="https://www.next-book.info/next-book-logo.png">
-
-  {{ range .AlternativeOutputFormats -}}
-      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-  {{ end -}}
-
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700;900&family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-  {{ $style := resources.Get "styles/style.scss" | toCSS | minify | fingerprint }}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  {{ $style := resources.Get "style.scss" | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-</head>
-<body class="{{ block "bodyclass" . }}{{ end }}">
-  <header class="container">
-    <div>
-      <a href="/" class="logo-link">
-          {{ partial "logo.html" . }}
-          <h1>
-            next-book
-          </h1>
-          <p class="subtitle">book publishing on the web</p>
-      </a>
-    </div>
 
-    <nav>
-      <ul>
-        <li><a href="/concept/">Concept</a></li>
-        <li><a href="/articles/">Articles</a></li>
-        <li><a href="/docs/">Docs</a></li>
-        <li><a href="/about-us/">About us</a></li>
-        <li>|</li>
-        <li><a href="/cs/">Česky</a></li>
-        <li><a href="/cs/muni-mkp/">Projekt MKP+MU</a></li>
-      </ul>
-    </nav>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+
+<body>
+  <header class="wrapper grid grid-right">
+    <div>
+      <h1><a href="/">{{ .Site.Title }}</a></h1>
+    </div>
+    <div>
+      <nav>
+        <ul>
+          {{ partial "menu-item.html" (dict "link" "/library/" "permalink" .RelPermalink "text" (i18n "library")) }}
+          {{ partial "menu-item.html" (dict "link" "/blog/" "permalink" .RelPermalink "text" (i18n "blog")) }}
+          {{ partial "menu-item.html" (dict "link" "/concept/" "permalink" .RelPermalink "text" (i18n "concept")) }}
+          {{ partial "menu-item.html" (dict "link" "/non-profit/" "permalink" .RelPermalink "text" (i18n "non-profit")) }}
+          {{ partial "menu-item.html" (dict "link" "/get-in-touch/" "permalink" .RelPermalink "text" (i18n "get-in-touch")) }}
+
+          {{ if .IsTranslated }}
+            {{ range .Translations }}
+              {{ if ne .Language.Lang $.Language.Lang }}
+                <li><a tabindex="0" href="{{ .Permalink }}" class="lang">
+                  {{ .Language.Lang | upper }}
+                </a></li>
+              {{ end  }}
+            {{ end }}
+          {{ else }}
+            {{ if eq .Language.Lang "cs" }}
+              <li lang="en"><a tabindex="0" href="{{ "/en/" | absURL }}" class="lang" aria-label="Switch to English">EN</a></li>
+            {{ else }}
+              <li lang="cs"><a tabindex="0" href="{{ "/" | absURL }}" class="lang" aria-label="Přepnout do češtiny">CS</a></li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
+  {{ block "main" . }}{{ end }}  
 
-  <div class="container container-gold">
-    <footer>
-      <div>
-        <p>&copy; 2016–2020 next-book, z. s. (<a href="/about-us">Why a non-profit?</a>)</p>
-
-        {{ block "assocInfo" . }}{{ end }}
-      </div>
-    </footer>
-  </div>
-
-  <script src="{{ (resources.Get "scripts/app.js" | fingerprint).RelPermalink | relURL }}"></script>
+  <footer class="wrapper">
+    <p>&copy; 2017—{{ now.Format "2006" }} next-book, z. s.</p>
+  </footer>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
+
 </html>

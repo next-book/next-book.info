@@ -1,11 +1,21 @@
-baseURL = "https://next-book.info"
-defaultContentLanguage = "en-us"
+baseURL = "https://www.next-book.info"
+defaultContentLanguage = "cs"
 title = "next-book"
-languageCode = "en-us"
-copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
-
-[author]
-    name = "next-book"
+disableKinds = ["taxonomyTerm", "taxonomy"]
+relativeurls = true
 
 [markup.goldmark.renderer]
-unsafe = true
+  unsafe = true
+
+[languages]
+  [languages.cs]
+    contentDir = "content"
+    languageName = "Česky"
+    weight = 2
+    [languages.cs.params]
+  [languages.en]
+    contentDir = "content-en"
+    languageName = "English"
+    weight = 1
+    [languages.en.params]
+
