@@ -1,43 +1,32 @@
 ---
-title: About us
-aside: |
+title: Jsme technologická neziskovka
+aside: >
   ## Thanks!
+
 
   Publishing house [Nová Beseda](https://www.novabeseda.cz/page/english) allowed initial research and experimental development of the first ideas and continues to create opportunities for development.
       
   Many thanks go to
 
+
   - [Boris Anthony](https://borisanthony.net) for discussions and encouragement
+
   - [Jan Vlček](https://twitter.com/vlki) for code reviews
+team:
+  - title: Jan Martinek
+  - title: Josef Kocurek
+  - title: Matěj Málek
+  - title: Lukáš Porsche
+join:
+  title: Přidej se!
+  desc: >-
+    Miluješ knihy, trochu i e-knihy a chceš se podílet na navrhování čtení
+    budoucnosti? Pojď se potkat.
+
+
+    Hledáme parťačku na hhhh, přístupnost, fundraising, ale
+  button: Jdem na kafe!
 ---
+## **Proč ne start-up?**
 
-## Inventing books
-
-We’re a non-profit based in Brno, Czech Republic. We work on the next-book platform, trying to make it a well documented platform and open standard in the long-term.
-
-## Why a non-profit?
-
-We dont want to be another startup that sucks out the money that’s left in a crisis-stricken market. We want te create a platform that helps all its users — publishers, readers and other institutions that make the book world so interesting. We want to establish a sustainable organization working towards great web books.
-
-## Team
-
-**Josef Kocurek** (design research) \
-**Matěj Málek** (graphic design) \
-**Jan Martinek** (design, development) \
-**Lukáš Porsche** (self-publishing, marketing)
-
-Our goal is to become more diverse as soon as possible and sustainable by <del>April</del> December 2020. (Planning in 2020 is complicated!)
-
-We’re looking for new team members — if you like what we do, please [get in touch](mailto:contact@next-book.info) with us! We need someone to work on:
-
-- EPUB best practices transfer
-- accessibility research
-- fundraising
-
-## Projects
-
-**Since Jan 2019, there’s an 18-month project led by Prague-based publisher [Nová beseda](https://www.novabeseda.cz/page/english) and funded by Technology Agency of the Czech Republic.** In it, Masaryk and Palacký Universities work together towards applied research goals in publishing, experimenting with the medium and transferring annotation affordances from print to digital academic reading.
-
-**Through Feb-Dec 2018, publishers from Czechia, Slovakia, Poland, Hungary joined forces** in a project led by Prague-based publisher [Nová beseda](https://www.novabeseda.cz/page/english) and funded by Visegrad Fund. Those teams created several prototypes presented at [next-book.eu](https://next-book.eu/en/).
-
-The original team back in 2017 were [Ivana Lukeš Rybanská](https://github.com/orgs/next-book/people/IvanaRybanska) and [Jan Martinek](http://jan-martinek.com) from Czech Republic.
+Naším cílem nejsou rychlé peníze, ale tvorba udržitelné platformy, jejíž stabilita pomáhá všem, kteří ji užívají — vydavatelům, čtenářům a dalším institucím, které dělají ekosystém knih tak zajímavým. Chceme vytvořit organizaci, která si na sebe vydělá, a zároveň dokáže nezávisle garantovat kvalitu a rozvoj webových knih.
