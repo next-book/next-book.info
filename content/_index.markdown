@@ -1,6 +1,6 @@
 ---
 title: Budoucnost čtení knih (je) na webu
-intro: >-
+description: >-
   *Jsme technologická neziskovka.*
 
 

@@ -133,7 +133,7 @@ const preklady = files("Překlady", "i18n", [
 const pages = files("Pages", "pages", [
   fileCollection("Homepage", "home", "content/_index.markdown", [
     title("Titulek"),
-    markdown("Intro", "intro"),
+    markdown("Intro", "description"),
     markdown("Vision", "vision"),
     object("Money CTA", "money-cta", [
       title("Claim"),
@@ -158,7 +158,7 @@ const pages = files("Pages", "pages", [
   ]),
   fileCollection("Library", "library", "content/library.md", [
     title("Title"),
-    markdown("Intro", "intro"),
+    markdown("Intro", "description"),
     list("Other sources", "source", "sources", [
       title("Title"),
       string("Description", "desc"),
@@ -168,10 +168,12 @@ const pages = files("Pages", "pages", [
   ]),
   fileCollection("Concept", "concept", "content/concept.md", [
     title("Title"),
+    markdown("Intro", "description"),
     markdown("Text", "body"),
   ]),
   fileCollection("Non-profit", "ngo", "content/non-profit.md", [
     title("Title"),
+    markdown("Intro", "description"),
     markdown("Text", "body"),
     list("Team", "member", "team", [
       title("Name"),
@@ -185,7 +187,11 @@ const pages = files("Pages", "pages", [
       string("Button link", "link"),
     ]),
   ]),
-
+  fileCollection("Contact", "contact", "content/contact.md", [
+    title("Title"),
+    markdown("Description", "description"),
+    markdown("Text", "body"),
+  ]),
   fileCollection("Books", "books", "data/books.yaml", [
     title("Title"),
     list("Books", "book", "books", [

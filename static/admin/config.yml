@@ -36,7 +36,7 @@ collections:
               - bulleted-list
               - numbered-list
             label: Intro
-            name: intro
+            name: description
             required: false
             widget: markdown
           - editor_components: &ref_3
@@ -188,7 +188,7 @@ collections:
               - bulleted-list
               - numbered-list
             label: Intro
-            name: intro
+            name: description
             required: false
             widget: markdown
           - label: Other sources
@@ -231,6 +231,22 @@ collections:
               - quote
               - bulleted-list
               - numbered-list
+            label: Intro
+            name: description
+            required: false
+            widget: markdown
+          - editor_components: &ref_14
+              - image
+            buttons: &ref_15
+              - bold
+              - italic
+              - link
+              - heading-two
+              - heading-three
+              - heading-four
+              - quote
+              - bulleted-list
+              - numbered-list
             label: Text
             name: body
             required: false
@@ -242,9 +258,25 @@ collections:
           - label: Title
             name: title
             widget: string
-          - editor_components: &ref_14
+          - editor_components: &ref_16
               - image
-            buttons: &ref_15
+            buttons: &ref_17
+              - bold
+              - italic
+              - link
+              - heading-two
+              - heading-three
+              - heading-four
+              - quote
+              - bulleted-list
+              - numbered-list
+            label: Intro
+            name: description
+            required: false
+            widget: markdown
+          - editor_components: &ref_18
+              - image
+            buttons: &ref_19
               - bold
               - italic
               - link
@@ -263,7 +295,7 @@ collections:
             required: false
             label_singular: member
             widget: list
-            fields: &ref_16
+            fields: &ref_20
               - label: Name
                 name: title
                 widget: string
@@ -291,7 +323,7 @@ collections:
             label: Join us!
             name: join
             required: false
-            fields: &ref_17
+            fields: &ref_21
               - label: Title
                 name: title
                 widget: string
@@ -319,6 +351,45 @@ collections:
                 name: link
                 required: false
                 widget: string
+      - label: Contact
+        name: contact
+        file: content/contact.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - editor_components: &ref_22
+              - image
+            buttons: &ref_23
+              - bold
+              - italic
+              - link
+              - heading-two
+              - heading-three
+              - heading-four
+              - quote
+              - bulleted-list
+              - numbered-list
+            label: Description
+            name: description
+            required: false
+            widget: markdown
+          - editor_components: &ref_24
+              - image
+            buttons: &ref_25
+              - bold
+              - italic
+              - link
+              - heading-two
+              - heading-three
+              - heading-four
+              - quote
+              - bulleted-list
+              - numbered-list
+            label: Text
+            name: body
+            required: false
+            widget: markdown
       - label: Books
         name: books
         file: data/books.yaml
@@ -331,7 +402,7 @@ collections:
             required: false
             label_singular: book
             widget: list
-            fields: &ref_18
+            fields: &ref_26
               - label: Title
                 name: title
                 widget: string
@@ -365,7 +436,7 @@ collections:
     label_singular: blog post
     folder: content/blog
     extension: md
-    editor: &ref_19
+    editor: &ref_27
       preview: false
     fields:
       - label: Title
@@ -381,9 +452,9 @@ collections:
         widget: datetime
         date_format: DD.MM.YYYY
         time_format: false
-      - editor_components: &ref_20
+      - editor_components: &ref_28
           - image
-        buttons: &ref_21
+        buttons: &ref_29
           - bold
           - italic
           - link
@@ -397,9 +468,9 @@ collections:
         name: description
         required: false
         widget: markdown
-      - editor_components: &ref_22
+      - editor_components: &ref_30
           - image
-        buttons: &ref_23
+        buttons: &ref_31
           - bold
           - italic
           - link
@@ -431,7 +502,7 @@ collections:
           - editor_components: *ref_1
             buttons: *ref_2
             label: Intro
-            name: intro
+            name: description
             required: false
             widget: markdown
           - editor_components: *ref_3
@@ -471,7 +542,7 @@ collections:
           - editor_components: *ref_9
             buttons: *ref_10
             label: Intro
-            name: intro
+            name: description
             required: false
             widget: markdown
           - label: Other sources
@@ -489,6 +560,12 @@ collections:
             widget: string
           - editor_components: *ref_12
             buttons: *ref_13
+            label: Intro
+            name: description
+            required: false
+            widget: markdown
+          - editor_components: *ref_14
+            buttons: *ref_15
             label: Text
             name: body
             required: false
@@ -500,8 +577,14 @@ collections:
           - label: Title
             name: title
             widget: string
-          - editor_components: *ref_14
-            buttons: *ref_15
+          - editor_components: *ref_16
+            buttons: *ref_17
+            label: Intro
+            name: description
+            required: false
+            widget: markdown
+          - editor_components: *ref_18
+            buttons: *ref_19
             label: Text
             name: body
             required: false
@@ -511,12 +594,31 @@ collections:
             required: false
             label_singular: member
             widget: list
-            fields: *ref_16
+            fields: *ref_20
           - widget: object
             label: Join us!
             name: join
             required: false
-            fields: *ref_17
+            fields: *ref_21
+      - label: Contact
+        name: contact
+        file: content-en/contact.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - editor_components: *ref_22
+            buttons: *ref_23
+            label: Description
+            name: description
+            required: false
+            widget: markdown
+          - editor_components: *ref_24
+            buttons: *ref_25
+            label: Text
+            name: body
+            required: false
+            widget: markdown
       - label: Books
         name: books
         file: data/books.yaml
@@ -529,13 +631,13 @@ collections:
             required: false
             label_singular: book
             widget: list
-            fields: *ref_18
+            fields: *ref_26
   - name: blog-en
     label: Blog (EN)
     label_singular: blog post (en)
     folder: content-en/blog
     extension: md
-    editor: *ref_19
+    editor: *ref_27
     fields:
       - label: Title
         name: title
@@ -550,14 +652,14 @@ collections:
         widget: datetime
         date_format: DD.MM.YYYY
         time_format: false
-      - editor_components: *ref_20
-        buttons: *ref_21
+      - editor_components: *ref_28
+        buttons: *ref_29
         label: Perex
         name: description
         required: false
         widget: markdown
-      - editor_components: *ref_22
-        buttons: *ref_23
+      - editor_components: *ref_30
+        buttons: *ref_31
         label: Text
         name: body
         required: false
