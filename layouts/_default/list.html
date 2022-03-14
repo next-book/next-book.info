@@ -1,4 +1,5 @@
 {{ define "main" }}
+<main>
 	<h1>{{ .Title }}</h1>
 	{{ range .Pages }}
 		{{ $perm := .RelPermalink }}
@@ -8,4 +9,5 @@
 			{{ with .Params.name }}<img class="pic" src="{{ $perm }}{{ . }}">{{ end }}
 		</div>
 	{{ end }}
+</main>
 {{ end }}

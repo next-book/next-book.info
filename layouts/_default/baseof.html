@@ -9,42 +9,38 @@
   {{ $style := resources.Get "style.scss" | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
+  <link rel="stylesheet" href="https://use.typekit.net/tly6rvv.css">
+
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
-  <header class="wrapper grid grid-right">
-    <div>
-      <h1><a href="/">{{ .Site.Title }}</a></h1>
-    </div>
-    <div>
-      <nav>
-        <ul>
-          {{ partial "menu-item.html" (dict "link" "/library/" "permalink" .RelPermalink "text" (i18n "library")) }}
-          {{ partial "menu-item.html" (dict "link" "/blog/" "permalink" .RelPermalink "text" (i18n "blog")) }}
-          {{ partial "menu-item.html" (dict "link" "/concept/" "permalink" .RelPermalink "text" (i18n "concept")) }}
-          {{ partial "menu-item.html" (dict "link" "/non-profit/" "permalink" .RelPermalink "text" (i18n "non-profit")) }}
-          {{ partial "menu-item.html" (dict "link" "/get-in-touch/" "permalink" .RelPermalink "text" (i18n "get-in-touch")) }}
+  <nav class="global">
+    <ul>
+      {{ partial "menu-item.html" (dict "link" "/" "permalink" .RelPermalink "text" "next-book") }}
+      {{ partial "menu-item.html" (dict "link" "/library/" "permalink" .RelPermalink "text" (i18n "library")) }}
+      {{ partial "menu-item.html" (dict "link" "/blog/" "permalink" .RelPermalink "text" (i18n "blog")) }}
+      {{ partial "menu-item.html" (dict "link" "/concept/" "permalink" .RelPermalink "text" (i18n "concept")) }}
+      {{ partial "menu-item.html" (dict "link" "/non-profit/" "permalink" .RelPermalink "text" (i18n "non-profit")) }}
+      {{ partial "menu-item.html" (dict "link" "/contact/" "permalink" .RelPermalink "text" (i18n "get-in-touch")) }}
 
-          {{ if .IsTranslated }}
-            {{ range .Translations }}
-              {{ if ne .Language.Lang $.Language.Lang }}
-                <li><a tabindex="0" href="{{ .Permalink }}" class="lang">
-                  {{ .Language.Lang | upper }}
-                </a></li>
-              {{ end  }}
-            {{ end }}
-          {{ else }}
-            {{ if eq .Language.Lang "cs" }}
-              <li lang="en"><a tabindex="0" href="{{ "/en/" | absURL }}" class="lang" aria-label="Switch to English">EN</a></li>
-            {{ else }}
-              <li lang="cs"><a tabindex="0" href="{{ "/" | absURL }}" class="lang" aria-label="Přepnout do češtiny">CS</a></li>
-            {{ end }}
-          {{ end }}
-        </ul>
-      </nav>
-    </div>
-  </header>
+      {{ if .IsTranslated }}
+        {{ range .Translations }}
+          {{ if ne .Language.Lang $.Language.Lang }}
+            <li><a tabindex="0" href="{{ .Permalink }}" class="lang">
+              {{ .Language.Lang | upper }}
+            </a></li>
+          {{ end  }}
+        {{ end }}
+      {{ else }}
+        {{ if eq .Language.Lang "cs" }}
+          <li lang="en"><a tabindex="0" href="{{ "/en/" | absURL }}" class="lang" aria-label="Switch to English">EN</a></li>
+        {{ else }}
+          <li lang="cs"><a tabindex="0" href="{{ "/" | absURL }}" class="lang" aria-label="Přepnout do češtiny">CS</a></li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </nav>
 
   {{ block "main" . }}{{ end }}  
 

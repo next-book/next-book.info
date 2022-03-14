@@ -1,3 +1,16 @@
 {{ define "main" }}	
+<main class="home">
+  <header>
+    <div class="wrapper">
+      <h1>
+        <span class="vf-logo">next-book</span>
+        <span class="hide">: </span> {{ .Title }}
+      </h1>
+
+      <p><a class="button" href="">Prohlédnout si webové knihy</a></p>
+      <p><a class="button outlined" href="">Chci vedět víc</a></p>
+    </div>
+  </header>
 	{{ .Content }}
+</main>
 {{ end }}
