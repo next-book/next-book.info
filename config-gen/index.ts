@@ -144,7 +144,7 @@ const strankyEn = files("Jiné", "stranky", [
   ]),
 ]);
 
-save("./static-preview/admin/config.yml", {
+save("./static/admin/config.yml", {
   backend: {
     name: "git-gateway",
     branch: "main",
