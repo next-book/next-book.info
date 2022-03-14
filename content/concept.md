@@ -1,7 +1,7 @@
 ---
-title: Concept
-perex: "**In short:** Every book is a standalone website, utilizing the core ideas of the web technology for good reading experience."
-
+title: Why web books and next-book?
+perex: "**In short:** Every book is a standalone website, utilizing the core
+  ideas of the web technology for good reading experience."
 aside: |
   ## Lost in remediation
 
@@ -35,29 +35,48 @@ aside: |
 
   *The future that did not arrive yet.*
 ---
+Next-book aims to be a good tool for making web books. Next-book is not a service or a product, it’s a software library. It’s a tool that aims to establish basic reading affordances on the web.
 
-This is accomplished by several parts of next-book:
+## What makes web books useful?
 
-- **[Publisher](https://github.com/next-book/publisher)** that produces the book (adds some info to HTML and puts everything in its place).
-- **[Web app interface](https://github.com/next-book/interface)** that is embedded in the book and enhances the reading experience.
-- **Cloud apps** that allow personal sync and community experiences (being designed and will be out soon — Q1&nbsp;2020).
+* Web books are readily usable in whatever web browser and easy to read (even offline).
+* Web books enable everything “web” to become a part of a book: not only multimedia, but also scripts, advanced styles, SVGs, etc.
+* Every web book is a static website (just a bunch of HTML and related files). You can upload it to any hosting and it won’t stop functioning.
 
-## Background
+## What makes next-book a good tool?
 
-<p class="perex">
-  When people ask <i>“Don't you miss something when reading a&nbsp;book in&nbsp;digital?”</i>
-  our answer is&nbsp;<i>“Yes!”</i>
-</p>
+* It’s easy to pick up — use the basic template to start immediately.
+* It provides a lot of control over every level of experience. Customize content and UI according to your needs if you want to.
+* It provides many features designed as an evolution of both paper and electronic reading.
+* Its design becomes more and more robust ever since the first prototypes back in 2017.
 
-We don't miss _that scent_ and texture though. _That’s what paper books are for._
+## What’s the relation between web books and next-book?
 
-Paper books are still better in many ways than currently published ebooks.
-Computers and networks are still no challenge for the printing press.
+Next-book is a tool for making web books. A web book can be any long text on the web — and the more the authors care about reading experience, the more such text becomes book-ish. And we want to make the experience so book-ish that the website becomes a book.
 
-<p class="perex">
-  Next-book is a vision of tools, formats and affordances for reading, sharing and writing books. It’s a way of thinking about books on the web.
-</p>
+Next-book is not a service — in startup terms, this is no “Medium for books”. It’s not even a startup (we’re a \[non-profit](link)). It may eventually underpin such a service, but first, there need to be some good book-ish websites… or web books. Chicken and egg all over again.
 
-Next-book does not assume any reading device, publishing process or business model. It assumes only the use of a modern web browser and tries to think about the book experience first, technology second and everything else only after that.
+Last thing: what makes a website book-ish? The answer is simple: all the things that make a book book-ish and more — we don’t know lies ahead. We read a lot of books about reading books to find out.
 
-After 30 years of the World Wide Web we might be ready to make it good for serious reading.
+## Toolset
+
+Next-book is a set of several libraries. The three most important are:
+
+* boilerplate (github, docs) is the basic template for a book that is easy to use (with some web development knowledge), however also provides complete control over the result if needed
+* publisher (github, docs) takes a HTML website and produces a bound web book\
+  (integrates metadata, adds navigational information etc.)
+* interface (github, docs) provides user interface in the book\
+  (TOC, config, bookmarks, offline mode etc.)
+
+Beside these, we have a configurable epub to next-book converter (github) and we’re exploring the options for providing a cloud-sync for readers across their books (github).
+
+## Features
+
+* focused reading mode („persistent pagination“)
+* seamless offline mode
+* visual user customization framework (color schema, font size) even with advanced styles
+* robust CSS to underpin glorious book designs
+* table of contents and navigation
+* reading position, bookmarks, highlights and notes
+* return to last-read position after checking another part of the book
+* footnotes (soon: bibliography and various indices)
