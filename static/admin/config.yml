@@ -371,6 +371,10 @@ collections:
       - label: Title
         name: title
         widget: string
+      - label: Save as a draft
+        name: draft
+        required: false
+        widget: boolean
       - label: Publication date
         name: date
         required: false
@@ -536,6 +540,10 @@ collections:
       - label: Title
         name: title
         widget: string
+      - label: Save as a draft
+        name: draft
+        required: false
+        widget: boolean
       - label: Publication date
         name: date
         required: false

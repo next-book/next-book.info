@@ -213,6 +213,7 @@ const blog = folderCollection(
   },
   [
     title("Title"),
+    boolean("Save as a draft", "draft"),
     datetime("Publication date", "date", { time_format: false }),
     markdown("Perex", "description"),
     markdown("Text", "body"),
