@@ -130,19 +130,94 @@ const preklady = files("Překlady", "i18n", [
   fileCollection("English", "en", "i18n/en.yml", i18nStrings),
 ]);
 
-const stranky = files("Jiné", "stranky", [
+const pages = files("Pages", "pages", [
   fileCollection("Homepage", "home", "content/_index.markdown", [
     title("Titulek"),
     markdown("Intro", "intro"),
+    markdown("Vision", "vision"),
+    object("Money CTA", "money-cta", [
+      title("Claim"),
+      string("Button", "button"),
+    ]),
+    list("Who is it good for?", "target group", "good-for", [
+      title("Target group"),
+      markdown("Reasons", "reasons"),
+      string("Link text", "link-text"),
+      string("Link", "link"),
+    ]),
+    object("Open platform", "open", [
+      title("Title"),
+      markdown("Description", "desc"),
+    ]),
+    object("Newsletter", "newsletter", [
+      title("Title"),
+      markdown("Description", "desc"),
+      string("Legal", "legal"),
+      markdown("Not sure? Archive", "not-sure"),
+    ]),
+  ]),
+  fileCollection("Library", "library", "content/library.md", [
+    title("Title"),
+    markdown("Intro", "intro"),
+    list("Other sources", "source", "sources", [
+      title("Title"),
+      string("Description", "desc"),
+      string("Button text", "button"),
+      string("Button link", "link"),
+    ]),
+  ]),
+  fileCollection("Concept", "concept", "content/concept.md", [
+    title("Title"),
+    markdown("Text", "body"),
+  ]),
+  fileCollection("Non-profit", "ngo", "content/non-profit.md", [
+    title("Title"),
+    markdown("Text", "body"),
+    list("Team", "member", "team", [
+      title("Name"),
+      image("Portrait", "portrait"),
+      markdown("Description", "desc"),
+    ]),
+    object("Join us!", "join", [
+      title("Title"),
+      markdown("Description", "desc"),
+      string("Button text", "button"),
+      string("Button link", "link"),
+    ]),
+  ]),
+
+  fileCollection("Books", "books", "data/books.yaml", [
+    title("Title"),
+    list("Books", "book", "books", [
+      title("Title"),
+      image("Cover", "cover"),
+      string("Author", "author"),
+      string("Year published", "year"),
+      string("Description", "desc"),
+      select("Collection", "collection", ["cs", "en", "Čapek", "ngo"]),
+    ]),
   ]),
 ]);
 
-const strankyEn = files("Jiné", "stranky", [
-  fileCollection("Homepage", "home", "content/_index.markdown", [
-    title("Titulek"),
-    markdown("Intro", "intro"),
-  ]),
-]);
+const blog = folderCollection(
+  "Blog",
+  "blog post",
+  "blog",
+  {
+    folder: "content/blog",
+    path: "{{slug}}/index",
+    extension: "md",
+    create: true,
+    media_folder: "",
+    public_folder: "",
+  },
+  [
+    title("Title"),
+    datetime("Publication date", "date", { time_format: false }),
+    markdown("Perex", "description"),
+    markdown("Text", "body"),
+  ]
+);
 
 save("./static/admin/config.yml", {
   backend: {
@@ -159,5 +234,5 @@ save("./static/admin/config.yml", {
     clean_accents: true,
     sanitize_replacement: "_",
   },
-  collections: [stranky, englishFiles(strankyEn)],
+  collections: [pages, blog, englishFiles(pages), englishFolder(blog)],
 });

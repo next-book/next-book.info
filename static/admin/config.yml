@@ -11,9 +11,9 @@ slug:
   clean_accents: true
   sanitize_replacement: _
 collections:
-  - name: stranky
-    label: Jiné
-    editor:
+  - name: pages
+    label: Pages
+    editor: &ref_0
       preview: false
     files:
       - label: Homepage
@@ -23,9 +23,9 @@ collections:
           - label: Titulek
             name: title
             widget: string
-          - editor_components:
+          - editor_components: &ref_1
               - image
-            buttons:
+            buttons: &ref_2
               - bold
               - italic
               - link
@@ -39,10 +39,383 @@ collections:
             name: intro
             required: false
             widget: markdown
-  - name: stranky-en
-    label: Jiné (EN)
-    editor:
+          - editor_components: &ref_3
+              - image
+            buttons: &ref_4
+              - bold
+              - italic
+              - link
+              - heading-two
+              - heading-three
+              - heading-four
+              - quote
+              - bulleted-list
+              - numbered-list
+            label: Vision
+            name: vision
+            required: false
+            widget: markdown
+          - widget: object
+            label: Money CTA
+            name: money-cta
+            required: false
+            fields: &ref_5
+              - label: Claim
+                name: title
+                widget: string
+              - label: Button
+                name: button
+                required: false
+                widget: string
+          - label: Who is it good for?
+            name: good-for
+            required: false
+            label_singular: target group
+            widget: list
+            fields: &ref_6
+              - label: Target group
+                name: title
+                widget: string
+              - editor_components:
+                  - image
+                buttons:
+                  - bold
+                  - italic
+                  - link
+                  - heading-two
+                  - heading-three
+                  - heading-four
+                  - quote
+                  - bulleted-list
+                  - numbered-list
+                label: Reasons
+                name: reasons
+                required: false
+                widget: markdown
+              - label: Link text
+                name: link-text
+                required: false
+                widget: string
+              - label: Link
+                name: link
+                required: false
+                widget: string
+          - widget: object
+            label: Open platform
+            name: open
+            required: false
+            fields: &ref_7
+              - label: Title
+                name: title
+                widget: string
+              - editor_components:
+                  - image
+                buttons:
+                  - bold
+                  - italic
+                  - link
+                  - heading-two
+                  - heading-three
+                  - heading-four
+                  - quote
+                  - bulleted-list
+                  - numbered-list
+                label: Description
+                name: desc
+                required: false
+                widget: markdown
+          - widget: object
+            label: Newsletter
+            name: newsletter
+            required: false
+            fields: &ref_8
+              - label: Title
+                name: title
+                widget: string
+              - editor_components:
+                  - image
+                buttons:
+                  - bold
+                  - italic
+                  - link
+                  - heading-two
+                  - heading-three
+                  - heading-four
+                  - quote
+                  - bulleted-list
+                  - numbered-list
+                label: Description
+                name: desc
+                required: false
+                widget: markdown
+              - label: Legal
+                name: legal
+                required: false
+                widget: string
+              - editor_components:
+                  - image
+                buttons:
+                  - bold
+                  - italic
+                  - link
+                  - heading-two
+                  - heading-three
+                  - heading-four
+                  - quote
+                  - bulleted-list
+                  - numbered-list
+                label: Not sure? Archive
+                name: not-sure
+                required: false
+                widget: markdown
+      - label: Library
+        name: library
+        file: content/library.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - editor_components: &ref_9
+              - image
+            buttons: &ref_10
+              - bold
+              - italic
+              - link
+              - heading-two
+              - heading-three
+              - heading-four
+              - quote
+              - bulleted-list
+              - numbered-list
+            label: Intro
+            name: intro
+            required: false
+            widget: markdown
+          - label: Other sources
+            name: sources
+            required: false
+            label_singular: source
+            widget: list
+            fields: &ref_11
+              - label: Title
+                name: title
+                widget: string
+              - label: Description
+                name: desc
+                required: false
+                widget: string
+              - label: Button text
+                name: button
+                required: false
+                widget: string
+              - label: Button link
+                name: link
+                required: false
+                widget: string
+      - label: Concept
+        name: concept
+        file: content/concept.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - editor_components: &ref_12
+              - image
+            buttons: &ref_13
+              - bold
+              - italic
+              - link
+              - heading-two
+              - heading-three
+              - heading-four
+              - quote
+              - bulleted-list
+              - numbered-list
+            label: Text
+            name: body
+            required: false
+            widget: markdown
+      - label: Non-profit
+        name: ngo
+        file: content/non-profit.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - editor_components: &ref_14
+              - image
+            buttons: &ref_15
+              - bold
+              - italic
+              - link
+              - heading-two
+              - heading-three
+              - heading-four
+              - quote
+              - bulleted-list
+              - numbered-list
+            label: Text
+            name: body
+            required: false
+            widget: markdown
+          - label: Team
+            name: team
+            required: false
+            label_singular: member
+            widget: list
+            fields: &ref_16
+              - label: Name
+                name: title
+                widget: string
+              - label: Portrait
+                name: portrait
+                required: false
+                widget: image
+              - editor_components:
+                  - image
+                buttons:
+                  - bold
+                  - italic
+                  - link
+                  - heading-two
+                  - heading-three
+                  - heading-four
+                  - quote
+                  - bulleted-list
+                  - numbered-list
+                label: Description
+                name: desc
+                required: false
+                widget: markdown
+          - widget: object
+            label: Join us!
+            name: join
+            required: false
+            fields: &ref_17
+              - label: Title
+                name: title
+                widget: string
+              - editor_components:
+                  - image
+                buttons:
+                  - bold
+                  - italic
+                  - link
+                  - heading-two
+                  - heading-three
+                  - heading-four
+                  - quote
+                  - bulleted-list
+                  - numbered-list
+                label: Description
+                name: desc
+                required: false
+                widget: markdown
+              - label: Button text
+                name: button
+                required: false
+                widget: string
+              - label: Button link
+                name: link
+                required: false
+                widget: string
+      - label: Books
+        name: books
+        file: data/books.yaml
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Books
+            name: books
+            required: false
+            label_singular: book
+            widget: list
+            fields: &ref_18
+              - label: Title
+                name: title
+                widget: string
+              - label: Cover
+                name: cover
+                required: false
+                widget: image
+              - label: Author
+                name: author
+                required: false
+                widget: string
+              - label: Year published
+                name: year
+                required: false
+                widget: string
+              - label: Description
+                name: desc
+                required: false
+                widget: string
+              - label: Collection
+                name: collection
+                required: false
+                widget: select
+                options:
+                  - cs
+                  - en
+                  - Čapek
+                  - ngo
+  - name: blog
+    label: Blog
+    label_singular: blog post
+    folder: content/blog
+    extension: md
+    editor: &ref_19
       preview: false
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publication date
+        name: date
+        required: false
+        widget: datetime
+        date_format: DD.MM.YYYY
+        time_format: false
+      - editor_components: &ref_20
+          - image
+        buttons: &ref_21
+          - bold
+          - italic
+          - link
+          - heading-two
+          - heading-three
+          - heading-four
+          - quote
+          - bulleted-list
+          - numbered-list
+        label: Perex
+        name: description
+        required: false
+        widget: markdown
+      - editor_components: &ref_22
+          - image
+        buttons: &ref_23
+          - bold
+          - italic
+          - link
+          - heading-two
+          - heading-three
+          - heading-four
+          - quote
+          - bulleted-list
+          - numbered-list
+        label: Text
+        name: body
+        required: false
+        widget: markdown
+    create: true
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+  - name: pages-en
+    label: Pages (EN)
+    editor: *ref_0
     files:
       - label: Homepage
         name: home
@@ -51,19 +424,137 @@ collections:
           - label: Titulek
             name: title
             widget: string
-          - editor_components:
-              - image
-            buttons:
-              - bold
-              - italic
-              - link
-              - heading-two
-              - heading-three
-              - heading-four
-              - quote
-              - bulleted-list
-              - numbered-list
+          - editor_components: *ref_1
+            buttons: *ref_2
             label: Intro
             name: intro
             required: false
             widget: markdown
+          - editor_components: *ref_3
+            buttons: *ref_4
+            label: Vision
+            name: vision
+            required: false
+            widget: markdown
+          - widget: object
+            label: Money CTA
+            name: money-cta
+            required: false
+            fields: *ref_5
+          - label: Who is it good for?
+            name: good-for
+            required: false
+            label_singular: target group
+            widget: list
+            fields: *ref_6
+          - widget: object
+            label: Open platform
+            name: open
+            required: false
+            fields: *ref_7
+          - widget: object
+            label: Newsletter
+            name: newsletter
+            required: false
+            fields: *ref_8
+      - label: Library
+        name: library
+        file: content-en/library.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - editor_components: *ref_9
+            buttons: *ref_10
+            label: Intro
+            name: intro
+            required: false
+            widget: markdown
+          - label: Other sources
+            name: sources
+            required: false
+            label_singular: source
+            widget: list
+            fields: *ref_11
+      - label: Concept
+        name: concept
+        file: content-en/concept.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - editor_components: *ref_12
+            buttons: *ref_13
+            label: Text
+            name: body
+            required: false
+            widget: markdown
+      - label: Non-profit
+        name: ngo
+        file: content-en/non-profit.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - editor_components: *ref_14
+            buttons: *ref_15
+            label: Text
+            name: body
+            required: false
+            widget: markdown
+          - label: Team
+            name: team
+            required: false
+            label_singular: member
+            widget: list
+            fields: *ref_16
+          - widget: object
+            label: Join us!
+            name: join
+            required: false
+            fields: *ref_17
+      - label: Books
+        name: books
+        file: data/books.yaml
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Books
+            name: books
+            required: false
+            label_singular: book
+            widget: list
+            fields: *ref_18
+  - name: blog-en
+    label: Blog (EN)
+    label_singular: blog post (en)
+    folder: content-en/blog
+    extension: md
+    editor: *ref_19
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publication date
+        name: date
+        required: false
+        widget: datetime
+        date_format: DD.MM.YYYY
+        time_format: false
+      - editor_components: *ref_20
+        buttons: *ref_21
+        label: Perex
+        name: description
+        required: false
+        widget: markdown
+      - editor_components: *ref_22
+        buttons: *ref_23
+        label: Text
+        name: body
+        required: false
+        widget: markdown
+    create: true
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
