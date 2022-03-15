@@ -34,9 +34,9 @@
         {{ end }}
       {{ else }}
         {{ if eq .Language.Lang "cs" }}
-          <li lang="en"><a tabindex="0" href="{{ "/en/" | absURL }}" class="lang" aria-label="Switch to English">EN</a></li>
+          <li lang="en"><a tabindex="0" href="{{ "/en/" | relURL }}" class="lang" aria-label="Switch to English">EN</a></li>
         {{ else }}
-          <li lang="cs"><a tabindex="0" href="{{ "/" | absURL }}" class="lang" aria-label="Přepnout do češtiny">CS</a></li>
+          <li lang="cs"><a tabindex="0" href="{{ "/" | relURL }}" class="lang" aria-label="Přepnout do češtiny">CS</a></li>
         {{ end }}
       {{ end }}
     </ul>
