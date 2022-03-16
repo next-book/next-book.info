@@ -2,16 +2,30 @@
 title: Pojďme spolu něco vymyslet
 description: ""
 ---
-Pracujete v knihovně nebo vás prostě jen zajímá elektronické publikování a rádi byste se pobavli o možnostech nebo navázali spolupráci? Dejte nám vědět, moc rádi se vám ozveme.
+Pracujete v nakladatelství, na akademické půdě nebo sami píšete a chcete vydat knihu také jako snadno přístupný a skvěle použitelný e-book? Ozvěte se nám!
 
-Jste nakladatel, akademik nebo autor a chcete vydat knihu také jako snadno přístupný a skvěle použitelný e-book? Ozvěte se nám.
+Působíte v knihovně nebo vás prostě jen zajímá e-publikování a rádi byste se pobavli o možnostech nebo navázali spolupráci? Dejte nám vědět.
 
-Rádi se s vámi potkáme naživo nebo přes videohovor. Napište nám na chci@next-book.info nebo pomocí formuláře.
+Rádi se s vámi potkáme naživo nebo přes videohovor. Napište nám na **chci@next-book.info**.
+
+
 
 ## **Pár projektů už máme za sebou**
 
-První prototypy e-knih ve formátu next-book vznikly v roce 2018 v rámci projektu s nakladatelstvím Nová beseda. \[odkaz na něco hezkého?]
+**Redesign knihovních služeb 2020: webové knihy**
 
-Další projekt s Novou besedou běží od roku 2019 \[odkazy na výsledky by šly?]
+Od listopadu 2020 společně s *Městskou knihovnou v Praze* a *Katedrou informačních studií a knihovnictví* (Masarykova univerzita) hledáme nové způsoby, jak poskytovat knihovní služby online – a to především díky možnostem webových knih.
 
-V současnosti probíhá projekt za účasti Městské knihovny v Praze a Masarykovy univerzity, v jehož rámci jsou volně dostupné knihy ze sbírek Městské knihovny převáděny do formátu next-book a poskytovány čtenářům v on-line katalogu.
+V rámci projektu také vyvíjíme konvertor, který umožní tvorbu webových knih z formátu .epub. Čtenáři tak budou moct číst e-knihy, které *knihovna nabízí volně k dispozici*, přímo v prohlížeči.
+
+Více o projektu se dozvíte na stránkách *Masarykovy univerzity*. Projekt podpořila [Technologická agentura ČR](https://www.tacr.cz/).
+
+**Interaktivní odborné knihy - redefinice elektronického publikování v oblasti non-fikce**
+
+V roce 2019–2020 jsme byli součástí projektu společně s nakladatelstvím *Nová beseda*, Masarykovou univerzitou a Univerzitou Palackého. Cílem bylo prozkoumat možnosti přenosu anotačních praktik u akademické četby z tištěného prostředí do digitálního. V rámci platformy next-book tak vznikl propracovaný systém poznámkování a anotování literatury.
+
+Více o projektu se dozvíte na *stránkách MUNI*. Projekt podpořila *Technologická agentura ČR*.
+
+**První prototypy next-booku**
+
+V průběhu února až prosince 2018 spojili síly vydavatelé z Česka, Slovenska, Polska a Maďarska v projektu vedeném pražským nakladatelstvím Nová beseda a financovaném Visegrádským fondem. Tyto týmy vytvořily několik prototypů webových knih prezentovaných na *[next-book.eu](https://next-book.eu/en/)*.
