@@ -16,11 +16,11 @@ vision: >-
   Therefore we want:
 
 
-  > Chceme nastartovat novou éru knihu. 
+  > Nastartovat novou éru knih. 
 
   >
 
-  > E-knihu krásnou, čtenářsky přívětivou a dostupnou. 
+  > E-knihy krásné, čtenářsky přívětivé a dostupné. 
 
   >
 
