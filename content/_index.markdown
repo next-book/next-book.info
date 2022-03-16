@@ -16,7 +16,15 @@ vision: >-
   Therefore we want:
 
 
-  > Co chceme. Co je naše vize. O co usilujeme.
+  > Chceme nastartovat novou éru knihu. 
+
+  >
+
+  > E-knihu krásnou, čtenářsky přívětivou a dostupnou. 
+
+  >
+
+  > E-publikování nezávislé, otevřené a rozvíjející se.
 money-cta:
   title: Podílejte na rozvoji webových knih!
   button: Darovat
