@@ -1,0 +1,28 @@
+{{ define "main" }}
+<main>
+  <div class="_content-column">
+    <h1>{{ .Title }}</h1>
+
+    <div class="perex">
+      {{ with .Params.description }}
+        {{ partial "md-block.html" . }}
+      {{ end }}
+    </div>
+
+    {{ range .Params.sources }}
+      <h2>{{ .title }}</h2>
+      {{ partial "md-block.html" .desc }}
+      <a href="" class="_button black">{{ .button }}</a>
+    {{ end }}
+
+    {{ range .Pages }}
+      {{ $perm := .RelPermalink }}
+      <h2 class=""><a href="{{ $perm }}">{{ .Title }}</a></h2>
+      {{ with .Params.date }}<b>{{ partial "date.html" (dict "months" $.Site.Data.mesice "date" .) }}</b>{{ end }}
+      <div>
+        {{ with .Params.name }}<img class="pic" swrc="{{ $perm }}{{ . }}">{{ end }}
+      </div>
+    {{ end }}
+  </div>
+</main>
+{{ end }}

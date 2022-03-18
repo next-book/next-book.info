@@ -138,6 +138,11 @@ h3 {
   font-weight: 500;
 }
 
+a {
+  color: inherit;
+  text-decoration-color: $orange;
+}
+
 p,
 li {
   font-family: $bread;
@@ -224,6 +229,13 @@ li {
   }
 }
 
+.perex {
+  p {
+    max-width: 28rem;
+    @include font-size-l;
+  }
+}
+
 .balance-wrapper-h2 {
   max-width: 34rem;
 }
@@ -233,7 +245,12 @@ li {
 }
 
 nav.global {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 0.5rem 1rem;
+  background: $background;
 
   ul {
     display: flex;
@@ -263,6 +280,48 @@ nav.global {
   }
 }
 
+._bubble-wrapper {
+  position: relative;
+
+  ._box > .desc {
+    position: relative;
+    z-index: 99;
+  }
+
+  .bubble {
+    display: block;
+    content: " ";
+    background-image: linear-gradient(-45deg, $orange, $orange),
+      url(/images/marble.jpg);
+    background-size: 400%;
+    background-blend-mode: color;
+    width: clamp(180px, 24vw, 250px);
+    height: clamp(180px, 24vw, 250px);
+    border-radius: 50%;
+    position: absolute;
+
+    z-index: 1;
+  }
+
+  .bubble:nth-child(3n + 0) {
+    background-blend-mode: color;
+    top: 10%;
+    right: 20%;
+  }
+
+  .bubble:nth-child(3n + 1) {
+    background-blend-mode: screen;
+    top: 30%;
+    right: 40%;
+  }
+
+  .bubble:nth-child(3n + 2) {
+    background-blend-mode: multiply;
+    top: 0%;
+    right: -10%;
+  }
+}
+
 main.home {
   header {
     background-blend-mode: multiply;
@@ -273,6 +332,7 @@ main.home {
     min-height: 80vh;
     padding: 10vh;
     box-sizing: border-box;
+    margin: 0 1rem;
 
     .wrapper {
       box-sizing: border-box;

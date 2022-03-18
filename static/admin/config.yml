@@ -170,7 +170,7 @@ collections:
                 widget: markdown
       - label: Library
         name: library
-        file: content/library.md
+        file: content/library/_index.md
         fields:
           - label: Title
             name: title
@@ -214,7 +214,7 @@ collections:
                 widget: string
       - label: Concept
         name: concept
-        file: content/concept.md
+        file: content/concept/_index.md
         fields:
           - label: Title
             name: title
@@ -253,7 +253,7 @@ collections:
             widget: markdown
       - label: Non-profit
         name: ngo
-        file: content/non-profit.md
+        file: content/non-profit/_index.md
         fields:
           - label: Title
             name: title
@@ -353,7 +353,7 @@ collections:
                 widget: string
       - label: Contact
         name: contact
-        file: content/contact.md
+        file: content/contact/_index.md
         fields:
           - label: Title
             name: title
@@ -534,7 +534,7 @@ collections:
             fields: *ref_8
       - label: Library
         name: library
-        file: content-en/library.md
+        file: content-en/library/_index.md
         fields:
           - label: Title
             name: title
@@ -553,7 +553,7 @@ collections:
             fields: *ref_11
       - label: Concept
         name: concept
-        file: content-en/concept.md
+        file: content-en/concept/_index.md
         fields:
           - label: Title
             name: title
@@ -572,7 +572,7 @@ collections:
             widget: markdown
       - label: Non-profit
         name: ngo
-        file: content-en/non-profit.md
+        file: content-en/non-profit/_index.md
         fields:
           - label: Title
             name: title
@@ -602,7 +602,7 @@ collections:
             fields: *ref_21
       - label: Contact
         name: contact
-        file: content-en/contact.md
+        file: content-en/contact/_index.md
         fields:
           - label: Title
             name: title

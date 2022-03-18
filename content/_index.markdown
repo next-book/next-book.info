@@ -4,7 +4,7 @@ description: >-
   ## Jsme technologická neziskovka.
 
 
-  Podporujeme *knižní ekosystém* vývojem *otevřené platformy* pro publikaci a čtení knih ve *webovém prohlížeči.*
+  Podporujeme <a href="">knižní ekosystém</a> vývojem *otevřené platformy* pro publikaci a čtení knih ve *webovém prohlížeči.*
 vision: >-
   When people ask “Don't you miss something when reading a book in digital?” our
   answer is
@@ -16,11 +16,11 @@ vision: >-
   Therefore we want:
 
 
-  > Nastartovat novou éru knih. 
+  > Nastartovat novou éru knih.
 
   >
 
-  > E-knihy krásné, čtenářsky přívětivé a dostupné. 
+  > E-knihy krásné, čtenářsky přívětivé a dostupné.
 
   >
 

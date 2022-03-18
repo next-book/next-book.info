@@ -73,6 +73,27 @@
       });
     }
   </script>
+  <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const bubbles = document.querySelectorAll('.bubble');
+    const ratio = 0.5;
+
+    bubbles.forEach(b => {
+      b.dataset.bubbleScale = (Math.random() - 0.5);
+    });
+
+    document.addEventListener('scroll', function() {
+
+
+
+        bubbles.forEach(b => {
+          const top = b.getBoundingClientRect().top;
+          b.style.transform = 'translateY(' + ((window.innerHeight - top) * b.dataset.bubbleScale * ratio) + 'px)';
+        });
+    });
+  });
+
+  </script>
 </body>
 
 </html>

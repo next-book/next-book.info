@@ -1,7 +1,13 @@
 {{ define "main" }}
 <main>
-  <h1>{{ .Title }}</h1>
+  <div class="_content-column">
+    <h1>{{ .Title }}</h1>
 
-	{{ .Content }}
+    {{ with .Params.perex }}
+      {{ partial "md-block.html" . }}
+    {{ end }}
+
+  	{{ .Content }}
+  </div>
 </main>
 {{ end }}

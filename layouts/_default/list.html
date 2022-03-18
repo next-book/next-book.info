@@ -1,13 +1,21 @@
 {{ define "main" }}
 <main>
-	<h1>{{ .Title }}</h1>
-	{{ range .Pages }}
-		{{ $perm := .RelPermalink }}
-		<h2 class=""><a href="{{ $perm }}">{{ .Title }}</a></h2>
-		{{ with .Params.date }}<b>{{ partial "date.html" (dict "months" $.Site.Data.mesice "date" .) }}</b>{{ end }}
-		<div>
-			{{ with .Params.name }}<img class="pic" src="{{ $perm }}{{ . }}">{{ end }}
-		</div>
-	{{ end }}
+  <div class="_content-column">
+	 <h1>{{ .Title }}</h1>
+    {{ with .Params.perex }}
+      {{ partial "md-block.html" . }}
+    {{ end }}
+
+  	{{ range .Pages }}
+  		{{ $perm := .RelPermalink }}
+  		<h2 class=""><a href="{{ $perm }}">{{ .Title }}</a></h2>
+  		{{ with .Params.date }}<b>{{ partial "date.html" (dict "months" $.Site.Data.mesice "date" .) }}</b>{{ end }}
+  		<div>
+  			{{ with .Params.name }}<img class="pic" swrc="{{ $perm }}{{ . }}">{{ end }}
+  		</div>
+  	{{ end }}
+
+    {{ .Content }}
+  </div>
 </main>
 {{ end }}

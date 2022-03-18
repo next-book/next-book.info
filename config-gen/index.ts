@@ -156,7 +156,7 @@ const pages = files("Pages", "pages", [
       markdown("Not sure? Archive", "not-sure"),
     ]),
   ]),
-  fileCollection("Library", "library", "content/library.md", [
+  fileCollection("Library", "library", "content/library/_index.md", [
     title("Title"),
     markdown("Intro", "description"),
     list("Other sources", "source", "sources", [
@@ -166,12 +166,12 @@ const pages = files("Pages", "pages", [
       string("Button link", "link"),
     ]),
   ]),
-  fileCollection("Concept", "concept", "content/concept.md", [
+  fileCollection("Concept", "concept", "content/concept/_index.md", [
     title("Title"),
     markdown("Intro", "description"),
     markdown("Text", "body"),
   ]),
-  fileCollection("Non-profit", "ngo", "content/non-profit.md", [
+  fileCollection("Non-profit", "ngo", "content/non-profit/_index.md", [
     title("Title"),
     markdown("Intro", "description"),
     markdown("Text", "body"),
@@ -187,7 +187,7 @@ const pages = files("Pages", "pages", [
       string("Button link", "link"),
     ]),
   ]),
-  fileCollection("Contact", "contact", "content/contact.md", [
+  fileCollection("Contact", "contact", "content/contact/_index.md", [
     title("Title"),
     markdown("Description", "description"),
     markdown("Text", "body"),
