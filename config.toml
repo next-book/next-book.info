@@ -2,7 +2,7 @@ baseURL = "https://www.next-book.info"
 defaultContentLanguage = "cs"
 title = "next-book"
 disableKinds = ["taxonomyTerm", "taxonomy"]
-relativeurls = true
+relativeurls = false
 
 [markup.goldmark.renderer]
   unsafe = true
