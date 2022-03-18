@@ -27,7 +27,7 @@
       {{ if .IsTranslated }}
         {{ range .Translations }}
           {{ if ne .Language.Lang $.Language.Lang }}
-            <li><a tabindex="0" href="{{ .Permalink }}" class="lang">
+            <li><a tabindex="0" href="{{ .RelPermalink }}" class="lang">
               {{ .Language.Lang | upper }}
             </a></li>
           {{ end  }}
