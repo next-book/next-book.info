@@ -1,6 +1,6 @@
 <li>
   <a {{ if eq .permalink .link }}class="selected"{{ end }} 
-    href="{{ .link }}">
+    href="{{ .page.Permalink }}">
     {{ .text }}
   </a>
 </li>

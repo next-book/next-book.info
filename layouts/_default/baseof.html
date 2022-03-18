@@ -17,12 +17,12 @@
 <body>
   <nav class="global">
     <ul>
-      {{ partial "menu-item.html" (dict "link" "/" "permalink" .RelPermalink "text" "next-book") }}
-      {{ partial "menu-item.html" (dict "link" "/library/" "permalink" .RelPermalink "text" (i18n "library")) }}
-      {{ partial "menu-item.html" (dict "link" "/blog/" "permalink" .RelPermalink "text" (i18n "blog")) }}
-      {{ partial "menu-item.html" (dict "link" "/concept/" "permalink" .RelPermalink "text" (i18n "concept")) }}
-      {{ partial "menu-item.html" (dict "link" "/non-profit/" "permalink" .RelPermalink "text" (i18n "non-profit")) }}
-      {{ partial "menu-item.html" (dict "link" "/contact/" "permalink" .RelPermalink "text" (i18n "get-in-touch")) }}
+      {{ partial "menu-item.html" (dict "page" (.GetPage "/") "permalink" .RelPermalink "text" "next-book") }}
+      {{ partial "menu-item.html" (dict "page" (.GetPage "/library") "permalink" .RelPermalink "text" (i18n "library")) }}
+      {{ partial "menu-item.html" (dict "page" (.GetPage "/blog") "permalink" .RelPermalink "text" (i18n "blog")) }}
+      {{ partial "menu-item.html" (dict "page" (.GetPage "/concept") "permalink" .RelPermalink "text" (i18n "concept")) }}
+      {{ partial "menu-item.html" (dict "page" (.GetPage "/non-profit") "permalink" .RelPermalink "text" (i18n "non-profit")) }}
+      {{ partial "menu-item.html" (dict "page" (.GetPage "/contact") "permalink" .RelPermalink "text" (i18n "get-in-touch")) }}
 
       {{ if .IsTranslated }}
         {{ range .Translations }}
