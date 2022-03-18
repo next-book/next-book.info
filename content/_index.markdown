@@ -1,7 +1,7 @@
 ---
 title: Budoucnost čtení knih (je) na webu
 description: >-
-  *Jsme technologická neziskovka.*
+  ## Jsme technologická neziskovka.
 
 
   Podporujeme *knižní ekosystém* vývojem *otevřené platformy* pro publikaci a čtení knih ve *webovém prohlížeči.*
@@ -44,7 +44,7 @@ good-for:
     reasons: Vytvořte dílo na míru internetu. Třeba s multimediálním obsahem,
       vzájemnou provázaností, podporou obrazotvornosti či zapojením čtenářstva.
 open:
-  title: Otevřená platforma = demokratičtější publikování
+  title: Otevřená platforma = demokratičtější publikování
   desc: >-
     Navrhujeme standard, který umožní s webovými knihami pracovat komukoliv a
     kdekoliv. Bez licencí, omezení a vícenákladů.

@@ -6,13 +6,49 @@
         <span class="vf-logo-wrapper">
           <span class="vf-logo">next→book</span>
         </span>
-        <span class="hide">: </span> {{ .Title }}
+        <span class="hide">: </span>
+        <span class="claim-wrapper">
+          <span class="claim balance-text">{{ .Title }}</span>
+        </span>
       </h1>
 
-      <p><a class="button" href="">Prohlédnout si webové knihy</a></p>
-      <p><a class="button outlined" href="">Chci vedět víc</a></p>
+      <p><a class="_button" href="">Prohlédnout si webové knihy</a></p>
+      <p><a class="_button outlined" href="">Chci vedět víc</a></p>
     </div>
   </header>
-	{{ .Content }}
-</main>
+
+  <main>
+    <section class="_content-column balance-content">
+    	{{ partial "md-block.html" .Description }}
+      <p><a class="_button black">{{ i18n "find-out-more" }}</a></p>
+    </section>
+    {{ with (index .Params "good-for") }}
+    <div class="_backdrop">
+      <section class="_content-column">
+          <h2 class="balance-text">Knížky na webu pomůžou všem</h2>
+          <div class="_grid four">
+            {{ range . }}
+              <div>
+                <h3>{{ .title }}</h3>
+                {{ partial "md-block.html" .reasons }}
+              </div>
+            {{ end }}
+          </div>
+      </section>
+    </div>
+    {{ end }}
+
+    {{ with .Params.open }}
+    <div class="_content-column balance-content">
+      <div class="_box accent">
+        <h2>{{ .title }}</h2>
+        <div class="desc">
+          {{ partial "md-block.html" .desc }}
+        </div>
+      </div>
+    </div>
+    {{ end }}
+
+
+  </main>
 {{ end }}
