@@ -1,0 +1,32 @@
+$break-small-min: 480px;
+$break-medium-min: 650px;
+$break-large-min: 890px;
+
+@mixin sm {
+  @media only screen and (max-width: $break-small-min - 0.01px) {
+    @content;
+  }
+}
+
+@mixin md-up {
+  @media only screen and (min-width: $break-small-min) {
+    @content;
+  }
+}
+
+@mixin lg-up {
+  @media only screen and (min-width: $break-large-min) {
+    @content;
+  }
+}
+
+@mixin font-size($small, $large: false) {
+  font-size: $small;
+
+  @if $large {
+    @include md-up {
+      font-size: $large;
+      font-size: clamp(#{$large * 0.7}, relFontSize($large), $large);
+    }
+  }
+}

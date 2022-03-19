@@ -1,0 +1,21 @@
+._box {
+  background: $gray;
+  padding: 2rem;
+
+  &.accent {
+    background: $orange;
+
+    color: $background;
+
+    h2 {
+      @include font-size-xxl;
+      margin-top: 0;
+      font-weight: 600;
+    }
+
+    .desc p {
+      max-width: 28rem;
+      @include font-size-l;
+    }
+  }
+}

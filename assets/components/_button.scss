@@ -1,0 +1,25 @@
+._button {
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  min-width: 18rem;
+
+  background: $background;
+  padding: 0.5rem 1.5rem 0.7rem;
+  border-radius: 10rem;
+
+  text-decoration: none;
+  color: $orange;
+  border: 0.1rem solid $background;
+  font-weight: 600;
+
+  &.outlined {
+    color: $background;
+    background: $orange;
+  }
+
+  &.black {
+    color: $background;
+    background: $text;
+  }
+}

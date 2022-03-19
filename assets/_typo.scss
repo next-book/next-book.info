@@ -1,0 +1,62 @@
+@keyframes bounce {
+  from {
+    font-variation-settings: "wght" 1, "SFGT" 1;
+  }
+  12.5% {
+    font-variation-settings: "wght" 1, "SFGT" 1;
+  }
+  25% {
+    font-variation-settings: "wght" 1000, "SFGT" 1;
+  }
+  37.5% {
+    font-variation-settings: "wght" 1000, "SFGT" 1;
+  }
+  50% {
+    font-variation-settings: "wght" 1000, "SFGT" 1000;
+  }
+  62.5% {
+    font-variation-settings: "wght" 1000, "SFGT" 1000;
+  }
+  75% {
+    font-variation-settings: "wght" 1, "SFGT" 1000;
+  }
+  87.5% {
+    font-variation-settings: "wght" 1, "SFGT" 1000;
+  }
+  to {
+    font-variation-settings: "wght" 1, "SFGT" 1;
+  }
+}
+
+@function relFontSize($pxSize) {
+  @return $pxSize / 1200px * 100vw;
+}
+
+@mixin font-size-s {
+  @include font-size(14px, 16px);
+}
+
+@mixin font-size-m {
+  @include font-size(16px, 18px);
+}
+
+@mixin font-size-l {
+  @include font-size(20px, 24px);
+}
+
+@mixin font-size-xl {
+  @include font-size(24px, 32px);
+}
+
+@mixin font-size-xxl {
+  @include font-size(28px, 40px);
+}
+
+@mixin font-size-xxxl {
+  @include font-size(28px, 50px);
+}
+
+@font-face {
+  font-family: "nb-logo";
+  src: url("/fonts/next-bookVF.ttf") format("truetype");
+}

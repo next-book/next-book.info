@@ -1,0 +1,14 @@
+._grid {
+  display: grid;
+  grid-gap: 2.5rem;
+
+  &.four {
+    @include md-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include lg-up {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

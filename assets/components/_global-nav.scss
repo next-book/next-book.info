@@ -1,0 +1,40 @@
+._global-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  height: $nav-height;
+  background: $background;
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: block;
+      list-style-type: none;
+      margin-left: 1rem;
+
+      &:first-child {
+        margin-left: 0;
+        flex-grow: 10;
+      }
+
+      &:last-child {
+      }
+    }
+  }
+
+  a {
+    color: $text;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: lowercase;
+
+    &.selected {
+      color: $orange;
+    }
+  }
+}

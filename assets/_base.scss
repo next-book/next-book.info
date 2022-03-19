@@ -1,0 +1,93 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 3rem;
+}
+
+h1,
+h2 {
+  font-family: $title;
+  font-weight: normal;
+  @include font-size-xxl;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 1.3em;
+  @include font-size-xxxl;
+}
+
+h3 {
+  font-family: $bread;
+  @include font-size-l;
+  font-weight: 500;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: $orange;
+}
+
+p,
+li {
+  font-family: $bread;
+  @include font-size-m;
+}
+
+.balance-text {
+  visibility: hidden;
+}
+
+@media (scripting: none) {
+  .balance-text {
+    visibility: visible;
+  }
+}
+
+@supports (text-wrap: balance) {
+  .balance-text {
+    text-wrap: balance;
+    visibility: visible;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.perex {
+  p {
+    max-width: 28rem;
+    @include font-size-l;
+  }
+}
+
+.balance-wrapper-h2 {
+  max-width: 34rem;
+}
+
+.balance-wrapper-h3 {
+  max-width: 20rem;
+}
+
+footer {
+  color: $background;
+  background-color: $dark;
+
+  .copy {
+    margin-top: 4rem;
+  }
+}

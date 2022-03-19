@@ -1,0 +1,41 @@
+._bubble-wrapper {
+  position: relative;
+
+  ._box > .desc {
+    position: relative;
+    z-index: 99;
+  }
+
+  .bubble {
+    display: block;
+    content: " ";
+    background-image: linear-gradient(-45deg, $orange, $orange),
+      url(/images/marble.jpg);
+    background-size: 400%;
+    background-blend-mode: color;
+    width: clamp(180px, 24vw, 250px);
+    height: clamp(180px, 24vw, 250px);
+    border-radius: 50%;
+    position: absolute;
+
+    z-index: 1;
+  }
+
+  .bubble:nth-child(3n + 0) {
+    background-blend-mode: color;
+    top: 10%;
+    right: 20%;
+  }
+
+  .bubble:nth-child(3n + 1) {
+    background-blend-mode: screen;
+    top: 30%;
+    right: 40%;
+  }
+
+  .bubble:nth-child(3n + 2) {
+    background-blend-mode: multiply;
+    top: 0%;
+    right: -10%;
+  }
+}
