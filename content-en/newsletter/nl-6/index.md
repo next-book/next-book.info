@@ -1,5 +1,5 @@
 ---
-title: "💌 #6 Thinking about Q2 of 21st century"
+title: "#6 Thinking about Q2 of 21st century"
 date: 2020-01-18
 tags: [newsletter]
 description: 1450 AD was 570 years ago!

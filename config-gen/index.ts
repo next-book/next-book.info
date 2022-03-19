@@ -207,7 +207,7 @@ const pages = files("Pages", "pages", [
     markdown("Description", "description"),
     markdown("Text", "body"),
   ]),
-  fileCollection("Books", "books", "data/books.yaml", [
+  fileCollection("Books", "books", "data/books.yml", [
     title("Title"),
     list("Books", "book", "books", [
       title("Title"),

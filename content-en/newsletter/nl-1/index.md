@@ -1,5 +1,5 @@
 ---
-title: "💌 #1  Digitization in schools, Tabook and our Lean Canvas."
+title: "#1  Digitization in schools, Tabook and our Lean Canvas."
 date: 2019-10-11
 tags: [newsletter]
 asidePic: me.png

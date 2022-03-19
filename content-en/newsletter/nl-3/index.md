@@ -1,10 +1,11 @@
 ---
-title: "💌 #3  Conferences, Samsung and PWAs and Disturbed Typography"
+title: "#3  Conferences, Samsung and PWAs and Disturbed Typography"
 date: 2019-11-08
 tags: [newsletter]
 asidePic: me.png
 description: Live from Regensburg!
 ---
+
 **Hello!**
 
 I’m currently in Regensburg to attend a conference on digital reading — aptly named Reading 2019. I brought a poster that made me articulate the ideas for a new audience—check if it resonates with you in this [twitter thread](https://twitter.com/i/timeline).
@@ -18,9 +19,9 @@ Meanwhile… **here are three exciting bits from the past two weeks!**
 Have a nice day!  
 — Jan
 
-{{< fig 
-  src="cutting.jpeg" 
-  alt="Photo of scissors and a let of bookmarks being clipped from A4 papers." 
+{{< fig
+  src="cutting.jpeg"
+  alt="Photo of scissors and a let of bookmarks being clipped from A4 papers."
   caption="I turn everything I do into arts and crafts experience. I handed out these bookmarks here at the conference instead of biz cards.">}}
 
 ## 1. Reading 2019 (Regensburg, DE)
@@ -31,11 +32,10 @@ One methodological issue I found in most of the studies is that display is often
 
 Read more on this in [my (brief) notes from the conference](https://www.jan-martinek.com/archive/reading-19/).
 
-{{< fig 
-  src="reading.jpeg" 
-  alt="Slide with a caption Reading is increasingly diverse and its examples." 
+{{< fig
+  src="reading.jpeg"
+  alt="Slide with a caption Reading is increasingly diverse and its examples."
   caption="A slide form Anne Mangen’s keynote “Reading on Paper and Screens: What Do We Know, and What Should We Know More About?”">}}
-
 
 ## 2. Samsung, App-store and PWAs
 
@@ -49,11 +49,10 @@ They’re very much experimenting and the onboarding seems to be pretty manual �
 
 Read more about this in a [Medium post](https://medium.com/samsung-internet-dev/introducing-progressive-web-apps-to-samsung-galaxy-store-47ecd317725b) written by [Ada Rose Cannon](https://twitter.com/Lady_Ada_King).
 
-{{< fig 
-  src="samsung.png" 
-  alt="Screenshot of a text from the above linked article with instructions from Samsung store." 
+{{< fig
+  src="samsung.png"
+  alt="Screenshot of a text from the above linked article with instructions from Samsung store."
   caption="Instructions from the post on Medium.”">}}
-
 
 ## 3. And now for something completely… beautiful
 
@@ -63,21 +62,21 @@ And read **[Disturbing the Text: Typographic devices in literary fiction](https:
 
 > “In conventional literary fiction, effective typography recedes. Grey rectangles of justified type are so familiar they are essentially invisible on the page, allowing the reader to slip into the world of the book unimpeded by the activity of reading. This article explores ways some novelists use unconventional typography as a literary device, visually interrupting the reader to make a specific point.”
 
-{{< fig 
-  src="typo.jpg" 
+{{< fig
+  src="typo.jpg"
   alt="Photo of several pages from one of the books described in the book.">}}
 
 It’s well written, well researched, and well… about something very beautiful. It’s perfect weekend reading.
 
 And I must add: something similar might be achievable with one very specific web publication platform 😉
 
-***
+---
 
 **See you in two weeks!**
 
 And thanks for reading this newsletter!
 
-{{< fig 
-  src="openalt.jpg" 
+{{< fig
+  src="openalt.jpg"
   alt="Photo of me in front of a slide showing an old book and an old computer."
   caption="Me introducing the concept of electronic reading at 1987’s OpenAlt conference.">}}

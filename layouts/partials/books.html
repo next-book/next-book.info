@@ -1,0 +1,9 @@
+{{ $page := .page }}
+{{ range .books }}
+  <h3>{{ .title }}</h3>
+  {{ with .cover }}
+    {{ partial "pic.html" (dict "pic" (replaceRE "/media/" "" .) "Resources" ($page.GetPage "/media").Resources "resize" "300x") }}
+  {{ end }}
+  <p>{{ .year }}</p>
+  {{ partial "md-block.html" .desc}}
+{{ end }}

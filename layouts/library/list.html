@@ -9,6 +9,11 @@
       {{ end }}
     </div>
 
+    {{ with .Site.Data.books.books }}
+      <h2>Karel Čapek v kapse</h2>
+      {{ partial "books.html" (dict "books" (where . "collection" "Čapek") "page" $) }}
+    {{ end }}
+
     {{ range .Params.sources }}
       <h2>{{ .title }}</h2>
       {{ partial "md-block.html" .desc }}

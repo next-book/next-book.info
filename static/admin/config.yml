@@ -168,12 +168,16 @@ collections:
                 name: not-sure
                 required: false
                 widget: markdown
-      - label: Blog index
+      - label: Blog archive
         name: blog
         file: content/blog/_index.markdown
         fields:
           - label: Title
             name: title
+            widget: string
+          - label: Short title
+            name: shortTitle
+            required: false
             widget: string
           - editor_components: &ref_9
               - image
@@ -191,12 +195,16 @@ collections:
             name: description
             required: false
             widget: markdown
-      - label: Newsletter index
+      - label: Newsletter archive
         name: newsletter
         file: content/newsletter/_index.markdown
         fields:
           - label: Title
             name: title
+            widget: string
+          - label: Short title
+            name: shortTitle
+            required: false
             widget: string
           - editor_components: &ref_11
               - image
@@ -438,7 +446,7 @@ collections:
             widget: markdown
       - label: Books
         name: books
-        file: data/books.yaml
+        file: data/books.yml
         fields:
           - label: Title
             name: title
@@ -635,12 +643,16 @@ collections:
             name: newsletter
             required: false
             fields: *ref_8
-      - label: Blog index
+      - label: Blog archive
         name: blog
         file: content-en/blog/_index.markdown
         fields:
           - label: Title
             name: title
+            widget: string
+          - label: Short title
+            name: shortTitle
+            required: false
             widget: string
           - editor_components: *ref_9
             buttons: *ref_10
@@ -648,12 +660,16 @@ collections:
             name: description
             required: false
             widget: markdown
-      - label: Newsletter index
+      - label: Newsletter archive
         name: newsletter
         file: content-en/newsletter/_index.markdown
         fields:
           - label: Title
             name: title
+            widget: string
+          - label: Short title
+            name: shortTitle
+            required: false
             widget: string
           - editor_components: *ref_11
             buttons: *ref_12
@@ -750,7 +766,7 @@ collections:
             widget: markdown
       - label: Books
         name: books
-        file: data/books.yaml
+        file: data/books.yml
         fields:
           - label: Title
             name: title

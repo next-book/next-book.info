@@ -1,5 +1,5 @@
 ---
-title: "💌 #2  Grants proposal, Baker Framework and some Metal."
+title: "#2  Grants proposal, Baker Framework and some Metal."
 date: 2019-10-25
 tags: [newsletter]
 asidePic: me.png

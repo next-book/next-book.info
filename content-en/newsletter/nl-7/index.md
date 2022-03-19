@@ -1,5 +1,5 @@
 ---
-title: "💌 #7 Reading experience: lost and found"
+title: "#7 Reading experience: lost and found"
 date: 2020-01-31
 tags: [newsletter]
 description: Nothing can replace the haptics of dutifully chiseled petroglyphs.
