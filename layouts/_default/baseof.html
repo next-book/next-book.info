@@ -16,7 +16,7 @@
 <body>
   <nav class="_global-nav">
     <ul>
-      {{ partial "menu-item.html" (dict "page" (.GetPage "/") "permalink" .RelPermalink "text" "next-book") }}
+      {{ partial "menu-item.html" (dict "page" (.GetPage "/") "permalink" "" "text" "next-book") }}
       {{ partial "menu-item.html" (dict "page" (.GetPage "/library") "permalink" .RelPermalink "text" (i18n "library")) }}
       {{ partial "menu-item.html" (dict "page" (.GetPage "/blog") "permalink" .RelPermalink "text" (i18n "blog")) }}
       {{ partial "menu-item.html" (dict "page" (.GetPage "/concept") "permalink" .RelPermalink "text" (i18n "concept")) }}
