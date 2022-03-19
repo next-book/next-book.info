@@ -3,11 +3,16 @@
   <div class="_content-column">
     <h1 class="balance-text">{{ .Title }}</h1>
 
-    {{ with .Params.perex }}
-      {{ partial "md-block.html" . }}
-    {{ end }}
+    <div class="article-text">
+      <p class="published">{{ dateFormat "Monday, Jan 2, 2006" .Params.date }}</p>
 
-  	{{ .Content }}
+      {{ with .Params.perex }}
+        {{ partial "md-block.html" . }}
+      {{ end }}
+
+    	{{ .Content }}
+    </div>
   </div>
+
 </main>
 {{ end }}

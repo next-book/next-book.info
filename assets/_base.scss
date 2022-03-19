@@ -25,6 +25,19 @@ a {
   display: none;
 }
 
+figure {
+  margin: 0;
+  background-color: $orange;
+  color: $background;
+
+  figcaption {
+    padding: 1rem;
+    p {
+      margin: 0 0 0.5rem;
+    }
+  }
+}
+
 footer {
   color: $background;
   background-color: $dark;

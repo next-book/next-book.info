@@ -1,0 +1,23 @@
+{{ define "main" }}
+<main>
+  <div class="_content-column">
+	 <h1 class="balance-text">{{ .Title }}</h1>
+    {{ with .Params.perex }}
+      {{ partial "md-block.html" . }}
+    {{ end }}
+
+    <div class="_team">
+  	{{ range .Params.team }}
+      <div class="member">
+        <h3>{{ .title }}</h3>
+        {{ with .portrait }}
+          {{ partial "pic.html" (dict "pic" (replaceRE "/media/" "" .) "Resources" ($.GetPage "/media").Resources "resize" "300x") }}
+        {{ end }}
+        {{ partial "md-block.html" .desc }}
+      </div>
+    {{ end }}
+
+    {{ .Content }}
+  </div>
+</main>
+{{ end }}
