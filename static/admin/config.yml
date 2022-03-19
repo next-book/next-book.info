@@ -168,9 +168,9 @@ collections:
                 name: not-sure
                 required: false
                 widget: markdown
-      - label: Library
-        name: library
-        file: content/library/_index.md
+      - label: Blog index
+        name: blog
+        file: content/blog/_index.markdown
         fields:
           - label: Title
             name: title
@@ -191,12 +191,58 @@ collections:
             name: description
             required: false
             widget: markdown
+      - label: Newsletter index
+        name: newsletter
+        file: content/newsletter/_index.markdown
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - editor_components: &ref_11
+              - image
+            buttons: &ref_12
+              - bold
+              - italic
+              - link
+              - heading-two
+              - heading-three
+              - heading-four
+              - quote
+              - bulleted-list
+              - numbered-list
+            label: Intro
+            name: description
+            required: false
+            widget: markdown
+      - label: Library
+        name: library
+        file: content/library/_index.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - editor_components: &ref_13
+              - image
+            buttons: &ref_14
+              - bold
+              - italic
+              - link
+              - heading-two
+              - heading-three
+              - heading-four
+              - quote
+              - bulleted-list
+              - numbered-list
+            label: Intro
+            name: description
+            required: false
+            widget: markdown
           - label: Other sources
             name: sources
             required: false
             label_singular: source
             widget: list
-            fields: &ref_11
+            fields: &ref_15
               - label: Title
                 name: title
                 widget: string
@@ -215,45 +261,6 @@ collections:
       - label: Concept
         name: concept
         file: content/concept/_index.md
-        fields:
-          - label: Title
-            name: title
-            widget: string
-          - editor_components: &ref_12
-              - image
-            buttons: &ref_13
-              - bold
-              - italic
-              - link
-              - heading-two
-              - heading-three
-              - heading-four
-              - quote
-              - bulleted-list
-              - numbered-list
-            label: Intro
-            name: description
-            required: false
-            widget: markdown
-          - editor_components: &ref_14
-              - image
-            buttons: &ref_15
-              - bold
-              - italic
-              - link
-              - heading-two
-              - heading-three
-              - heading-four
-              - quote
-              - bulleted-list
-              - numbered-list
-            label: Text
-            name: body
-            required: false
-            widget: markdown
-      - label: Non-profit
-        name: ngo
-        file: content/non-profit/_index.md
         fields:
           - label: Title
             name: title
@@ -290,12 +297,51 @@ collections:
             name: body
             required: false
             widget: markdown
+      - label: Non-profit
+        name: ngo
+        file: content/non-profit/_index.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - editor_components: &ref_20
+              - image
+            buttons: &ref_21
+              - bold
+              - italic
+              - link
+              - heading-two
+              - heading-three
+              - heading-four
+              - quote
+              - bulleted-list
+              - numbered-list
+            label: Intro
+            name: description
+            required: false
+            widget: markdown
+          - editor_components: &ref_22
+              - image
+            buttons: &ref_23
+              - bold
+              - italic
+              - link
+              - heading-two
+              - heading-three
+              - heading-four
+              - quote
+              - bulleted-list
+              - numbered-list
+            label: Text
+            name: body
+            required: false
+            widget: markdown
           - label: Team
             name: team
             required: false
             label_singular: member
             widget: list
-            fields: &ref_20
+            fields: &ref_24
               - label: Name
                 name: title
                 widget: string
@@ -323,7 +369,7 @@ collections:
             label: Join us!
             name: join
             required: false
-            fields: &ref_21
+            fields: &ref_25
               - label: Title
                 name: title
                 widget: string
@@ -358,9 +404,9 @@ collections:
           - label: Title
             name: title
             widget: string
-          - editor_components: &ref_22
+          - editor_components: &ref_26
               - image
-            buttons: &ref_23
+            buttons: &ref_27
               - bold
               - italic
               - link
@@ -374,9 +420,9 @@ collections:
             name: description
             required: false
             widget: markdown
-          - editor_components: &ref_24
+          - editor_components: &ref_28
               - image
-            buttons: &ref_25
+            buttons: &ref_29
               - bold
               - italic
               - link
@@ -402,7 +448,7 @@ collections:
             required: false
             label_singular: book
             widget: list
-            fields: &ref_26
+            fields: &ref_30
               - label: Title
                 name: title
                 widget: string
@@ -436,7 +482,7 @@ collections:
     label_singular: blog post
     folder: content/blog
     extension: md
-    editor: &ref_27
+    editor: &ref_31
       preview: false
     fields:
       - label: Title
@@ -452,9 +498,9 @@ collections:
         widget: datetime
         date_format: DD.MM.YYYY
         time_format: false
-      - editor_components: &ref_28
+      - editor_components: &ref_32
           - image
-        buttons: &ref_29
+        buttons: &ref_33
           - bold
           - italic
           - link
@@ -468,9 +514,66 @@ collections:
         name: description
         required: false
         widget: markdown
-      - editor_components: &ref_30
+      - editor_components: &ref_34
           - image
-        buttons: &ref_31
+        buttons: &ref_35
+          - bold
+          - italic
+          - link
+          - heading-two
+          - heading-three
+          - heading-four
+          - quote
+          - bulleted-list
+          - numbered-list
+        label: Text
+        name: body
+        required: false
+        widget: markdown
+    create: true
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+  - name: newsletter
+    label: Newsletter
+    label_singular: newsletter
+    folder: content/newsletter
+    extension: md
+    editor: &ref_36
+      preview: false
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Save as a draft
+        name: draft
+        required: false
+        widget: boolean
+      - label: Publication date
+        name: date
+        required: false
+        widget: datetime
+        date_format: DD.MM.YYYY
+        time_format: false
+      - editor_components: &ref_37
+          - image
+        buttons: &ref_38
+          - bold
+          - italic
+          - link
+          - heading-two
+          - heading-three
+          - heading-four
+          - quote
+          - bulleted-list
+          - numbered-list
+        label: Perex
+        name: description
+        required: false
+        widget: markdown
+      - editor_components: &ref_39
+          - image
+        buttons: &ref_40
           - bold
           - italic
           - link
@@ -532,9 +635,9 @@ collections:
             name: newsletter
             required: false
             fields: *ref_8
-      - label: Library
-        name: library
-        file: content-en/library/_index.md
+      - label: Blog index
+        name: blog
+        file: content-en/blog/_index.markdown
         fields:
           - label: Title
             name: title
@@ -545,34 +648,41 @@ collections:
             name: description
             required: false
             widget: markdown
+      - label: Newsletter index
+        name: newsletter
+        file: content-en/newsletter/_index.markdown
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - editor_components: *ref_11
+            buttons: *ref_12
+            label: Intro
+            name: description
+            required: false
+            widget: markdown
+      - label: Library
+        name: library
+        file: content-en/library/_index.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - editor_components: *ref_13
+            buttons: *ref_14
+            label: Intro
+            name: description
+            required: false
+            widget: markdown
           - label: Other sources
             name: sources
             required: false
             label_singular: source
             widget: list
-            fields: *ref_11
+            fields: *ref_15
       - label: Concept
         name: concept
         file: content-en/concept/_index.md
-        fields:
-          - label: Title
-            name: title
-            widget: string
-          - editor_components: *ref_12
-            buttons: *ref_13
-            label: Intro
-            name: description
-            required: false
-            widget: markdown
-          - editor_components: *ref_14
-            buttons: *ref_15
-            label: Text
-            name: body
-            required: false
-            widget: markdown
-      - label: Non-profit
-        name: ngo
-        file: content-en/non-profit/_index.md
         fields:
           - label: Title
             name: title
@@ -589,17 +699,36 @@ collections:
             name: body
             required: false
             widget: markdown
+      - label: Non-profit
+        name: ngo
+        file: content-en/non-profit/_index.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - editor_components: *ref_20
+            buttons: *ref_21
+            label: Intro
+            name: description
+            required: false
+            widget: markdown
+          - editor_components: *ref_22
+            buttons: *ref_23
+            label: Text
+            name: body
+            required: false
+            widget: markdown
           - label: Team
             name: team
             required: false
             label_singular: member
             widget: list
-            fields: *ref_20
+            fields: *ref_24
           - widget: object
             label: Join us!
             name: join
             required: false
-            fields: *ref_21
+            fields: *ref_25
       - label: Contact
         name: contact
         file: content-en/contact/_index.md
@@ -607,14 +736,14 @@ collections:
           - label: Title
             name: title
             widget: string
-          - editor_components: *ref_22
-            buttons: *ref_23
+          - editor_components: *ref_26
+            buttons: *ref_27
             label: Description
             name: description
             required: false
             widget: markdown
-          - editor_components: *ref_24
-            buttons: *ref_25
+          - editor_components: *ref_28
+            buttons: *ref_29
             label: Text
             name: body
             required: false
@@ -631,13 +760,13 @@ collections:
             required: false
             label_singular: book
             widget: list
-            fields: *ref_26
+            fields: *ref_30
   - name: blog-en
     label: Blog (EN)
     label_singular: blog post (en)
     folder: content-en/blog
     extension: md
-    editor: *ref_27
+    editor: *ref_31
     fields:
       - label: Title
         name: title
@@ -652,14 +781,50 @@ collections:
         widget: datetime
         date_format: DD.MM.YYYY
         time_format: false
-      - editor_components: *ref_28
-        buttons: *ref_29
+      - editor_components: *ref_32
+        buttons: *ref_33
         label: Perex
         name: description
         required: false
         widget: markdown
-      - editor_components: *ref_30
-        buttons: *ref_31
+      - editor_components: *ref_34
+        buttons: *ref_35
+        label: Text
+        name: body
+        required: false
+        widget: markdown
+    create: true
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+  - name: newsletter-en
+    label: Newsletter (EN)
+    label_singular: newsletter (en)
+    folder: content-en/newsletter
+    extension: md
+    editor: *ref_36
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Save as a draft
+        name: draft
+        required: false
+        widget: boolean
+      - label: Publication date
+        name: date
+        required: false
+        widget: datetime
+        date_format: DD.MM.YYYY
+        time_format: false
+      - editor_components: *ref_37
+        buttons: *ref_38
+        label: Perex
+        name: description
+        required: false
+        widget: markdown
+      - editor_components: *ref_39
+        buttons: *ref_40
         label: Text
         name: body
         required: false

@@ -8,6 +8,8 @@ $dark: #383838;
 $bread: "halyard-display", sans-serif;
 $title: "ivypresto-display", serif;
 
+$nav-height: 3rem;
+
 $break-small-min: 480px;
 $break-medium-min: 650px;
 $break-large-min: 890px;
@@ -116,6 +118,10 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+
+body {
+  padding-top: 3rem;
 }
 
 h1,
@@ -250,6 +256,7 @@ nav.global {
   left: 0;
   right: 0;
   padding: 0.5rem 1rem;
+  height: $nav-height;
   background: $background;
 
   ul {
@@ -277,6 +284,10 @@ nav.global {
     text-decoration: none;
     font-size: 1.5rem;
     text-transform: lowercase;
+
+    &.selected {
+      color: $orange;
+    }
   }
 }
 

@@ -156,6 +156,16 @@ const pages = files("Pages", "pages", [
       markdown("Not sure? Archive", "not-sure"),
     ]),
   ]),
+  fileCollection("Blog index", "blog", "content/blog/_index.markdown", [
+    title("Title"),
+    markdown("Intro", "description"),
+  ]),
+  fileCollection(
+    "Newsletter index",
+    "newsletter",
+    "content/newsletter/_index.markdown",
+    [title("Title"), markdown("Intro", "description")]
+  ),
   fileCollection("Library", "library", "content/library/_index.md", [
     title("Title"),
     markdown("Intro", "description"),
@@ -226,6 +236,27 @@ const blog = folderCollection(
   ]
 );
 
+const newsletter = folderCollection(
+  "Newsletter",
+  "newsletter",
+  "newsletter",
+  {
+    folder: "content/newsletter",
+    path: "{{slug}}/index",
+    extension: "md",
+    create: true,
+    media_folder: "",
+    public_folder: "",
+  },
+  [
+    title("Title"),
+    boolean("Save as a draft", "draft"),
+    datetime("Publication date", "date", { time_format: false }),
+    markdown("Perex", "description"),
+    markdown("Text", "body"),
+  ]
+);
+
 save("./static/admin/config.yml", {
   backend: {
     name: "git-gateway",
@@ -241,5 +272,12 @@ save("./static/admin/config.yml", {
     clean_accents: true,
     sanitize_replacement: "_",
   },
-  collections: [pages, blog, englishFiles(pages), englishFolder(blog)],
+  collections: [
+    pages,
+    blog,
+    newsletter,
+    englishFiles(pages),
+    englishFolder(blog),
+    englishFolder(newsletter),
+  ],
 });
