@@ -56,7 +56,73 @@
   @include font-size(28px, 50px);
 }
 
+@mixin font-size-xxxxl {
+  @include font-size(32px, 72px);
+}
+
 @font-face {
   font-family: "nb-logo";
   src: url("/fonts/next-bookVF.ttf") format("truetype");
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  font-family: $title;
+  line-height: 1.3em;
+  @include font-size-xxxxl;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 3rem;
+  @include font-size-xxxl;
+}
+
+h3 {
+  font-family: $bread;
+  @include font-size-l;
+  font-weight: 500;
+}
+
+p,
+li {
+  font-family: $bread;
+  @include font-size-m;
+}
+
+.perex {
+  p {
+    max-width: 28rem;
+    @include font-size-l;
+  }
+}
+
+.balance-text {
+  visibility: hidden;
+}
+
+@media (scripting: none) {
+  .balance-text {
+    visibility: visible;
+  }
+}
+
+@supports (text-wrap: balance) {
+  .balance-text {
+    text-wrap: balance;
+    visibility: visible;
+  }
+}
+
+.balance-wrapper-h1 {
+  max-width: 50rem;
+}
+
+.balance-wrapper-h2 {
+  max-width: 34rem;
+}
+
+.balance-wrapper-h3 {
+  max-width: 20rem;
 }

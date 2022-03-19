@@ -156,15 +156,20 @@ const pages = files("Pages", "pages", [
       markdown("Not sure? Archive", "not-sure"),
     ]),
   ]),
-  fileCollection("Blog index", "blog", "content/blog/_index.markdown", [
+  fileCollection("Blog archive", "blog", "content/blog/_index.markdown", [
     title("Title"),
+    string("Short title", "shortTitle"),
     markdown("Intro", "description"),
   ]),
   fileCollection(
-    "Newsletter index",
+    "Newsletter archive",
     "newsletter",
     "content/newsletter/_index.markdown",
-    [title("Title"), markdown("Intro", "description")]
+    [
+      title("Title"),
+      string("Short title", "shortTitle"),
+      markdown("Intro", "description"),
+    ]
   ),
   fileCollection("Library", "library", "content/library/_index.md", [
     title("Title"),

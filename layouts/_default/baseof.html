@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
   <link rel="stylesheet" href="https://use.typekit.net/tly6rvv.css">
-  <script src="/text-balancer/text-balancer.js"></script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
@@ -73,6 +72,7 @@
       });
     }
   </script>
+  <script src="/text-balancer/text-balancer.js"></script>
   <script>
   window.addEventListener('DOMContentLoaded', () => {
     const bubbles = document.querySelectorAll('.bubble');
@@ -83,9 +83,6 @@
     });
 
     document.addEventListener('scroll', function() {
-
-
-
         bubbles.forEach(b => {
           const top = b.getBoundingClientRect().top;
           b.style.transform = 'translateY(' + ((window.innerHeight - top) * b.dataset.bubbleScale * ratio) + 'px)';

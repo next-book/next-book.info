@@ -94,12 +94,7 @@
     }
   }
 
-  // run now or when document has loaded
-  if (["complete", "interactive"].includes(document.readyState)) {
-    initialize();
-  } else {
-    document.addEventListener("readystatechange", initialize);
-  }
+  document.addEventListener("DOMContentLoaded", initialize);
 })();
 
 // timer-based fallback if text doesn’t appear after three seconds
