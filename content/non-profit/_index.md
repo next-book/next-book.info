@@ -14,6 +14,8 @@ aside: >
   - [Jan Vlček](https://twitter.com/vlki) for code reviews
 team:
   - title: Jan Martinek
+    portrait: /media/1639593370-6.png
+    desc: kdo su já
   - title: Josef Kocurek
   - title: Matěj Málek
   - title: Lukáš Porsche
