@@ -47,10 +47,10 @@ open:
   title: Otevřená platforma = demokratičtější publikování
   desc: >-
     Navrhujeme standard, který umožní s webovými knihami pracovat komukoliv a
-    kdekoliv. Bez licencí, omezení a vícenákladů.
+    kdekoliv. Svobodně, bez  omezení a vícenákladů.
 
 
-    Kód, postup i hotové knížky jsou dostupné veřejně. Vytvořte si vlastní projekt, dejte nám zpětnou vazbu nebo se rovnou zapojte do vývoje s námi.
+    Myslíme na potřeby tvůrců e-knih #eprdctn. Kód, postup i hotové knížky jsou dostupné veřejně. Vytvořte si vlastní projekt, dejte nám zpětnou vazbu nebo se rovnou zapojte do vývoje s námi.
 newsletter:
   title: Píšeme o e-čtení, vývoji platformy, výzkumech i novinkách v odvětví
   desc: V nepravidelném newsletteru vám dáme vědět co je u nás nového – včetně knih.
