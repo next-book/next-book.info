@@ -21,12 +21,8 @@ team:
   - title: Lukáš Porsche
 join:
   title: Přidej se!
-  desc: >-
-    Miluješ knihy, trochu i e-knihy a chceš se podílet na navrhování čtení
-    budoucnosti? Pojď se potkat.
-
-
-    Hledáme parťačku na hhhh, přístupnost, fundraising, ale
+  desc: Miluješ knihy, trochu i e-knihy a chceš se podílet na navrhování čtení
+    budoucnosti? **Pojď se potkat.** Společně vymyslíme, co by tě bavilo.
   button: Jdem na kafe!
 ---
 ## **Proč ne start-up?**
