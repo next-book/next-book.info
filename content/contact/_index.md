@@ -26,8 +26,8 @@ Více o projektu se dozvíte na *stránkách Masarykovy univerzity*. Projekt po
 
 ### **Spolupráce malých nakladatelů**
 
-V průběhu února až prosince 2018 spojili síly vydavatelé z Česka, Slovenska, Polska a Maďarska v projektu vedeném pražským nakladatelstvím Nová beseda a financovaném Visegrádským fondem. Tyto týmy vytvořily několik prototypů webových knih prezentovaných na *[next-book.eu](https://next-book.eu/en/)*.
+V průběhu února až prosince 2018 spojili síly vydavatelé z Česka, Slovenska, Polska a Maďarska v projektu vedeném pražským nakladatelstvím Nová beseda a financovaném Visegrádským fondem. Tyto týmy vytvořily několik prototypů webových knih prezentovaných na [next-book.eu](https://next-book.eu/en/).
 
 ### První next-book
 
-nová beseda / co je nového v …
+Historii next-booku odstartovala kniha, na které spolupracoval Honza Martinek s Ivanou Lukeš Rybanskou z nakladatelství Nová beseda. Začali jsme s cílem vytvořit interaktivní verzi knihy na web, ale brzy jsme se octli hluboko v králičí noře webového čtení a publikování knih na webu. Vznikla kniha **Co je nového ve filmové vědě**, kterou si můžete přečíst [na webu nakladatelství Nová beseda](https://novabeseda.cz/page/nextbook). Po mnoha letech slouží i jako reflexe cesty, kterou jsme ušli.
