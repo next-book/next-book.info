@@ -1,5 +1,6 @@
 {{- $date := time (print .date) -}}
 <time class="post-date {{ .class }}" datetime="{{ $date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+  {{ if eq .lang "cs" }}
     {{- $date.Day -}}.
     {{- if not .hideMonth -}}
       &nbsp;{{- index .months (printf "%d" $date.Month) -}}
@@ -7,4 +8,7 @@
     {{- if not .hideYear }}
       {{ $date.Year -}}
     {{- end -}}
+  {{ else }}
+    {{ dateFormat "Monday, Jan 2, 2006" $date }}
+  {{ end }}
 </time>{{- "" -}}

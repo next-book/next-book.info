@@ -9,7 +9,7 @@
   	{{ range .Pages }}
   		{{ $perm := .RelPermalink }}
   		<h2 class=""><a href="{{ $perm }}">{{ .Title }}</a></h2>
-  		{{ with .Params.date }}<b>{{ partial "date.html" (dict "months" $.Site.Data.mesice "date" .) }}</b>{{ end }}
+  		{{ with .Params.date }}<b>{{ partial "date.html" (dict "months" $.Site.Data.mesice "date" . "lang" $.Language.Lang) }}</b>{{ end }}
   		<div>
   			{{ with .Params.name }}<img class="pic" swrc="{{ $perm }}{{ . }}">{{ end }}
   		</div>

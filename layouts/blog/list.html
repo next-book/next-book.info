@@ -25,7 +25,7 @@
     {{ range .Pages }}
     <div class="article-preview centered">
       <p class="published">
-        {{ with .Params.date }}{{ partial "date.html" (dict "months" $.Site.Data.mesice "date" .) }}{{ end }}
+        {{ with .Params.date }}<b>{{ partial "date.html" (dict "months" $.Site.Data.mesice "date" . "lang" $.Language.Lang) }}</b>{{ end }}
       </p>
 
       <h2 class="balance-text"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>

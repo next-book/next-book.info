@@ -4,7 +4,9 @@
     <h1 class="balance-text">{{ .Title }}</h1>
 
     <div class="article-text">
-      <p class="published">{{ dateFormat "Monday, Jan 2, 2006" .Params.date }}</p>
+      <p class="published">
+        {{ with .Params.date }}<b>{{ partial "date.html" (dict "months" $.Site.Data.mesice "date" . "lang" $.Language.Lang) }}</b>{{ end }}
+      </p>
 
       {{ with .Params.perex }}
         {{ partial "md-block.html" . }}
