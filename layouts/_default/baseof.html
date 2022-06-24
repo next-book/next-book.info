@@ -44,21 +44,29 @@
   {{ block "main" . }}{{ end }}  
 
   <footer class="wrapper">
-    <div class="_content-column balance-content">
-      {{ with (.GetPage "/").Params.newsletter }}
-      <div id="mc_embed_signup">
-        <h3>{{ .title }}</h3>
-        <form action="https://next-book.us20.list-manage.com/subscribe/post?u=f81ac979da2d23765713d081e&amp;id=89f546e1fd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          {{ partial "md-block.html" .desc }}
-          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f81ac979da2d23765713d081e_89f546e1fd" tabindex="-1" value=""></div>
-        </form>
-        {{ partial "md-block.html" .legal }}
-        {{ partial "md-block.html" (index . "not-sure") }}
-        {{ end }}
+    <div class="_content-column _grid">
+      <div class="half">
+        {{ with (.GetPage "/").Params.newsletter }}
+        <div id="mc_embed_signup" class="balance-content">
+          <h3>{{ partial "typo.html" .title }}</h3>
+          <form action="https://next-book.us20.list-manage.com/subscribe/post?u=f81ac979da2d23765713d081e&amp;id=89f546e1fd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            {{ partial "md-block.html" .desc }}
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="_button orange small">
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f81ac979da2d23765713d081e_89f546e1fd" tabindex="-1" value=""></div>
+          </form>
+          {{ partial "md-block.html" .legal }}
+          {{ partial "md-block.html" (index . "not-sure") }}
+          {{ end }}
+        </div>
+        <p class="copy">&copy; 2017—{{ now.Format "2006" }} next-book, z. s.</p>
       </div>
-      <p class="copy">&copy; 2017—{{ now.Format "2006" }} next-book, z. s.</p>
+      <div class="fourth"></div>
+      <div class="fourth _logo end">
+        <span class="vf-logo-wrapper">
+          <span class="vf-logo">next→book</span>
+        </span>
+      </div>
     </div>
   </footer>
   <script>

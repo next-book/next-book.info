@@ -1,9 +1,19 @@
-{{ $page := .page }}
-{{ range .books }}
-  <h3>{{ .title }}</h3>
-  {{ with .cover }}
-    {{ partial "pic.html" (dict "pic" (replaceRE "/media/" "" .) "Resources" ($page.GetPage "/media").Resources "resize" "300x") }}
+<section class="_grid _folder">
+  {{ with .title }}
+    <h2 class="full">{{ . }}</h2>
   {{ end }}
-  <p>{{ .year }}</p>
-  {{ partial "md-block.html" .desc}}
-{{ end }}
+
+  {{ $page := .page }}
+  {{ range .books }}
+    <div class="third _book">
+      <div class="cover">
+        {{ with .cover }}
+          {{ partial "pic.html" (dict "pic" (replaceRE "/media/" "" .) "Resources" ($page.GetPage "/media").Resources "resize" "500x") }}
+        {{ end }}
+      </div>
+      <h3>{{ .title }}</h3>
+      <p class="info">{{ .author }}<br>{{ .year }}</p>
+      <a class="_button black small">Číst</a>
+    </div>
+  {{ end }}
+</section>

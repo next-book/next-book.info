@@ -13,29 +13,21 @@ body {
 }
 
 body {
-  padding-top: 3rem;
+  padding-top: $nav-height;
 }
 
 a {
-  color: inherit;
-  text-decoration-color: $orange;
+  color: $orange;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+  }
 }
 
 .hide {
   display: none;
-}
-
-figure {
-  margin: 0;
-  background-color: $orange;
-  color: $background;
-
-  figcaption {
-    padding: 1rem;
-    p {
-      margin: 0 0 0.5rem;
-    }
-  }
 }
 
 footer {
@@ -44,5 +36,42 @@ footer {
 
   .copy {
     margin-top: 4rem;
+  }
+}
+
+section {
+  margin-bottom: #{6 * $gap};
+}
+
+hr {
+  border: 0;
+  margin: 4 * $gap;
+}
+
+input[type="text"],
+input[type="email"] {
+  display: inline-block;
+  @include font-bread;
+  padding: 0.5vw 1vw;
+  border-radius: 2px;
+  border: none;
+}
+
+.orange-box {
+  background: $orange;
+  color: white;
+  padding: #{2 * $gap};
+  margin: #{2 * $gap} 0;
+
+  & > div {
+    padding-bottom: #{2 * $gap};
+    margin-bottom: #{2 * $gap};
+    border-bottom: 0.5px solid white;
+
+    &:last-child {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
   }
 }

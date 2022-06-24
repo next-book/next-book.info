@@ -2,13 +2,15 @@ $text: black;
 $background: white;
 $orange: #f26531;
 $orangeDark: #a52d01;
-$gray: #f5f5f5;
+$gray: #f5f4f1;
 $dark: #383838;
 
 $bread: "halyard-display", sans-serif;
 $title: "ivypresto-display", serif;
+$article: "ivypresto-text", serif;
 
-$nav-height: 3rem;
+$nav-height: 4vw;
+$gap: 1vw;
 
 @import "responsive";
 @import "typo";

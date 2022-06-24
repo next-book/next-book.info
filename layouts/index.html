@@ -3,8 +3,10 @@
   <header class="_home-header">
     <div class="wrapper">
       <h1>
-        <span class="vf-logo-wrapper">
-          <span class="vf-logo">next→book</span>
+        <span class="_logo">
+          <span class="vf-logo-wrapper">
+            <span class="vf-logo">next→book</span>
+          </span>
         </span>
         <span class="hide">: </span>
         <span class="claim-wrapper">
@@ -12,49 +14,81 @@
         </span>
       </h1>
 
-      <p><a class="_button min-width" href="">Prohlédnout si webové knihy</a></p>
-      <p><a class="_button min-width outlined" href="">Chci vedět víc</a></p>
+      <ul>
+        <li><a class="_button white" href="">Prohlédnout si webové knihy</a></li>
+        <li><a class="_button white outlined" href="">Chci vedět víc</a></li>
+      </ul>
     </div>
   </header>
 
   <main>
-    <section class="_content-column balance-content">
-    	{{ partial "md-block.html" .Description }}
-      <p><a class="_button black">{{ i18n "find-out-more" }}</a></p>
+    {{ with .Params.ngo}}
+    <section class="_content-column _grid balance-content">
+      <div class="full">
+        <h2 class="home-h2">{{ .title }}</h2>
+      </div>
+      <div class="_perex centered">
+        {{ partial "md-block.html" .text }}
+
+        <p><a class="_button outlined">{{ i18n "find-out-more" }}</a></p>
+      </div>
     </section>
+    {{ end }}
+
+    <hr>
+
     {{ with (index .Params "good-for") }}
     <div class="_backdrop">
       <section class="_content-column">
-          <h2 class="balance-text">Knížky na webu pomůžou všem</h2>
-          <div class="_grid four">
-            {{ range . }}
-              <div>
-                <h3>{{ .title }}</h3>
+        <h2 class="home-h2 balance-text">Knížky na webu pomůžou všem</h2>
+
+        <ul class="_good-for">
+          {{ range . }}
+            <li class="_grid good-for-item">
+              <h3>{{ .title }}</h3>
+              <div class="good-for-desc">
                 {{ partial "md-block.html" .reasons }}
+                <ul class="good-for-links">
+                  {{ range .links }}
+                    <li><a href="{{ .link }}">{{ .title }}</a></li>
+                  {{ end }}
+                </ul>
               </div>
-            {{ end }}
-          </div>
+            </li>
+          {{ end }}
+        </ul>
       </section>
     </div>
     {{ end }}
 
-    {{ with .Params.open }}
-      <div class="_content-column balance-content">
-        <div class="_bubble-wrapper">
-          <div class="_box accent">
-            <div class="desc">
-              <h2>{{ .title }}</h2>
-              {{ partial "md-block.html" .desc }}
-            </div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-          </div>
+    <hr>
 
+    {{ with .Params.open }}
+      <div class="_content-column">
+        <div class="desc">
+          <h2 class="home-h2 _grid">
+            <div class="full">{{ .title }}&nbsp;=</div>
+            <div class="right"><em>{{ .subtitle }}</em></div>
+          </h2>
+          <div class="_grid">
+            <div class="centered">
+              <div class="_perex">
+                {{ partial "md-block.html" .perex }}
+              </div>
+              {{ partial "md-block.html" .desc }}
+
+              <p><a href="" class="_button outlined">Prozkoumat Github</a></p>
+              <p><a href="" class="_button outlined orange">Jak fungují webové knihy?</a></p>
+            </div>
+          </div>
         </div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
       </div>
     {{ end }}
 
+    <hr>
 
   </main>
 {{ end }}

@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main>
-  <div class="_content-column">
-
+  <div class="_content-column _grid">
+    <div class="full">
       <h1 class="balance-text">{{ .Title }}</h1>
 
       {{ with .Params.description }}
@@ -10,30 +10,34 @@
         {{ partial "md-block.html" .Summary }}
       {{ end }}
 
-
-
-      <div class="article-text">
+    </div>
+    <div class="centered">
+      <div class="">
         {{ with .GetPage "/blog" }}
-          <a href="{{ .Permalink }}" class="_button selected">{{ .Params.shortTitle | lower }}</a>
+          <a href="{{ .Permalink }}" class="_button orange small">{{ .Params.shortTitle | lower }}</a>
         {{ end }}
         {{ with .GetPage "/newsletter" }}
-          <a href="{{ .Permalink }}" class="_button black">{{ .Params.shortTitle | lower }}</a>
-        {{ end }}
-
-        {{ range .Pages }}
-          <p class="published">
-            {{ with .Params.date }}{{ partial "date.html" (dict "months" $.Site.Data.mesice "date" .) }}{{ end }}
-          </p>
-
-          <h2 class="balance-text"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-
-          {{ with .Params.description }}
-            {{ partial "md-block.html" . }}
-          {{ else }}
-            {{ partial "md-block.html" .Summary }}
-          {{ end }}
+          <a href="{{ .Permalink }}" class="_button black small">{{ .Params.shortTitle | lower }}</a>
         {{ end }}
       </div>
+    </div>
+
+    {{ range .Pages }}
+    <div class="article-preview centered">
+      <p class="published">
+        {{ with .Params.date }}{{ partial "date.html" (dict "months" $.Site.Data.mesice "date" .) }}{{ end }}
+      </p>
+
+      <h2 class="balance-text"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+
+      {{ with .Params.description }}
+        {{ partial "md-block.html" . }}
+      {{ else }}
+        {{ partial "md-block.html" .Summary }}
+      {{ end }}
+      </div>
+    {{ end }}
+
 
       {{ .Content }}
     </div>

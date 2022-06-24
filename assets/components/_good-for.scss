@@ -1,0 +1,62 @@
+._good-for {
+  padding: 0;
+  counter-reset: good;
+
+  .good-for-item {
+    border-top: 0.5px solid black;
+    padding: 2vw 0;
+    list-style-type: none;
+    counter-increment: good;
+
+    &::before {
+      display: block;
+      grid-column: 1;
+
+      @include font-perex;
+      color: $orange;
+
+      content: counter(good, upper-alpha);
+    }
+
+    h3 {
+      @include font-perex;
+      margin: 0;
+      grid-column: 2 / 6;
+    }
+
+    .good-for-desc {
+      grid-column: 6 / -1;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .good-for-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+      margin: 1rem 0 0;
+      padding: 0;
+
+      li {
+        display: block;
+        margin-right: 2em;
+
+        a {
+          &::before {
+            display: inline-block;
+            vertical-align: middle;
+            content: " ";
+            width: 1em;
+            height: 1.1em;
+            margin-right: 0.2em;
+            background-image: url(/images/button.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+}

@@ -3,22 +3,31 @@
   <div class="_content-column">
     <h1 class="balance-text">{{ .Title }}</h1>
 
-    <div class="perex">
-      {{ with .Params.description }}
-        {{ partial "md-block.html" . }}
-      {{ end }}
+    <div class="_grid">
+      <div class="_perex centered">
+        {{ with .Params.description }}
+          {{ partial "md-block.html" . }}
+        {{ end }}
+      </div>
     </div>
 
     {{ with .Site.Data.books.books }}
-      <h2>Karel Čapek v kapse</h2>
-      {{ partial "books.html" (dict "books" (where . "collection" "Čapek") "page" $) }}
+      {{ partial "books.html" (dict "title" "Karel Čapek v kapse" "books" (where . "collection" "Čapek") "page" $) }}
     {{ end }}
 
-    {{ range .Params.sources }}
-      <h2>{{ .title }}</h2>
-      {{ partial "md-block.html" .desc }}
-      <a href="" class="_button black">{{ .button }}</a>
-    {{ end }}
+    <div class="orange-box">
+      {{ range .Params.sources }}
+      <div class="_grid ">
+        <div class="half">
+            <h2>{{ .title }}</h2>
+        </div>
+        <div class="half">
+            {{ partial "md-block.html" .desc }}
+            <a href="" class="_button outlined-inverted">{{ .button }}</a>
+        </div>
+      </div>
+      {{ end }}
+    </div>
 
     {{ range .Pages }}
       {{ $perm := .RelPermalink }}

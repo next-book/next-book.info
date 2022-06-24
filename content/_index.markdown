@@ -1,10 +1,8 @@
 ---
 title: Budoucnost čtení knih (je) na webu
-description: >-
-  ## Jsme technologická neziskovka.
-
-
-  Podporujeme <a href="">knižní ekosystém</a> vývojem *otevřené platformy* pro publikaci a čtení knih ve *webovém prohlížeči.*
+ngo:
+  title: Jsme technologická neziskovka.
+  text: Podporujeme <a href="">knižní ekosystém</a> vývojem *otevřené platformy* pro publikaci a čtení knih ve *webovém prohlížeči.*
 vision: >-
   When people ask “Don't you miss something when reading a book in digital?” our
   answer is
@@ -33,23 +31,32 @@ good-for:
       prohlížeči. Prostě otevřete knížku a čtete. Ať už jste online nebo
       offline.
     title: Čtenářům a čtenářkám
+    links:
+      - title: Omrknout knížky
+      - title: Funkce webových knih
   - title: Nakladatelům a nakladatelkám
     reasons: Dostaňte to dobré z papírových knih do e-knih. Vizuální zpracování i
       příjemné čtení. Nezávisle na platformě, s napojením na váš e-shop,
       konverzí z jiných formátů nebo sledováním statistik.
+    links:
+      - title: Vydávat webové knihy
   - title: Učitelkám, knihovníkům a akademičkám
     reasons: Dělejte s knížkami věci, o kterých se vám dřív ani nesnilo. Podporujte
       čtenářství, zvídavost, komunitní služby nebo třeba porozumění textu.
+    links:
+      - title: Spojme se!
   - title: Autorům a autorkám
     reasons: Vytvořte dílo na míru internetu. Třeba s multimediálním obsahem,
       vzájemnou provázaností, podporou obrazotvornosti či zapojením čtenářstva.
+    links:
+      - title: To mě zajímá
 open:
-  title: Otevřená platforma = demokratičtější publikování
-  desc: >-
+  title: Otevřená platforma
+  subtitle: demokratičtější publikování
+  perex: |
     Navrhujeme standard, který umožní s webovými knihami pracovat komukoliv a
     kdekoliv. Svobodně, bez  omezení a vícenákladů.
-
-
+  desc: >-
     Myslíme na potřeby tvůrců e-knih #eprdctn. Kód, postup i hotové knížky jsou dostupné veřejně. Vytvořte si vlastní projekt, dejte nám zpětnou vazbu nebo se rovnou zapojte do vývoje s námi.
 newsletter:
   title: Píšeme o e-čtení, vývoji platformy, výzkumech i novinkách v odvětví

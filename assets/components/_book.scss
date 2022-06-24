@@ -1,0 +1,29 @@
+._book {
+  background: $gray;
+  padding: $gap;
+  position: relative;
+
+  .cover {
+    background: $orange;
+    margin-bottom: $gap;
+
+    img {
+      display: block;
+      padding: #{2 * $gap};
+      margin: 0 auto;
+      height: 25vw;
+    }
+  }
+
+  h3,
+  p {
+    @include font-bread;
+    margin: 0;
+  }
+
+  ._button {
+    position: absolute;
+    bottom: $gap;
+    right: $gap;
+  }
+}

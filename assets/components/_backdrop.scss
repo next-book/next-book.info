@@ -1,3 +1,5 @@
 ._backdrop {
+  overflow: hidden;
+  margin: $gap 0;
   background: $gray;
 }

@@ -8,14 +8,13 @@
     color: $background;
 
     h2 {
-      @include font-size-xxl;
+      @include font-heading-boxed;
       margin-top: 0;
-      font-weight: 600;
     }
 
     .desc p {
       max-width: 28rem;
-      @include font-size-l;
+      @include font-perex;
     }
   }
 }

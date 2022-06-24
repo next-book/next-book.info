@@ -1,28 +1,44 @@
 {{ define "main" }}
 <main>
-  <div class="_content-column">
-   <h1 class="balance-text">{{ .Title }}</h1>
-    {{ with .Params.description }}
-      {{ partial "md-block.html" . }}
-    {{ end }}
+  <div class="_content-column _grid">
+    <div class="full">
+      <h1 class="balance-text">{{ .Title }}</h1>
 
-    {{ with .GetPage "/blog" }}
-      <a href="{{ .Permalink }}" class="_button black">{{ .Params.shortTitle | lower }}</a>
-    {{ end }}
-    {{ with .GetPage "/newsletter" }}
-      <a href="{{ .Permalink }}" class="_button selected">{{ .Params.shortTitle | lower }}</a>
-    {{ end }}
+      {{ with .Params.description }}
+        {{ partial "md-block.html" . }}
+      {{ else }}
+        {{ partial "md-block.html" .Summary }}
+      {{ end }}
+
+      <div class="">
+        {{ with .GetPage "/blog" }}
+          <a href="{{ .Permalink }}" class="_button orange small">{{ .Params.shortTitle | lower }}</a>
+        {{ end }}
+        {{ with .GetPage "/newsletter" }}
+          <a href="{{ .Permalink }}" class="_button black small">{{ .Params.shortTitle | lower }}</a>
+        {{ end }}
+      </div>
+    </div>
 
     {{ range .Pages }}
-      {{ $perm := .RelPermalink }}
-      <h2 class="balance-text"><a href="{{ $perm }}">{{ .Title }}</a></h2>
-      {{ with .Params.date }}<b>{{ partial "date.html" (dict "months" $.Site.Data.mesice "date" .) }}</b>{{ end }}
-      <div>
-        {{ with .Params.name }}<img class="pic" swrc="{{ $perm }}{{ . }}">{{ end }}
+    <div class="article-preview centered">
+      <p class="published">
+        {{ with .Params.date }}{{ partial "date.html" (dict "months" $.Site.Data.mesice "date" .) }}{{ end }}
+      </p>
+
+      <h2 class="balance-text"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+
+      {{ with .Params.description }}
+        {{ partial "md-block.html" . }}
+      {{ else }}
+        {{ partial "md-block.html" .Summary }}
+      {{ end }}
       </div>
     {{ end }}
 
-    {{ .Content }}
+
+      {{ .Content }}
+    </div>
   </div>
 </main>
 {{ end }}

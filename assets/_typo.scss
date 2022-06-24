@@ -1,63 +1,81 @@
-@keyframes bounce {
-  from {
-    font-variation-settings: "wght" 1, "SFGT" 1;
-  }
-  12.5% {
-    font-variation-settings: "wght" 1, "SFGT" 1;
-  }
-  25% {
-    font-variation-settings: "wght" 1000, "SFGT" 1;
-  }
-  37.5% {
-    font-variation-settings: "wght" 1000, "SFGT" 1;
-  }
-  50% {
-    font-variation-settings: "wght" 1000, "SFGT" 1000;
-  }
-  62.5% {
-    font-variation-settings: "wght" 1000, "SFGT" 1000;
-  }
-  75% {
-    font-variation-settings: "wght" 1, "SFGT" 1000;
-  }
-  87.5% {
-    font-variation-settings: "wght" 1, "SFGT" 1000;
-  }
-  to {
-    font-variation-settings: "wght" 1, "SFGT" 1;
-  }
+$multiplier: 0.045;
+$sm-multiplier: 0.065;
+
+@mixin font-article {
+  font-family: $article;
+  font-size: #{24vw * $multiplier * 1.4};
+  line-height: #{40vw * $multiplier * 1.4};
+  font-weight: 400;
 }
 
-@function relFontSize($pxSize) {
-  @return $pxSize / 1200px * 100vw;
+@mixin font-article-title {
+  font-family: $bread;
+  font-size: #{24vw * $multiplier * 1.4};
+  line-height: #{29vw * $multiplier * 1.4};
+  font-weight: 700;
 }
 
-@mixin font-size-s {
-  @include font-size(14px, 16px);
+/* @mixin font-bread ?!?!?! {
+  font-family: $bread;
+  font-size: #{24vw * $multiplier};
+  line-height: #{32vw * $multiplier};
+  font-weight: 400;
+} */
+
+@mixin font-bread {
+  font-family: $bread;
+  font-size: #{35vw * $multiplier};
+  line-height: #{49vw * $multiplier};
+  font-weight: 400;
 }
 
-@mixin font-size-m {
-  @include font-size(16px, 18px);
+@mixin font-perex {
+  font-family: $bread;
+  font-size: #{50vw * $multiplier};
+  line-height: #{70vw * $multiplier};
+  font-weight: 400;
 }
 
-@mixin font-size-l {
-  @include font-size(20px, 24px);
+@mixin font-button {
+  font-family: $bread;
+  font-size: #{35vw * $multiplier};
+  line-height: #{30vw * $multiplier};
+  font-weight: 500;
 }
 
-@mixin font-size-xl {
-  @include font-size(24px, 32px);
+@mixin font-nav {
+  font-family: $bread;
+  font-size: #{36vw * $multiplier};
+  line-height: #{50vw * $multiplier};
+  font-weight: 500;
 }
 
-@mixin font-size-xxl {
-  @include font-size(28px, 40px);
+@mixin font-preview-title {
+  font-family: $title;
+  font-size: #{70vw * $multiplier};
+  line-height: #{84vw * $multiplier};
+  font-weight: 600;
 }
 
-@mixin font-size-xxxl {
-  @include font-size(28px, 50px);
+@mixin font-heading-boxed {
+  font-family: $title;
+  font-size: #{96vw * $multiplier};
+  line-height: #{120vw * $multiplier};
+  font-weight: 400;
 }
 
-@mixin font-size-xxxxl {
-  @include font-size(32px, 72px);
+@mixin font-heading {
+  font-family: $title;
+  font-size: #{140vw * $multiplier};
+  line-height: #{168vw * $multiplier};
+  font-weight: 400;
+}
+
+@mixin font-title {
+  font-family: $title;
+  font-size: #{170vw * $multiplier};
+  line-height: #{195vw * $multiplier};
+  font-weight: 300;
 }
 
 @font-face {
@@ -66,35 +84,33 @@
 }
 
 h1,
-h2 {
-  font-weight: 300;
-  font-family: $title;
-  line-height: 1.3em;
-  @include font-size-xxxxl;
+h2.home-h2 {
+  margin: 0.2em 0 0.3em;
+  @include font-title;
 }
 
 h2 {
-  font-weight: 300;
-  font-size: 3rem;
-  @include font-size-xxxl;
+  padding: #{2 * $gap} 0 $gap;
+  margin: 0;
+  @include font-heading;
+
+  &.large {
+    @include font-title;
+  }
 }
 
 h3 {
-  font-family: $bread;
-  @include font-size-l;
-  font-weight: 500;
+  @include font-perex;
 }
 
 p,
 li {
-  font-family: $bread;
-  @include font-size-m;
+  @include font-bread;
 }
 
 .perex {
   p {
-    max-width: 28rem;
-    @include font-size-l;
+    @include font-perex;
   }
 }
 
@@ -115,14 +131,9 @@ li {
   }
 }
 
-.balance-wrapper-h1 {
-  max-width: 50rem;
-}
-
-.balance-wrapper-h2 {
-  max-width: 34rem;
-}
-
-.balance-wrapper-h3 {
-  max-width: 20rem;
+.balance-wrapper-h1,
+.balance-wrapper-h2,
+.balance-wrapper-h3,
+.balance-wrapper-p {
+  max-width: #{"min(100%, 70vw)"};
 }
