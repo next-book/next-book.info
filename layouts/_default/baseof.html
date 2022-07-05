@@ -6,7 +6,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  {{ $style := resources.Get "style.scss" | toCSS | minify | fingerprint }}
+
+  {{ $options := (dict "transpiler" "dartsass") }}
+  {{ $style := resources.Get "style.scss" | toCSS $options | minify }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
   <link rel="stylesheet" href="https://use.typekit.net/tly6rvv.css">
@@ -15,13 +17,16 @@
 
 <body>
   <nav class="_global-nav">
+    <input type="checkbox" name="open-nav" id="open-nav">
+    <label id="nav-opener" for="open-nav"></label>
     <ul>
+
       {{ partial "menu-item.html" (dict "page" (.GetPage "/") "permalink" "" "text" "next-book") }}
-      {{ partial "menu-item.html" (dict "page" (.GetPage "/library") "permalink" .RelPermalink "text" (i18n "library")) }}
-      {{ partial "menu-item.html" (dict "page" (.GetPage "/blog") "permalink" .RelPermalink "text" (i18n "blog")) }}
-      {{ partial "menu-item.html" (dict "page" (.GetPage "/concept") "permalink" .RelPermalink "text" (i18n "concept")) }}
-      {{ partial "menu-item.html" (dict "page" (.GetPage "/non-profit") "permalink" .RelPermalink "text" (i18n "non-profit")) }}
-      {{ partial "menu-item.html" (dict "page" (.GetPage "/contact") "permalink" .RelPermalink "text" (i18n "get-in-touch")) }}
+      {{ partial "menu-item.html" (dict "page" (.GetPage "library") "permalink" .RelPermalink "text" (i18n "library")) }}
+      {{ partial "menu-item.html" (dict "page" (.GetPage "blog") "permalink" .RelPermalink "text" (i18n "blog")) }}
+      {{ partial "menu-item.html" (dict "page" (.GetPage "concept") "permalink" .RelPermalink "text" (i18n "concept")) }}
+      {{ partial "menu-item.html" (dict "page" (.GetPage "non-profit") "permalink" .RelPermalink "text" (i18n "non-profit")) }}
+      {{ partial "menu-item.html" (dict "page" (.GetPage "contact") "permalink" .RelPermalink "text" (i18n "get-in-touch")) }}
 
       {{ if .IsTranslated }}
         {{ range .Translations }}
@@ -44,15 +49,17 @@
   {{ block "main" . }}{{ end }}  
 
   <footer class="wrapper">
-    <div class="_content-column _grid">
+    <div class="_content-column _grid spaced">
       <div class="half">
         {{ with (.GetPage "/").Params.newsletter }}
         <div id="mc_embed_signup" class="balance-content">
           <h3>{{ partial "typo.html" .title }}</h3>
           <form action="https://next-book.us20.list-manage.com/subscribe/post?u=f81ac979da2d23765713d081e&amp;id=89f546e1fd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             {{ partial "md-block.html" .desc }}
-            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="_button orange small">
+            <p>
+              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+              <input type="submit" value="{{ if eq $.Language.Lang "cs" }}Chci newsletter{{ else }}Subscribe{{ end }}" name="subscribe" id="mc-embedded-subscribe" class="_button orange small">
+            </p>
             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f81ac979da2d23765713d081e_89f546e1fd" tabindex="-1" value=""></div>
           </form>
           {{ partial "md-block.html" .legal }}
@@ -61,8 +68,7 @@
         </div>
         <p class="copy">&copy; 2017—{{ now.Format "2006" }} next-book, z. s.</p>
       </div>
-      <div class="fourth"></div>
-      <div class="fourth _logo end">
+      <div class="half _logo end">
         <span class="vf-logo-wrapper">
           <span class="vf-logo">next→book</span>
         </span>
@@ -82,7 +88,7 @@
   </script>
   <script src="/text-balancer/text-balancer.js"></script>
   <script>
-  window.addEventListener('DOMContentLoaded', () => {
+  /*window.addEventListener('DOMContentLoaded', () => {
     const bubbles = document.querySelectorAll('.bubble');
     const ratio = 0.5;
 
@@ -96,7 +102,7 @@
           b.style.transform = 'translateY(' + ((window.innerHeight - top) * b.dataset.bubbleScale * ratio) + 'px)';
         });
     });
-  });
+  });*/
 
   </script>
 </body>

@@ -1,0 +1,6 @@
+<div class="bubbles{{ with .class }}-{{ . }}{{ end }}-title">
+  {{ range after 1 (seq (add .bubbleCount 1))}}
+     <div class="_bubble"></div>
+  {{ end }}
+  <h1 class="balance-text">{{ .title }}</h1>
+</div>

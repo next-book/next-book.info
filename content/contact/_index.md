@@ -1,22 +1,30 @@
 ---
 title: Pojďme spolu něco vymyslet
 description: ""
+perex: |
+  Pracujete v nakladatelství, na akademické půdě nebo sami píšete a chcete vydat knihu také jako přístupnou a použitelnou webovou knihu? Ozvěte se nám!
+
+  Působíte v knihovně nebo vás prostě jen zajímá webové publikování a rádi byste se pobavili o možnostech nebo navázali spolupráci? Dejte nám vědět.
+
+  Rádi se s vámi potkáme naživo nebo přes videohovor. Napište nám na **chci@next-book.info**.
 ---
+
 Pracujete v nakladatelství, na akademické půdě nebo sami píšete a chcete vydat knihu také jako snadno přístupnou a skvěle použitelnou webovou knihu? Ozvěte se nám!
 
 Působíte v knihovně nebo vás prostě jen zajímá e-publikování a rádi byste se pobavli o možnostech nebo navázali spolupráci? Dejte nám vědět.
 
 Rádi se s vámi potkáme naživo nebo přes videohovor. Napište nám na [chci@next-book.info](mailto:chci@next-book.info).
 
-## **Pár projektů už máme za sebou**
 
-### **Redesign knihovních služeb 2020: webové knihy**
+## Pár projektů už máme za sebou
 
-Od listopadu 2020 společně s *Městskou knihovnou v Praze* a *Katedrou informačních studií a knihovnictví* (Masarykova univerzita) hledáme nové způsoby, jak poskytovat knihovní služby online – a to především díky možnostem webových knih.
+### Redesign knihovních služeb 2020: webové knihy
 
-V rámci projektu také vyvíjíme konvertor, který umožní tvorbu webových knih z formátu .epub. Čtenáři tak budou moct číst e-knihy, které *knihovna nabízí volně k dispozici*, přímo v prohlížeči.
+Od listopadu 2020 společně s *Městskou knihovnou v Praze* a *Katedrou informačních studií a knihovnictví* (Masarykova univerzita) hledáme nové způsoby, jak poskytovat knihovní služby online – a to především díky možnostem webových knih.
 
-Více o projektu se dozvíte na stránkách *Masarykovy univerzity*. Projekt podpořila [Technologická agentura ČR](https://www.tacr.cz/).
+V rámci projektu také vyvíjíme konvertor, který umožní tvorbu webových knih z formátu .epub. Čtenáři tak budou moct číst e-knihy, které *knihovna nabízí volně k dispozici*, přímo v prohlížeči.
+
+Více o projektu se dozvíte na stránkách [Masarykovy univerzity](https://www.phil.muni.cz/vyzkum/resene-projekty/57507). Projekt podpořila [Technologická agentura ČR](https://www.tacr.cz/).
 
 ### **Interaktivní odborné knihy**
 
@@ -31,3 +39,4 @@ V průběhu února až prosince 2018 spojili síly vydavatelé z Česka, Slovens
 ### První next-book
 
 Historii next-booku odstartovala kniha, na které spolupracoval Honza Martinek s Ivanou Lukeš Rybanskou z nakladatelství Nová beseda. Začali jsme s cílem vytvořit interaktivní verzi knihy na web, ale brzy jsme se octli hluboko v králičí noře webového čtení a publikování knih na webu. Vznikla kniha **Co je nového ve filmové vědě**, kterou si můžete přečíst [na webu nakladatelství Nová beseda](https://novabeseda.cz/page/nextbook). Po mnoha letech slouží i jako reflexe cesty, kterou jsme ušli.
+

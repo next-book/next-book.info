@@ -1,6 +1,7 @@
-<li>
-  <a {{ if eq .permalink .page.RelPermalink }}class="orange"{{ end }}
-    href="{{ .page.RelPermalink }}">
+{{- $nlInUrl := findRE "newsletter" .permalink -}}
+{{- $blogInLink := findRE "/blog/" .page.RelPermalink -}}
+<li {{ if or (eq .permalink .page.RelPermalink) (and $nlInUrl $blogInLink) }}class="selected"{{ end }}>
+  <a href="{{ .page.RelPermalink }}">
     {{ .text }}
   </a>
 </li>

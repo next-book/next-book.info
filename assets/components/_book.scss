@@ -1,17 +1,21 @@
 ._book {
   background: $gray;
-  padding: $gap;
+  padding: var(--gap);
   position: relative;
 
   .cover {
     background: $orange;
-    margin-bottom: $gap;
+    margin-bottom: var(--gap);
 
     img {
       display: block;
-      padding: #{2 * $gap};
+      padding: calc(2 * var(--gap));
       margin: 0 auto;
-      height: 25vw;
+      height: 25vh;
+
+      @include md-up {
+        height: 25vw;
+      }
     }
   }
 
@@ -23,7 +27,7 @@
 
   ._button {
     position: absolute;
-    bottom: $gap;
-    right: $gap;
+    bottom: var(--gap);
+    right: var(--gap);
   }
 }

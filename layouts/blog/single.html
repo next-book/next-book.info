@@ -3,7 +3,7 @@
   <div class="_content-column">
     {{ partial "title.html" (dict "bubbleCount" 1 "title" .Title) }}
 
-    <div class="page-text">
+    <div class="article-text">
       <p class="published">
         {{ with .Params.date }}<b>{{ partial "date.html" (dict "months" $.Site.Data.mesice "date" . "lang" $.Language.Lang) }}</b>{{ end }}
       </p>
@@ -15,6 +15,5 @@
     	{{ .Content }}
     </div>
   </div>
-
 </main>
 {{ end }}

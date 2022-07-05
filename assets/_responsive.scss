@@ -1,6 +1,6 @@
-$break-small-min: 480px;
+$break-small-min: 550px;
 $break-medium-min: 650px;
-$break-large-min: 890px;
+$break-large-min: 990px;
 
 @mixin sm {
   @media only screen and (max-width: $break-small-min - 0.01px) {

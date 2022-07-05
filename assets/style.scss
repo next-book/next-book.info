@@ -3,14 +3,16 @@ $background: white;
 $orange: #f26531;
 $orangeDark: #a52d01;
 $gray: #f5f4f1;
+$tag: #e5e5e5;
 $dark: #383838;
 
 $bread: "halyard-display", sans-serif;
 $title: "ivypresto-display", serif;
 $article: "ivypresto-text", serif;
 
-$nav-height: 4vw;
-$gap: 1vw;
+@function font-size($vw) {
+  @return clamp($vw * 0.045 * 0.5vw, $vw * 0.045 * 1vw, $vw * 0.5px);
+}
 
 @import "responsive";
 @import "typo";

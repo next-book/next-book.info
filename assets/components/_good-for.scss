@@ -8,6 +8,11 @@
     list-style-type: none;
     counter-increment: good;
 
+    @include sm {
+      display: grid;
+      grid-gap: 1em;
+    }
+
     &::before {
       display: block;
       grid-column: 1;
@@ -36,8 +41,12 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 
-      margin: 1rem 0 0;
+      margin: var(--gap) 0 0;
       padding: 0;
+
+      @include sm {
+        padding: 0 0 1em;
+      }
 
       li {
         display: block;

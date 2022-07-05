@@ -73,4 +73,4 @@ You can try it out on [an improved test page](https://tmp.jan-martinek.com/test3
 
 Well, that’s it for today. What are the other things you miss in digital books? Feel free to reply to this e-mail :)
 
-I’ve been experimenting with mobile screen recording, so perhaps there’ll be a more thrilling demonstration of our B.R.E.A.K.T.H.R.O.U.G.H.S. down the line :-)
+I’ve been experimenting with mobile screen recording, so perhaps there’ll be a more thrilling demonstration of our *breakthroughs* down the line :-)

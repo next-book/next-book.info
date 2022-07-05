@@ -49,7 +49,7 @@
 
   function prepHeadlines() {
     var candidates = document.querySelectorAll(
-      ".balance-text, .balance-content h2, .balance-content h3, .balance-content h4, .balance-content p"
+      ".balance-text, .balance-content h2, .balance-content h3, .balance-content h4, .balance-content p, .article-text h2, .article-text h3, .page-text h2, .page-text h3"
     );
 
     console.log(candidates);

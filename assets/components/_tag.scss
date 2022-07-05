@@ -1,0 +1,26 @@
+._tag,
+._content-column ._tag {
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+
+  padding: 0.4em 1.2em 0.5em;
+  margin-right: 0.5em;
+  border-radius: 10em;
+
+  text-decoration: none;
+
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
+  @include font-button;
+  will-change: transform box-shadow;
+
+  color: black;
+  background: $tag;
+
+  &.selected {
+    color: white;
+    background: $orange;
+  }
+}

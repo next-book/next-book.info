@@ -1,80 +1,94 @@
+@use "sass:math";
+
 $multiplier: 0.045;
 $sm-multiplier: 0.065;
 
+@function font-size($vw) {
+  @return clamp(
+    $vw * $multiplier * 0.5vw,
+    $vw * $multiplier * 1vw,
+    $vw * 0.5px
+  );
+}
+
+@mixin font($font-size, $line-height) {
+  font-size: font-size(math.sqrt($font-size) * 16);
+  line-height: font-size(math.sqrt($line-height) * 19);
+
+  @include md-up {
+    font-size: font-size(30 + $font-size);
+    line-height: font-size(30 + $line-height);
+  }
+
+  @include lg-up {
+    font-size: font-size($font-size);
+    line-height: font-size($line-height);
+  }
+}
+
 @mixin font-article {
   font-family: $article;
-  font-size: #{24vw * $multiplier * 1.4};
-  line-height: #{40vw * $multiplier * 1.4};
+  @include font(24 * 1.5, 40 * 1.5);
   font-weight: 400;
 }
 
 @mixin font-article-title {
   font-family: $bread;
-  font-size: #{24vw * $multiplier * 1.4};
-  line-height: #{29vw * $multiplier * 1.4};
+  @include font(24 * 1.5, 29 * 1.5);
   font-weight: 700;
 }
 
 /* @mixin font-bread ?!?!?! {
   font-family: $bread;
-  font-size: #{24vw * $multiplier};
-  line-height: #{32vw * $multiplier};
+  @include font(24, 32);
   font-weight: 400;
 } */
 
 @mixin font-bread {
   font-family: $bread;
-  font-size: #{35vw * $multiplier};
-  line-height: #{49vw * $multiplier};
+  @include font(35 * 1.1, 49 * 1.1);
   font-weight: 400;
 }
 
 @mixin font-perex {
   font-family: $bread;
-  font-size: #{50vw * $multiplier};
-  line-height: #{70vw * $multiplier};
+  @include font(50, 70);
   font-weight: 400;
 }
 
 @mixin font-button {
   font-family: $bread;
-  font-size: #{35vw * $multiplier};
-  line-height: #{30vw * $multiplier};
+  @include font(35, 30);
   font-weight: 500;
 }
 
 @mixin font-nav {
   font-family: $bread;
-  font-size: #{36vw * $multiplier};
-  line-height: #{50vw * $multiplier};
+  @include font(36 * 1.2, 50 * 1.2);
   font-weight: 500;
 }
 
 @mixin font-preview-title {
   font-family: $title;
-  font-size: #{70vw * $multiplier};
-  line-height: #{84vw * $multiplier};
+  @include font(70, 84);
   font-weight: 600;
 }
 
 @mixin font-heading-boxed {
   font-family: $title;
-  font-size: #{96vw * $multiplier};
-  line-height: #{120vw * $multiplier};
+  @include font(96, 120);
   font-weight: 400;
 }
 
 @mixin font-heading {
   font-family: $title;
-  font-size: #{140vw * $multiplier};
-  line-height: #{168vw * $multiplier};
+  @include font(140, 168);
   font-weight: 400;
 }
 
 @mixin font-title {
   font-family: $title;
-  font-size: #{170vw * $multiplier};
-  line-height: #{195vw * $multiplier};
+  @include font(170, 195);
   font-weight: 300;
 }
 
@@ -85,13 +99,28 @@ $sm-multiplier: 0.065;
 
 h1,
 h2.home-h2 {
-  margin: 0.2em 0 0.3em;
   @include font-title;
+  margin: 0.2em 0 0.3em;
+
+  .home-h2-shifted {
+    margin-left: 1em;
+  }
+
+  @include md-up {
+    margin-left: 0.1em;
+
+    .home-h2-shifted {
+      margin-left: -0.1em;
+    }
+  }
+
+  &.home-h2 {
+    margin-top: 0.5em;
+  }
 }
 
 h2 {
-  padding: #{2 * $gap} 0 $gap;
-  margin: 0;
+  margin: calc(2 * var(--gap)) 0 0;
   @include font-heading;
 
   &.large {
@@ -101,6 +130,11 @@ h2 {
 
 h3 {
   @include font-perex;
+  margin: calc(2 * var(--gap)) 0 calc(0.5 * var(--gap));
+}
+
+p {
+  margin: var(--gap) 0;
 }
 
 p,
@@ -135,5 +169,5 @@ li {
 .balance-wrapper-h2,
 .balance-wrapper-h3,
 .balance-wrapper-p {
-  max-width: #{"min(100%, 70vw)"};
+  max-width: #{"min(100%, 90vw)"};
 }

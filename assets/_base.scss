@@ -10,10 +10,23 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  @include font-bread;
+
+  --gap: 0.5em;
+
+  @include md-up {
+    --gap: 1em;
+  }
 }
 
 body {
-  padding-top: $nav-height;
+  @include md-up {
+    padding-top: font-size(140);
+  }
+
+  @include lg-up {
+    padding-top: font-size(100);
+  }
 }
 
 a {
@@ -26,6 +39,14 @@ a {
   }
 }
 
+p {
+  margin-bottom: 1.25em;
+}
+
+section > p:last-child {
+  margin-bottom: 0;
+}
+
 .hide {
   display: none;
 }
@@ -33,19 +54,28 @@ a {
 footer {
   color: $background;
   background-color: $dark;
+  padding: calc(2 * var(--gap)) 0;
 
   .copy {
-    margin-top: 4rem;
+    margin: 4rem 0 0;
+
+    @include sm {
+      text-align: center;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
   }
 }
 
 section {
-  margin-bottom: #{6 * $gap};
+  margin-bottom: calc(6 * var(--gap));
 }
 
 hr {
   border: 0;
-  margin: 4 * $gap;
+  margin: calc(4 * var(--gap));
 }
 
 input[type="text"],
@@ -60,12 +90,12 @@ input[type="email"] {
 .orange-box {
   background: $orange;
   color: white;
-  padding: #{2 * $gap};
-  margin: #{2 * $gap} 0;
+  padding: calc(3 * var(--gap));
+  margin: calc(3 * var(--gap)) 0 var(--gap);
 
   & > div {
-    padding-bottom: #{2 * $gap};
-    margin-bottom: #{2 * $gap};
+    padding-bottom: calc(2 * var(--gap));
+    margin-bottom: calc(2 * var(--gap));
     border-bottom: 0.5px solid white;
 
     &:last-child {
@@ -73,5 +103,14 @@ input[type="email"] {
       padding: 0;
       margin: 0;
     }
+  }
+
+  p {
+    margin: 0.5em 0 2em;
+  }
+
+  h2 {
+    @include font-heading-boxed;
+    margin-top: 0;
   }
 }

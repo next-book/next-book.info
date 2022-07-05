@@ -2,24 +2,22 @@
 <main>
   <div class="_content-column _grid">
     <div class="full">
-      <h1 class="balance-text">{{ .Title }}</h1>
+      {{ partial "title.html" (dict "bubbleCount" 2 "title" .Title "class" "blog") }}
 
       {{ with .Params.description }}
         {{ partial "md-block.html" . }}
       {{ else }}
         {{ partial "md-block.html" .Summary }}
       {{ end }}
-
     </div>
+
     <div class="centered">
-      <div class="">
-        {{ with .GetPage "/blog" }}
-          <a href="{{ .Permalink }}" class="_button orange small">{{ .Params.shortTitle | lower }}</a>
-        {{ end }}
-        {{ with .GetPage "/newsletter" }}
-          <a href="{{ .Permalink }}" class="_button black small">{{ .Params.shortTitle | lower }}</a>
-        {{ end }}
-      </div>
+      {{ with .GetPage "/blog" }}
+        <a href="{{ .Permalink }}" class="_tag selected">{{ .Params.shortTitle | lower }}</a>
+      {{ end }}
+      {{ with .GetPage "/newsletter" }}
+        <a href="{{ .Permalink }}" class="_tag">{{ .Params.shortTitle | lower }}</a>
+      {{ end }}
     </div>
 
     {{ range .Pages }}

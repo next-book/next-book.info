@@ -23,9 +23,9 @@
 
   <main>
     {{ with .Params.ngo}}
-    <section class="_content-column _grid balance-content">
+    <section class="_content-column _grid balance-content spaced">
       <div class="full">
-        <h2 class="home-h2">{{ .title }}</h2>
+        {{ partial "title.html" (dict "bubbleCount" 2 "title" .title "class" "ngo") }}
       </div>
       <div class="_perex centered">
         {{ partial "md-block.html" .text }}
@@ -64,14 +64,14 @@
     <hr>
 
     {{ with .Params.open }}
-      <div class="_content-column">
+      <div class="_content-column bubble-context bubbles-open">
         <div class="desc">
           <h2 class="home-h2 _grid">
             <div class="full">{{ .title }}&nbsp;=</div>
-            <div class="right"><em>{{ .subtitle }}</em></div>
+            <div class="right home-h2-shifted"><em>{{ .subtitle }}</em></div>
           </h2>
           <div class="_grid">
-            <div class="centered">
+            <div class="centered spaced">
               <div class="_perex">
                 {{ partial "md-block.html" .perex }}
               </div>
@@ -82,13 +82,10 @@
             </div>
           </div>
         </div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
+        <div class="_bubble"></div>
+        <div class="_bubble"></div>
       </div>
     {{ end }}
-
     <hr>
-
   </main>
 {{ end }}

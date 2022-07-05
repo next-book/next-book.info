@@ -1,21 +1,27 @@
 {{ define "main" }}
 <main>
   <div class="_content-column">
-	 <h1 class="balance-text">{{ .Title }}</h1>
-    {{ with .Params.perex }}
-      {{ partial "md-block.html" . }}
-    {{ end }}
+	 {{ partial "title.html" (dict "bubbleCount" 1 "title" .Title) }}
 
-  	{{ range .Pages }}
-  		{{ $perm := .RelPermalink }}
-  		<h2 class=""><a href="{{ $perm }}">{{ .Title }}</a></h2>
-  		{{ with .Params.date }}<b>{{ partial "date.html" (dict "months" $.Site.Data.mesice "date" . "lang" $.Language.Lang) }}</b>{{ end }}
-  		<div>
-  			{{ with .Params.name }}<img class="pic" swrc="{{ $perm }}{{ . }}">{{ end }}
-  		</div>
-  	{{ end }}
 
-    {{ .Content }}
+  <div class="page-text">
+      {{ with .Params.perex }}
+        <div class="perex">
+          {{ partial "md-block.html" . }}
+        </div>
+      {{ end }}
+
+    	{{ range .Pages }}
+    		{{ $perm := .RelPermalink }}
+    		<h2 class=""><a href="{{ $perm }}">{{ .Title }}</a></h2>
+    		{{ with .Params.date }}<b>{{ partial "date.html" (dict "months" $.Site.Data.mesice "date" . "lang" $.Language.Lang) }}</b>{{ end }}
+    		<div>
+    			{{ with .Params.name }}<img class="pic" swrc="{{ $perm }}{{ . }}">{{ end }}
+    		</div>
+    	{{ end }}
+
+      {{ partial "typo.html" .RawContent  }}
+    </div>
   </div>
 </main>
 {{ end }}

@@ -1,35 +1,68 @@
 ._content-column {
   max-width: 990px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 var(--gap);
 
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .page-text,
   .article-text {
     max-width: 30rem;
-    margin: 0 auto 6 * $gap;
+    margin: 0 auto calc(3 * var(--gap));
 
     img {
       max-width: 100%;
     }
 
-    .perex p {
-      @include font-perex;
+    .perex {
+      margin-top: calc(6 * var(--gap));
+      p {
+        @include font-perex;
+      }
+    }
+
+    ul {
+      padding-left: 1.25em;
+    }
+
+    ul {
+      display: block;
+      padding: 0;
+      border-radius: 2px;
+
+      li {
+        margin: 0.5em 0;
+        display: block;
+        padding: 0 0 0 1.15em;
+        @include font-bread;
+
+        &::before {
+          content: " ";
+          display: block;
+          width: 0.5em;
+          height: 0.5em;
+          background-image: url(/images/bullets.jpg);
+          background-position: 50% 50%;
+          background-size: 100%;
+          background-attachment: fixed;
+          float: left;
+          margin-left: -1.15em;
+          margin-top: 0.5em;
+          border-radius: 50%;
+        }
+      }
     }
 
     h2 {
-      @include font-article-title;
-      margin: 3 * $gap 0 1 * $gap;
-    }
-
-    p {
-      @include font-article;
-      text-indent: 4 * $gap;
-      margin: 0;
-    }
-
-    :not(p) + p,
-    p:first-child {
-      margin-top: 3 * $gap;
-      text-indent: 0;
+      @include font-preview-title;
+      margin: calc(1 * var(--gap)) 0 calc(0 * var(--gap));
+      padding: 0;
     }
 
     blockquote,
@@ -38,12 +71,12 @@
     }
 
     figure {
-      margin: 3 * $gap 0;
-      padding: $gap;
+      margin: calc(1 * var(--gap)) 0;
+      padding: var(--gap);
       background: $gray;
 
       figcaption p:first-child {
-        margin-top: $gap;
+        margin-top: var(--gap);
       }
     }
 
@@ -56,8 +89,8 @@
 
     .published + img {
       float: right;
-      margin-right: -3 * $gap;
-      padding: $gap;
+      margin-right: calc(-3 * var(--gap));
+      padding: var(--gap);
       border-radius: 50%;
       overflow: hidden;
       width: 180px;
@@ -66,9 +99,48 @@
     }
   }
 
+  .article-text {
+    h2 {
+      @include font-article-title;
+      margin: calc(2.5 * var(--gap)) 0 calc(0.5 * var(--gap));
+      padding: 0;
+    }
+
+    h3 {
+      margin: calc(3 * var(--gap)) 0 0;
+    }
+
+    p {
+      @include font-article;
+      text-indent: calc(4 * var(--gap));
+      margin: 0;
+    }
+
+    ul li {
+      @include font-article;
+
+      &:before {
+        margin-top: 0.6em;
+      }
+    }
+
+    p.published + p,
+    :not(p) + p,
+    p:first-child {
+      margin-top: calc(1.5 * var(--gap));
+      text-indent: 0;
+    }
+
+    h1 + p,
+    h2 + p,
+    h3 + p {
+      margin-top: var(--gap);
+    }
+  }
+
   .article-preview {
-    margin: $gap 0;
-    padding: $gap 0 $gap;
+    margin: var(--gap) 0;
+    padding: var(--gap) 0 var(--gap);
 
     h2 {
       margin: 0;
@@ -91,4 +163,25 @@
       padding: 1vw 0 2vw;
     }
   }
+
+  /* .page-text ul {
+    display: block;
+    padding: 0;
+
+    li {
+      margin: 0;
+      display: block;
+      padding: 0.5rem;
+      margin: -0.5px;
+      border: 0.5px solid $orange;
+      background: $background;
+      border-radius: 2px;
+      transform: translateX(-0.5rem);
+
+      &:nth-child(even) {
+        background: rgba($orange, 0.1);
+        transform: translateX(0.5rem);
+      }
+    }
+  } */
 }

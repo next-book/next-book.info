@@ -1,5 +1,6 @@
 ---
 title: Jsme technologická neziskovka
+perex: TOhle jsme my
 aside: >
   ## Thanks!
 

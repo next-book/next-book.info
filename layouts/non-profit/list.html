@@ -1,23 +1,50 @@
 {{ define "main" }}
 <main>
   <div class="_content-column">
-	 <h1 class="balance-text">{{ .Title }}</h1>
-    {{ with .Params.perex }}
-      {{ partial "md-block.html" . }}
-    {{ end }}
+	  {{ partial "title.html" (dict "bubbleCount" 2 "title" .Title) }}
 
-    <div class="_team">
-  	{{ range .Params.team }}
-      <div class="member">
-        <h3>{{ .title }}</h3>
-        {{ with .portrait }}
-          {{ partial "pic.html" (dict "pic" (replaceRE "/media/" "" .) "Resources" ($.GetPage "/media").Resources "resize" "300x") }}
-        {{ end }}
-        {{ partial "md-block.html" .desc }}
+    <div class="_grid">
+      <div class="page-text centered">
+        <div class="_perex">
+          {{ with .Params.perex }}
+            {{ partial "md-block.html" . }}
+          {{ end }}
+        </div>
+
+        {{ partial "md-block.html" .Params.startup }}
+
       </div>
-    {{ end }}
+    </div>
 
-    {{ .Content }}
+
+
+    <div class="_team _grid">
+      <h2 class="member-title member half">Náš tým</h2>
+    	{{ range .Params.team }}
+        <div class="member half">
+          {{ with .portrait }}
+            {{ partial "pic.html" (dict "pic" (replaceRE "/media/" "" .) "Resources" ($.GetPage "/media").Resources "resize" "300x") }}
+          {{ end }}
+          <h3>{{ .title }}</h3>
+          <p class="role">{{ .role }}</p>
+          {{ partial "md-block.html" .desc }}
+        </div>
+      {{ end }}
+
+      <div class="page-text centered">
+        {{ partial "md-block.html" .RawContent }}
+
+        {{ partial "md-block.html" .Params.aside }}
+
+        {{ with .Params.join }}
+          <h2>{{ partial "typo.html" .title }}</h2>
+
+          {{ partial "md-block.html" .desc }}
+
+          <p><a href="" class="_button orange">{{ .button }}</a></p>
+        {{ end }}
+      </div>
+    </div>
   </div>
 </main>
 {{ end }}
