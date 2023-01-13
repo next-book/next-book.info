@@ -18,20 +18,25 @@ good-for:
     title: Readers
     links:
       - title: Check out the books
+        link: /en/library/
       - title: Web book features
+        link: /en/concept/
   - title: Publishers
     reasons: Get the good stuff from both paper books and e-books into great digital books. Full visual experince and enjoyable reading. Platform independent. Connected to your e-shop, with a conversion from other formats or reading stats.
     links:
       - title: Publish web books
+        link: /en/contact/
   - title: Teachers, librarians and academics
     reasons: Do things with books you never dreamed of before. Support
       reading, curiosity, community services, or reading comprehension.
     links:
       - title: Let's connect!
+        link: /en/contact/
   - title: Authors
     reasons: Create an artwork that uses the internet. Perhaps with multimedia content, links, or interactivity.
     links:
       - title: I'm interested
+        link: /en/contact/
 open:
   title: Open platform
   subtitle: more democratic publishing

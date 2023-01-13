@@ -22,23 +22,28 @@ good-for:
     title: Čtenářům a čtenářkám
     links:
       - title: Omrknout knížky
+        link: /library/
       - title: Funkce webových knih
+        link: /concept/
   - title: Nakladatelům a nakladatelkám
     reasons: Dostaňte to dobré z papírových knih do e-knih. Vizuální zpracování i
       příjemné čtení. Nezávisle na platformě, s napojením na váš e-shop,
       konverzí z jiných formátů nebo sledováním statistik.
     links:
       - title: Vydávat webové knihy
+        link: /contact/
   - title: Učitelkám, knihovníkům a akademičkám
     reasons: Dělejte s knížkami věci, o kterých se vám dřív ani nesnilo. Podporujte
       čtenářství, zvídavost, komunitní služby nebo třeba porozumění textu.
     links:
       - title: Spojme se!
+        link: /contact/
   - title: Autorům a autorkám
     reasons: Vytvořte dílo na míru internetu. Třeba s multimediálním obsahem,
       vzájemnou provázaností, podporou obrazotvornosti či zapojením čtenářstva.
     links:
       - title: To mě zajímá
+        link: /contact/
 open:
   title: Otevřená platforma
   subtitle: demokratičtější publikování

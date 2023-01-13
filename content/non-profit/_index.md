@@ -34,7 +34,7 @@ team:
     portrait: /images/matej.jpg
     desc: |
       **Píšu svůj medailonek**  
-      Čekám, až dostanu doktorát, abych to mohl zmínit.
+      Každopádně myslím, že zrovna ten Kafka by se dal vyřešit ještě čistěji…
   - title: Jan Martinek
     role: vývojář, předseda spolku
     portrait: /images/jan.png
@@ -48,7 +48,7 @@ team:
       **Příjemné čtení na webu? To bude velký!**  
       Líbí se mi být součástí téhle foolish myšlenky na vklínění smysluplného e-knižního formátu mezi nepořádek, který v této oblasti zatím převládá. A ona každá silná myšlenka je v začátku foolish.
   - title: Jméno Příjmení
-    role: ???
+    role: 
     portrait: /images/missing.png
     desc: |
       **Nejsme kompletní**  

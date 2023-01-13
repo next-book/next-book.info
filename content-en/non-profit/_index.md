@@ -46,18 +46,14 @@ team:
       **An enjoyable read on the web? That'll be great!**  
       I like being part of this foolish idea to weave a meaningful e-book format in amongst the clutter that prevails in this area so far. And she every strong idea is foolish to begin with.
   - title: Your Name
-    role: ???
+    role: 
     portrait: /images/missing.png
     desc: |
       **We’re incomplete**  
       Do you love books and web and do you want to be involved in designing the future of reading? Let's meet.
 join:
   title: Come on in!
-  desc: >-
-    You love books, a bit of e-books and want to be involved in designing reading of the future? Let's meet.
-
-
-    Hledáme parťačku na hhhh, přístupnost, fundraising, ale
-  button: Let's get (virtual) coffee!
+  desc: You love books, or perhaps e-books, and you want to design the future of reading? **Let's meet.** We will figure out what we can do together.
+  button: Let's get a (virtual) coffee!
 ---
 

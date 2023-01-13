@@ -14,8 +14,14 @@
         </div>
       </div>
 
-      {{ with .Site.Data.books.books }}
-        {{ partial "books.html" (dict "title" "Karel Čapek v kapse" "books" (where . "collection" "Čapek") "page" $) }}
+      {{ if eq .Language.Lang "en" }}
+        {{ with .Site.Data.books.books }}
+          {{ partial "books.html" (dict "title" "Karel Čapek (in Czech)" "books" (where . "collection" "Čapek") "page" $) }}
+        {{ end }}
+      {{ else }}
+        {{ with .Site.Data.books.books }}
+          {{ partial "books.html" (dict "title" "Karel Čapek v kapse" "books" (where . "collection" "Čapek") "page" $) }}
+        {{ end }}
       {{ end }}
 
       <div class="orange-box">
@@ -26,7 +32,7 @@
           </div>
           <div class="half">
               {{ partial "md-block.html" .desc }}
-              <a href="" class="_button outlined white">{{ .button }}</a>
+              <a href="{{ .link }}" class="_button outlined white">{{ .button }}</a>
           </div>
         </div>
         {{ end }}

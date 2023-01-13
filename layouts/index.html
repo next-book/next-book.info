@@ -77,8 +77,8 @@
               </div>
               {{ partial "md-block.html" .desc }}
 
-              <p><a href="" class="_button outlined">{{ .checkGithub }}</a></p>
-              <p><a href="" class="_button outlined orange">{{ .howDoesItWork }}</a></p>
+              <p><a href="http://github.com/next-book" class="_button outlined">{{ .checkGithub }}</a></p>
+              <p><a href="{{ ($.GetPage "concept").Permalink }}" class="_button outlined orange">{{ .howDoesItWork }}</a></p>
             </div>
           </div>
         </div>

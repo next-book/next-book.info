@@ -22,7 +22,6 @@
 
 
     <div class="_team">
-
     	{{ range .Params.team }}
         <div class="member _grid">
           <div class="info">
@@ -39,16 +38,17 @@
       {{ end }}
 
       <div class="page-text centered">
-        {{ partial "md-block.html" .RawContent }}
+        <!-- {{ partial "md-block.html" .RawContent }}
 
         {{ partial "md-block.html" .Params.aside }}
+        -->
 
         {{ with .Params.join }}
           <h2>{{ partial "typo.html" .title }}</h2>
 
           {{ partial "md-block.html" .desc }}
 
-          <p><a href="" class="_button orange">{{ .button }}</a></p>
+          <p><a href="{{ ($.GetPage "contact").Permalink }}" class="_button orange">{{ .button }}</a></p>
         {{ end }}
       </div>
     </div>

@@ -7,7 +7,9 @@ sources:
     desc:
       In the catalogue of the Municipal Library in Prague you can already find over 50 titles from the Czech, Slovak and world literature.
     button: Web books in the MLP catalogue
+    link: https://www.mlp.cz/cz/o-knihovne/sluzby/e-zdroje/nextbook/
   - title: "Want to read your own book on the web?"
     desc: Let's meet. We'll introduce you to the possibilities of web books in depth and discuss how we can work together.
     button: Write to us
+    link: /en/contact/
 ---
