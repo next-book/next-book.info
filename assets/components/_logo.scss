@@ -58,10 +58,32 @@
 
 footer {
   ._logo {
-    margin: 3em 0;
+    @include md-up {
+      .vf-logo-wrapper,
+      .vf-logo {
+        display: block;
+        text-align: right;
+      }
+    }
+
+    @include sm {
+      margin: 3em 0;
+    }
 
     .vf-logo {
-      font-size: 15vw;
+      font-size: 7vw;
+      line-height: 8vw;
+      margin-bottom: -1vw;
+
+      @include sm {
+        font-size: 15vw;
+        line-height: 16vw;
+      }
+
+      @include lg-up {
+        font-size: 5vw;
+        line-height: 6vw;
+      }
     }
   }
 }

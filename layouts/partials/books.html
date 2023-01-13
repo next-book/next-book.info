@@ -5,10 +5,10 @@
 
   {{ $page := .page }}
   {{ range .books }}
-    <div class="third _book">
+    <div class="_book">
       <div class="cover">
         {{ with .cover }}
-          {{ partial "pic.html" (dict "pic" (replaceRE "/media/" "" .) "Resources" ($page.GetPage "/media").Resources "resize" "500x") }}
+          <img src="{{.}}" aria-hidden="true">
         {{ end }}
       </div>
       <h3>{{ .title }}</h3>

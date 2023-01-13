@@ -3,41 +3,38 @@
   <div class="_content-column _grid">
     <div class="full">
       {{ partial "title.html" (dict "bubbleCount" 2 "title" .Title "class" "blog") }}
-
-      {{ with .Params.description }}
-        {{ partial "md-block.html" . }}
-      {{ else }}
-        {{ partial "md-block.html" .Summary }}
-      {{ end }}
     </div>
 
-    <div class="centered">
-      {{ with .GetPage "/blog" }}
-        <a href="{{ .Permalink }}" class="_tag selected">{{ .Params.shortTitle | lower }}</a>
-      {{ end }}
-      {{ with .GetPage "/newsletter" }}
-        <a href="{{ .Permalink }}" class="_tag">{{ .Params.shortTitle | lower }}</a>
-      {{ end }}
-    </div>
-
-    {{ range .Pages }}
-    <div class="article-preview centered">
-      <p class="published">
-        {{ with .Params.date }}<b>{{ partial "date.html" (dict "months" $.Site.Data.mesice "date" . "lang" $.Language.Lang) }}</b>{{ end }}
-      </p>
-
-      <h2 class="balance-text"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-
-      {{ with .Params.description }}
-        {{ partial "md-block.html" . }}
-      {{ else }}
-        {{ partial "md-block.html" .Summary }}
-      {{ end }}
+    {{ if eq .Language.Lang "en" }}
+      <div class="centered">
+        {{ with .GetPage "/blog" }}
+          <a href="{{ .Permalink }}" class="_tag selected">{{ .Params.shortTitle | lower }}</a>
+        {{ end }}
+        {{ with .GetPage "/newsletter" }}
+          <a href="{{ .Permalink }}" class="_tag">{{ .Params.shortTitle | lower }}</a>
+        {{ end }}
       </div>
+
+      {{ range .Pages }}
+      <div class="article-preview centered">
+        <p class="published">
+          {{ with .Params.date }}<b>{{ partial "date.html" (dict "months" $.Site.Data.mesice "date" . "lang" $.Language.Lang) }}</b>{{ end }}
+        </p>
+
+        <h2 class="balance-text"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+
+        {{ with .Params.description }}
+          {{ partial "md-block.html" . }}
+        {{ else }}
+          {{ partial "md-block.html" .Params.perex }}
+        {{ end }}
+        </div>
+      {{ end }}
     {{ end }}
 
-
-      {{ .Content }}
+      <div class="centered padded-bottom perex">
+        {{ .Content }}
+      </div>
     </div>
   </div>
 </main>

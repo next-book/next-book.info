@@ -6,32 +6,33 @@
 
   box-sizing: border-box;
   margin: 0 var(--gap);
+  padding: 14vh 0 10vh;
 
   @include md-up {
-    padding: 10vh;
-    min-height: 80vh;
+    padding: 19vh 10vh 19vh;
   }
 
   .wrapper {
     box-sizing: border-box;
-    min-height: 60vh;
-    padding-top: 10vh;
     background-size: contain;
     background-repeat: no-repeat;
 
     .claim {
+      color: $background;
+      text-align: center;
+      margin: 0.5em 0 2em;
       @include font-perex;
     }
 
     h1 {
-      margin: 0 0 2rem;
+      margin: 0;
       color: $background;
       @include font-preview-title;
       text-align: center;
 
       .vf-logo {
-        padding: 8vw 0 8vw;
         font-size: 14vw;
+        line-height: 15vw;
       }
     }
 
@@ -46,13 +47,9 @@
         display: inline-block;
         list-style-type: none;
 
-        @include sm {
-          margin: 0.5em 2em;
-        }
+        margin: 0.5em var(--gap);
 
         @include md-up {
-          margin-right: var(--gap);
-
           &:last-child {
             margin-right: 0;
           }

@@ -1,16 +1,13 @@
 ---
-title: Pokochejte se možnostmi webových knih
+title: Peer into the possibilites of web books
 description:
-  Ponořte se do už existujících webových knih. Všechny uvedené tituly jsou
-  ve volné licenci. Stačí kliknout a rovnou čtete!
+  Immerse yourself in existing web books. All the titles listed are published under a free license. Just click and read right away!
 sources:
-  - title: Chcete číst více webových knih?
+  - title: Want to read more web books?
     desc:
-      V katalogu Městké knihovny v Praze už teď najdete přes 50 titulů z české,
-      slovenské i světové literatury.
-    button: Webové knihy v katalogu knihovny
-  - title: "Chcete číst vlastní titul na webu? "
-    desc: Pojďme se potkat. Představíme vám možnosti webových knih do hloubky a
-      probereme, jak můžeme spolupracovat.
-    button: Napište nám
+      In the catalogue of the Municipal Library in Prague you can already find over 50 titles from the Czech, Slovak and world literature.
+    button: Web books in the MLP catalogue
+  - title: "Want to read your own book on the web?"
+    desc: Let's meet. We'll introduce you to the possibilities of web books in depth and discuss how we can work together.
+    button: Write to us
 ---

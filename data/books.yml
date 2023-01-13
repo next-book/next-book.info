@@ -5,10 +5,10 @@ books:
     author: Karel Čapek
     year: "1940"
     desc: Drásavý román o konci spalovacích motorů.
-    cover: /media/mlp-microsite-tovarna-vertical_1.png
+    cover: /images/mlp-microsite-tovarna-vertical_1.png
   - title: Bílá nemoc
     desc: Zvyšující čísla ještě nemusí nic znamenat. Dokud nezačnou…
     author: Karel Čapek
     year: "1940"
     collection: Čapek
-    cover: /media/mlp-microsite-bila-nemoc-vertical_2.png
+    cover: /images/mlp-microsite-bila-nemoc-vertical_2.png

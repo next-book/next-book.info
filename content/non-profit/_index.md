@@ -1,7 +1,7 @@
 ---
 title: Jsme technologická neziskovka
-perex: 
-  Zatím jsme…
+perex: |
+  Chceme svět, ve kterém digitální publikování knih využívá webové technologie a stojí na otevřených základech. Chceme, aby digitální knihy byly plnohodnotným médiem a emancipační silou. Tak jsme založili neziskovku. ✨
 
 startup: |
   ## Proč ne start-up?
@@ -20,40 +20,39 @@ aside: |
   Dalibor
   
 
-
+teamTitle: Náš tým
 team:
   - title: Josef Kocurek
     role: designer služeb & výzkumník
-    portrait: /media/josef.jpg
+    portrait: /images/josef.jpg
     desc: |
       **Čtení patří lidem**  
       Webové knihy mají šanci rozbít naši závislost na aktérech, kteří zneužívají knižní trh jen k vydělávání peněz. Navíc jsou krásný a dobře se čtou.
 
   - title: Matěj Málek
     role: grafický designér
-    portrait: /media/matej.jpg
+    portrait: /images/matej.jpg
     desc: |
       **Píšu svůj medailonek**  
       Čekám, až dostanu doktorát, abych to mohl zmínit.
   - title: Jan Martinek
     role: vývojář, předseda spolku
-    portrait: /media/jan.png
+    portrait: /images/jan.png
     desc: |
       **Přemýšlím o budoucnosti knih**  
       Doufám ve čtení, které se vyváže z papíru, PDF i komerčních čteček a najde své místo v otevřených platformách na webu – médium už vzniklo, pojďme jej vytvořit znovu a lépe.
   - title: Lukáš Porsche
     role: webový analytik
-    portrait: /media/lukas.jpg
+    portrait: /images/lukas.jpg
     desc: |
       **Příjemné čtení na webu? To bude velký!**  
       Líbí se mi být součástí téhle foolish myšlenky na vklínění smysluplného e-knižního formátu mezi nepořádek, který v této oblasti zatím převládá. A ona každá silná myšlenka je v začátku foolish.
-  - title: Your name?
+  - title: Jméno Příjmení
     role: ???
-    portrait: /media/man.jpg
+    portrait: /images/missing.png
     desc: |
-      Miluješ knihy, trochu i e-knihy a chceš se podílet na navrhování čtení budoucnosti? Pojď se potkat.
-    
-      Hledáme parťačku na hhhh, přístupnost, fundraising, ale…
+      **Nejsme kompletní**  
+      Miluješ knihy a web a chceš se podílet na navrhování čtení budoucnosti? Pojď se potkat.
 join:
   title: Přidej se!
   desc: Miluješ knihy, trochu i e-knihy a chceš se podílet na navrhování čtení

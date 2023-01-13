@@ -1,7 +1,6 @@
 ---
-title: Why web books and next-book?
-perex: "**In short:** Every book is a standalone website, utilizing the core
-  ideas of the web technology for good reading experience."
+title: Webové knihy? Proč?
+perex: Web je nejpokročilejší technologie pro sdílení informací, kterou máme k dispozici. Vydávání knih na webu může odemknout budoucnost knih.
 aside: |
   ## Lost in remediation
 
@@ -35,48 +34,54 @@ aside: |
 
   *The future that did not arrive yet.*
 ---
-Next-book aims to be a good tool for making web books. Next-book is not a service or a product, it’s a software library. It’s a tool that aims to establish basic reading affordances on the web.
+Next-book si klade za cíl být dobrým nástrojem pro tvorbu webových knih. Není to služba ani produkt, je to softwarová knihovna. Chceme pomocí next-booku  vytvořit podmínky pro příjemné čtení na webu.
 
-## What makes web books useful?
+## Proč jsou webové knihy užitečné?
 
-* Web books are readily usable in whatever web browser and easy to read (even offline).
-* Web books enable everything “web” to become a part of a book: not only multimedia, but also scripts, advanced styles, SVGs, etc.
-* Every web book is a static website (just a bunch of HTML and related files). You can upload it to any hosting and it won’t stop functioning.
+* Webové knihy jsou snadno použitelné v jakémkoli webovém prohlížeči a snadno se čtou (i offline).
+* Webové knihy umožňují, aby se součástí knihy stalo vše "webové": nejen multimédia, ale také skripty, pokročilé styly, interaktivní grafika atd.
+* Každá webová kniha je statickou webovou stránkou (spousta HTML a souvisejících souborů). Můžete ji nahrát na libovolný hosting a bude „fungovat“.
 
-## What makes next-book a good tool?
+## Co dělá next-book dobrým nástrojem?
 
-* It’s easy to pick up — use the basic template to start immediately.
-* It provides a lot of control over every level of experience. Customize content and UI according to your needs if you want to.
-* It provides many features designed as an evolution of both paper and electronic reading.
-* Its design becomes more and more robust ever since the first prototypes back in 2017.
+* Je snadné si jej osvojit - [použijte základní šablonu][boilerplate] a začněte ihned.
+* Poskytuje velkou kontrolu nad každou úrovní zkušeností. Pokud chcete, přizpůsobte si obsah a uživatelské rozhraní podle svých potřeb.
+* Poskytuje mnoho funkcí, které evolučně vycházejí papírového i elektronického čtení.
+* Snažíme se od prvních prototypů z roku 2017 navrhovat stále robustnější design, který vyhoví potřebám čtenářů, autorů, vydavatelů, knihoven atd.
 
-## What’s the relation between web books and next-book?
+## Jaký je vztah mezi webovými knihami a next-book?
 
-Next-book is a tool for making web books. A web book can be any long text on the web — and the more the authors care about reading experience, the more such text becomes book-ish. And we want to make the experience so book-ish that the website becomes a book.
+Next-book je nástroj pro tvorbu webových knih. Webovou knihou může být jakýkoli dlouhý text na webu - a čím více autorům záleží na zážitku ze čtení, tím více se takový text stává knižním. A my chceme, aby byl zážitek tak knižní, že se webová stránka *stane* knihou.
 
-Next-book is not a service — in startup terms, this is no “Medium for books”. It’s not even a startup (we’re a \[non-profit](link)). It may eventually underpin such a service, but first, there need to be some good book-ish websites… or web books. Chicken and egg all over again.
+Next-book není služba - ve smyslu startupu to není žádné *Medium.com pro knihy*. Není to ani startup (jsme [neziskovka](/non-profit/)). Může být základem takové služby, ale nejprve musí existovat nějaké dobré webové stránky s knihami... nebo webové knihy. Slepice a vejce.
 
-Last thing: what makes a website book-ish? The answer is simple: all the things that make a book book-ish and more — we don’t know lies ahead. We read a lot of books about reading books to find out.
+Poslední věc: co dělá webovou stránku knižní? Odpověď je jednoduchá: všechny věci, které dělají web knižním, a *ještě něco navíc*. Mevíme, co nás čeká v budoucnosti. (Abychom to trochu prozkoumali, přečetli jsme spoustu knih o čtení knih.)
 
-## Toolset
+## Sada nástrojů
 
-Next-book is a set of several libraries. The three most important are:
+Next-book je sada několika knihoven. Tři nejdůležitější z nich jsou:
 
-* boilerplate (github, docs) is the basic template for a book that is easy to use (with some web development knowledge), however also provides complete control over the result if needed
-* publisher (github, docs) takes a HTML website and produces a bound web book\
-  (integrates metadata, adds navigational information etc.)
-* interface (github, docs) provides user interface in the book\
-  (TOC, config, bookmarks, offline mode etc.)
+* [boilerplate] je základní šablona pro knihu, která je snadno použitelná (s určitými znalostmi vývoje webu), zároveň však v případě potřeby poskytuje úplnou kontrolu nad výsledkem
+* [publisher] vezme webovou stránku ve formátu HTML a vytvoří vázanou webovou knihu (integruje metadata, přidává navigační informace atd.).
+* [interface] poskytuje uživatelské rozhraní v knize (TOC, konfigurace, záložky, offline režim atd.)
 
-Beside these, we have a configurable epub to next-book converter (github) and we’re exploring the options for providing a cloud-sync for readers across their books (github).
+Kromě toho máme konfigurovatelný převodník epub na next-book (github) a zkoumáme možnosti poskytování cloudové synchronizace pro čtenáře napříč jejich knihami (github).
 
-## Features
+## Funkce
 
-* focused reading mode („persistent pagination“)
-* seamless offline mode
-* visual user customization framework (color schema, font size) even with advanced styles
-* robust CSS to underpin glorious book designs
-* table of contents and navigation
-* reading position, bookmarks, highlights and notes
-* return to last-read position after checking another part of the book
-* footnotes (soon: bibliography and various indices)
+Popisovat software pomocí funkcí není zdravé, ale pomáhá to představivosti. Tak jsme jich tu několik sepsali:
+
+* režim soustředěného čtení ("trvalé stránkování")
+* bezproblémový offline režim
+* rámec pro vizuální přizpůsobení uživatele (barevné schéma, velikost písma) i s pokročilými styly
+* robustní CSS pro podporu nádherných návrhů knih
+* obsah a navigace
+* automatické udržování pozice v knize, i při přelistování
+* záložky, zvýraznění a poznámky
+* návrat na pozici posledního čtení po zkontrolování další části knihy
+* poznámky pod čarou (a brzy též bibliografie a rejstříky)
+
+
+[boilerplate]: http://github.com/next-book/boilerplate/
+[publisher]: http://github.com/next-book/publisher/
+[interface]: http://github.com/next-book/interface/

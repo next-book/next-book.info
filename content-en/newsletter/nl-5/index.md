@@ -47,7 +47,12 @@ This concise manifesto calls for a change in the publishing industry — and my 
 
 [Read it at The Bookseller.](https://www.thebookseller.com/futurebook/manifesto-skills-314196)
 
-![](sumava.jpeg "Picture of a sun-lit forest.")
+
+{{< fig
+  src="sumava.jpeg"
+  alt=""
+  caption="Picture of a sun-lit forest.">}}
+
 
 ## See you in two weeks!
 

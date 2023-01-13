@@ -1,6 +1,6 @@
 ---
-title: Jsme technologická neziskovka
-perex: TOhle jsme my
+title: We are a tech non-profit
+perex: We want a world in which digital book publishing uses web tech and is based on an open foundation. We want digital books to be a full-fledged medium and an emancipatory force. So we founded a non-profit. ✨
 aside: >
   ## Thanks!
 
@@ -13,21 +13,51 @@ aside: >
   - [Boris Anthony](https://borisanthony.net) for discussions and encouragement
 
   - [Jan Vlček](https://twitter.com/vlki) for code reviews
+startup: |
+  ## Why not a start-up?
+
+  Our goal isn’t to make a quick buck, but to create a sustainable platform whose stability helps everyone who uses it - publishers, readers and other institutions that make the book ecosystem so interesting. 
+
+  We want to create an organisation that can earn its keep (however, you can support [us at Patreon](https://www.patreon.com/nextbook/posts)), while at the same time independently guaranteeing the quality and development of web books.
+teamTitle: Our team
 team:
-  - title: Jan Martinek
   - title: Josef Kocurek
+    role: service designer & researcher
+    portrait: /images/josef.jpg
+    desc: |
+      **Reading belongs to the people**  
+      Web books have a chance to break our dependence on actors who exploit the book market just to make money. Plus, they are beautiful and easy to read.
   - title: Matěj Málek
-  - title: Lukáš Porsche
+    role: graphic designer
+    portrait: /images/matej.jpg
+    desc: |
+      **I'm writing my medallion**  
+      I'm waiting until I get my PhD to mention it.
+  - title: Jan Martinek
+    role: developer, chairman of the association
+    portrait: /images/jan.png
+    desc: |
+      **Thinking about the future of books**  
+      I'm hoping for a reading experience that takes off from paper, PDF and commercial readers and finds its place in open platforms on the web - the medium has already been created, let's re-create it and make it better.
+  - title: Lukas Porsche
+    role: web analyst
+    portrait: /images/lukas.jpg
+    desc: |
+      **An enjoyable read on the web? That'll be great!**  
+      I like being part of this foolish idea to weave a meaningful e-book format in amongst the clutter that prevails in this area so far. And she every strong idea is foolish to begin with.
+  - title: Your Name
+    role: ???
+    portrait: /images/missing.png
+    desc: |
+      **We’re incomplete**  
+      Do you love books and web and do you want to be involved in designing the future of reading? Let's meet.
 join:
-  title: Přidej se!
+  title: Come on in!
   desc: >-
-    Miluješ knihy, trochu i e-knihy a chceš se podílet na navrhování čtení
-    budoucnosti? Pojď se potkat.
+    You love books, a bit of e-books and want to be involved in designing reading of the future? Let's meet.
 
 
     Hledáme parťačku na hhhh, přístupnost, fundraising, ale
-  button: Jdem na kafe!
+  button: Let's get (virtual) coffee!
 ---
-## **Proč ne start-up?**
 
-Naším cílem nejsou rychlé peníze, ale tvorba udržitelné platformy, jejíž stabilita pomáhá všem, kteří ji užívají — vydavatelům, čtenářům a dalším institucím, které dělají ekosystém knih tak zajímavým. Chceme vytvořit organizaci, která si na sebe vydělá, a zároveň dokáže nezávisle garantovat kvalitu a rozvoj webových knih.

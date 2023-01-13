@@ -1,51 +1,48 @@
 ---
-title: Budoucnost čtení knih (je) na webu
-description: >-
-  *Jsme technologická neziskovka.*
+title: The future of reading is (on) the web
+showMeBooks: Check out some web books
+knowMore: I want to know more
+patreonizePlease: Support us at Patreon
+ngo:
+  title: We’re a tech non-profit.
+  text: We support the *book ecosystem* by developing an *open platform* for publishing and reading books in a *web browser*.
+  vision: |
+    When people ask “Don't you miss something when reading a book in digital?” our answer is **“Yes!”** Therefore we want:
 
-
-  Podporujeme *knižní ekosystém* vývojem *otevřené platformy* pro publikaci a čtení knih ve *webovém prohlížeči.*
-vision: >-
-  When people ask “Don't you miss something when reading a book in digital?” our
-  answer is
-
-
-  “Yes!”
-
-
-  Therefore we want:
-
-
-  > Co chceme. Co je naše vize. O co usilujeme.
-money-cta:
-  title: Podílejte na rozvoji webových knih!
-  button: Darovat
+    - Nastartovat novou éru knih.
+    - E-knihy krásné, čtenářsky přívětivé a dostupné.
+    - E-publikování nezávislé, otevřené a rozvíjející se.
+goodForTitle: Web books help everybody
 good-for:
-  - reasons: Zažijte e-čtení, jako nikdy předtím. Užijte si krásu knih rovnou v
-      prohlížeči. Prostě otevřete knížku a čtete. Ať už jste online nebo
-      offline.
-    title: Čtenářům a čtenářkám
-  - title: Nakladatelům a nakladatelkám
-    reasons: Dostaňte to dobré z papírových knih do e-knih. Vizuální zpracování i
-      příjemné čtení. Nezávisle na platformě, s napojením na váš e-shop,
-      konverzí z jiných formátů nebo sledováním statistik.
-  - title: Učitelkám, knihovníkům a akademičkám
-    reasons: Dělejte s knížkami věci, o kterých se vám dřív ani nesnilo. Podporujte
-      čtenářství, zvídavost, komunitní služby nebo třeba porozumění textu.
-  - title: Autorům a autorkám
-    reasons: Vytvořte dílo na míru internetu. Třeba s multimediálním obsahem,
-      vzájemnou provázaností, podporou obrazotvornosti či zapojením čtenářstva.
+  - reasons: Experience e-reading like never before. Enjoy the beauty of books right in a browser. Just open a book and read. Whether you're online or or offline.
+    title: Readers
+    links:
+      - title: Check out the books
+      - title: Web book features
+  - title: Publishers
+    reasons: Get the good stuff from both paper books and e-books into great digital books. Full visual experince and enjoyable reading. Platform independent. Connected to your e-shop, with a conversion from other formats or reading stats.
+    links:
+      - title: Publish web books
+  - title: Teachers, librarians and academics
+    reasons: Do things with books you never dreamed of before. Support
+      reading, curiosity, community services, or reading comprehension.
+    links:
+      - title: Let's connect!
+  - title: Authors
+    reasons: Create an artwork that uses the internet. Perhaps with multimedia content, links, or interactivity.
+    links:
+      - title: I'm interested
 open:
-  title: Otevřená platforma = demokratičtější publikování
-  desc: >-
-    Navrhujeme standard, který umožní s webovými knihami pracovat komukoliv a
-    kdekoliv. Bez licencí, omezení a vícenákladů.
-
-
-    Kód, postup i hotové knížky jsou dostupné veřejně. Vytvořte si vlastní projekt, dejte nám zpětnou vazbu nebo se rovnou zapojte do vývoje s námi.
+  title: Open platform
+  subtitle: more democratic publishing
+  perex: |
+    We are working on a standard that will allow anyone to work with web books. Under an open license. Without restrictions and additional costs.
+  desc: The code, procedure and finished books are publicly available. Create your own project, give us feedback or get involved in the development.
+  checkGithub: Explore our Github repos
+  howDoesItWork: How do web books work?
 newsletter:
-  title: Píšeme o e-čtení, vývoji platformy, výzkumech i novinkách v odvětví
-  desc: V nepravidelném newsletteru vám dáme vědět co je u nás nového – včetně knih.
-  legal: Přihlášením k odběru souhlasíte se zpracováním vašeho e-mailu.
-  not-sure: Nejste si jisti? Mrkněte *do archivu*.
+  title: We write about e-reading, platform development, research and industry news
+  desc: In an irregular newsletter we will let you know what's new - and we’ll include some books.
+  legal: By subscribing you agree to the processing of your email.
+  not-sure: Not sure? Check *the archives*.
 ---

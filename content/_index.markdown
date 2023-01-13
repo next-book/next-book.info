@@ -1,31 +1,20 @@
 ---
 title: Budoucnost čtení knih (je) na webu
+showMeBooks: Prohlédnout si webové knihy
+knowMore: Chci vedět víc
+patreonizePlease: Podpořte nás na Patreonu
 ngo:
   title: Jsme technologická neziskovka.
-  text: Podporujeme <a href="">knižní ekosystém</a> vývojem *otevřené platformy* pro publikaci a čtení knih ve *webovém prohlížeči.*
-vision: >-
-  When people ask “Don't you miss something when reading a book in digital?” our
-  answer is
+  text: Podporujeme *knižní ekosystém* vývojem *otevřené platformy* pro publikaci a čtení knih ve *webovém prohlížeči.*
+  vision: |
+    Když se nás lidé ptají „A nechybí vám něco při čtení elektronických knížek?“ naše odpověď je **„Ano!“**
 
+    Chceme:
 
-  “Yes!”
-
-
-  Therefore we want:
-
-
-  > Nastartovat novou éru knih.
-
-  >
-
-  > E-knihy krásné, čtenářsky přívětivé a dostupné.
-
-  >
-
-  > E-publikování nezávislé, otevřené a rozvíjející se.
-money-cta:
-  title: Podílejte na rozvoji webových knih!
-  button: Darovat
+    * Nastartovat novou éru knih.
+    * Krásné, čtenářsky přívětivé a dostupné digitální knihy.
+    * Nezávislé, otevřené a rozvíjející se digitální publikování.
+goodForTitle: Knížky na webu pomůžou všem
 good-for:
   - reasons: Zažijte e-čtení, jako nikdy předtím. Užijte si krásu knih rovnou v
       prohlížeči. Prostě otevřete knížku a čtete. Ať už jste online nebo
@@ -58,6 +47,8 @@ open:
     kdekoliv. Svobodně, bez  omezení a vícenákladů.
   desc: >-
     Myslíme na potřeby tvůrců e-knih #eprdctn. Kód, postup i hotové knížky jsou dostupné veřejně. Vytvořte si vlastní projekt, dejte nám zpětnou vazbu nebo se rovnou zapojte do vývoje s námi.
+  checkGithub: Prozkoumat Github
+  howDoesItWork: Jak fungují webové knihy?
 newsletter:
   title: Píšeme o e-čtení, vývoji platformy, výzkumech i novinkách v odvětví
   desc: V nepravidelném newsletteru vám dáme vědět co je u nás nového – včetně knih.

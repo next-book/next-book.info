@@ -13,21 +13,28 @@
 
         {{ partial "md-block.html" .Params.startup }}
 
+
+        <h2 class="member-title">{{ .Params.teamTitle }}</h2>
       </div>
     </div>
 
 
 
-    <div class="_team _grid">
-      <h2 class="member-title member half">Náš tým</h2>
+
+    <div class="_team">
+
     	{{ range .Params.team }}
-        <div class="member half">
-          {{ with .portrait }}
-            {{ partial "pic.html" (dict "pic" (replaceRE "/media/" "" .) "Resources" ($.GetPage "/media").Resources "resize" "300x") }}
-          {{ end }}
-          <h3>{{ .title }}</h3>
-          <p class="role">{{ .role }}</p>
-          {{ partial "md-block.html" .desc }}
+        <div class="member _grid">
+          <div class="info">
+            {{ with .portrait }}
+              <div class="img-wrapper">
+                <img src="{{.}}" aria-hidden="true">
+              </div>
+            {{ end }}
+            <h3>{{ .title }}</h3>
+            <p class="role">{{ .role }}</p>
+          </div>
+          <div class="desc">{{ partial "md-block.html" .desc }}</div>
         </div>
       {{ end }}
 

@@ -8,15 +8,13 @@
             <span class="vf-logo">next→book</span>
           </span>
         </span>
-        <span class="hide">: </span>
-        <span class="claim-wrapper">
-          <span class="claim balance-text">{{ .Title }}</span>
-        </span>
       </h1>
 
+      <p class="claim">{{ .Title }}</p>
+
       <ul>
-        <li><a class="_button white" href="">Prohlédnout si webové knihy</a></li>
-        <li><a class="_button white outlined" href="">Chci vedět víc</a></li>
+        <li><a class="_button white" href="{{ (.GetPage "library").Permalink }}">{{ .Params.showMeBooks }}</a></li>
+        <li><a class="_button white outlined" href="https://www.patreon.com/nextbook">{{ .Params.patreonizePlease }}</a></li>
       </ul>
     </div>
   </header>
@@ -29,7 +27,9 @@
       </div>
       <div class="_perex centered">
         {{ partial "md-block.html" .text }}
+      </div>
 
+      <div class="centered">
         <p><a class="_button outlined">{{ i18n "find-out-more" }}</a></p>
       </div>
     </section>
@@ -40,7 +40,7 @@
     {{ with (index .Params "good-for") }}
     <div class="_backdrop">
       <section class="_content-column">
-        <h2 class="home-h2 balance-text">Knížky na webu pomůžou všem</h2>
+        <h2 class="home-h2 balance-text">{{ $.Params.goodForTitle }}</h2>
 
         <ul class="_good-for">
           {{ range . }}
@@ -77,8 +77,8 @@
               </div>
               {{ partial "md-block.html" .desc }}
 
-              <p><a href="" class="_button outlined">Prozkoumat Github</a></p>
-              <p><a href="" class="_button outlined orange">Jak fungují webové knihy?</a></p>
+              <p><a href="" class="_button outlined">{{ .checkGithub }}</a></p>
+              <p><a href="" class="_button outlined orange">{{ .howDoesItWork }}</a></p>
             </div>
           </div>
         </div>

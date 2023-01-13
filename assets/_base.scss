@@ -114,3 +114,7 @@ input[type="email"] {
     margin-top: 0;
   }
 }
+
+.padded-bottom {
+  margin-bottom: calc(4 * var(--gap));
+}

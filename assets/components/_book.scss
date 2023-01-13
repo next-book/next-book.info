@@ -3,6 +3,16 @@
   padding: var(--gap);
   position: relative;
 
+  grid-column: span 12;
+
+  @include md-up {
+    grid-column: span 6;
+  }
+
+  @include lg-up {
+    grid-column: span 4;
+  }
+
   .cover {
     background: $orange;
     margin-bottom: var(--gap);
@@ -11,11 +21,9 @@
       display: block;
       padding: calc(2 * var(--gap));
       margin: 0 auto;
-      height: 25vh;
-
-      @include md-up {
-        height: 25vw;
-      }
+      width: 100%;
+      height: min(40vh, 350px);
+      object-fit: contain;
     }
   }
 

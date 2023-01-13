@@ -20,8 +20,22 @@
       max-width: 100%;
     }
 
+    hr {
+      margin: calc(2.5 * var(--gap)) 0 calc(2 * var(--gap));
+
+      &::before {
+        content: "* * *";
+        display: block;
+        text-align: center;
+        color: $orange;
+        font-size: 2em;
+        line-height: 2em;
+      }
+    }
+
     .perex {
       margin-top: calc(6 * var(--gap));
+
       p {
         @include font-perex;
       }
@@ -65,15 +79,33 @@
       padding: 0;
     }
 
-    blockquote,
-    blockquote p {
-      font-style: italic;
+    blockquote {
+      margin-left: calc(2 * var(--gap));
+      margin-right: calc(2 * var(--gap));
+
+      p {
+        font-style: italic;
+        text-indent: calc(2 * var(--gap));
+
+        em {
+          font-style: normal;
+        }
+      }
     }
 
     figure {
-      margin: calc(1 * var(--gap)) 0;
+      margin: var(--gap) 0;
       padding: var(--gap);
       background: $gray;
+
+      p,
+      p:first-child {
+        margin: 0;
+      }
+
+      img {
+        display: block;
+      }
 
       figcaption p:first-child {
         margin-top: var(--gap);
@@ -100,6 +132,26 @@
   }
 
   .article-text {
+    table {
+      margin: var(--gap) 0;
+      border-collapse: collapse;
+
+      td,
+      th {
+        text-align: left;
+      }
+
+      th {
+        color: $orange;
+        padding: 0.5em 1em 0.5em 0;
+      }
+
+      td {
+        padding: 0.5em;
+        border: 1px solid #ccc;
+      }
+    }
+
     h2 {
       @include font-article-title;
       margin: calc(2.5 * var(--gap)) 0 calc(0.5 * var(--gap));
@@ -112,15 +164,39 @@
 
     p {
       @include font-article;
-      text-indent: calc(4 * var(--gap));
+      text-indent: calc(2 * var(--gap));
       margin: 0;
     }
 
+    dl {
+      margin-left: calc(2 * var(--gap));
+      @include font-article;
+
+      dt {
+        font-weight: bold;
+      }
+
+      dd {
+        margin-left: calc(2 * var(--gap));
+      }
+    }
+
     ul li {
+      margin-left: calc(2 * var(--gap));
       @include font-article;
 
       &:before {
         margin-top: 0.6em;
+      }
+    }
+
+    ol {
+      margin-left: calc(2 * var(--gap));
+      padding-left: 1.2em;
+
+      li {
+        margin: 0.5em 0;
+        @include font-article;
       }
     }
 
@@ -163,25 +239,4 @@
       padding: 1vw 0 2vw;
     }
   }
-
-  /* .page-text ul {
-    display: block;
-    padding: 0;
-
-    li {
-      margin: 0;
-      display: block;
-      padding: 0.5rem;
-      margin: -0.5px;
-      border: 0.5px solid $orange;
-      background: $background;
-      border-radius: 2px;
-      transform: translateX(-0.5rem);
-
-      &:nth-child(even) {
-        background: rgba($orange, 0.1);
-        transform: translateX(0.5rem);
-      }
-    }
-  } */
 }

@@ -1,4 +1,4 @@
 ---
-title: Čtení o e-čtení a webových knihách
+title: Reading about *reading* and web books
 shortTitle: newsletter
 ---
