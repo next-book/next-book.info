@@ -129,12 +129,6 @@ far away from today’s standards.
 
 How does this react to the hardware-centric criticism above? Please wait a moment, I’ll show you how.
 
-<figure>
-
-![](nextbook-openalt-2018-comments.032.jpeg)
-
-</figure>
-
 As the name of the talk implies, I believe that the solution is to publish books on the open web. To pack all our books
 and move them to the browser.
 
