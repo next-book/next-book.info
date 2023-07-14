@@ -1,10 +1,10 @@
 ---
 title: Budoucnost čtení knih (je) na webu
 showMeBooks: Prohlédnout si webové knihy
-knowMore: Chci vedět víc
+knowMore: Chci vedět víc 
 patreonizePlease: Podpořte nás na Patreonu
 ngo:
-  title: Jsme technologická neziskovka.
+  title: Jsme technologická neziskovka
   text: Podporujeme *knižní ekosystém* vývojem *otevřené platformy* pro publikaci a čtení knih ve *webovém prohlížeči.*
   vision: |
     Když se nás lidé ptají „A nechybí vám něco při čtení elektronických knížek?“ naše odpověď je **„Ano!“**
