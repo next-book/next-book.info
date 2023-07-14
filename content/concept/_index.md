@@ -39,23 +39,23 @@ Next-book si klade za cíl být dobrým nástrojem pro tvorbu webových knih. Ne
 ## Proč jsou webové knihy užitečné?
 
 * Webové knihy jsou snadno použitelné v jakémkoli webovém prohlížeči a snadno se čtou (i offline).
-* Webové knihy umožňují, aby se součástí knihy stalo vše "webové": nejen multimédia, ale také skripty, pokročilé styly, interaktivní grafika atd.
+* Webové knihy umožňují, aby se součástí knihy stalo vše „webové“: nejen multimédia, ale také skripty, pokročilé styly, interaktivní grafika atd.
 * Každá webová kniha je statickou webovou stránkou (spousta HTML a souvisejících souborů). Můžete ji nahrát na libovolný hosting a bude „fungovat“.
 
 ## Co dělá next-book dobrým nástrojem?
 
-* Je snadné si jej osvojit - [použijte základní šablonu][boilerplate] a začněte ihned.
+* Je snadné si jej osvojit –  [použijte základní šablonu][boilerplate] a začněte ihned.
 * Poskytuje velkou kontrolu nad každou úrovní zkušeností. Pokud chcete, přizpůsobte si obsah a uživatelské rozhraní podle svých potřeb.
-* Poskytuje mnoho funkcí, které evolučně vycházejí papírového i elektronického čtení.
+* Poskytuje mnoho funkcí, které evolučně vycházejí z papírového i elektronického čtení.
 * Snažíme se od prvních prototypů z roku 2017 navrhovat stále robustnější design, který vyhoví potřebám čtenářů, autorů, vydavatelů, knihoven atd.
 
 ## Jaký je vztah mezi webovými knihami a next-book?
 
-Next-book je nástroj pro tvorbu webových knih. Webovou knihou může být jakýkoli dlouhý text na webu - a čím více autorům záleží na zážitku ze čtení, tím více se takový text stává knižním. A my chceme, aby byl zážitek tak knižní, že se webová stránka *stane* knihou.
+Next-book je nástroj pro tvorbu webových knih. Webovou knihou může být jakýkoli dlouhý text na webu – a čím více autorům záleží na zážitku ze čtení, tím více se takový text stává knižním. A my chceme, aby byl zážitek tak knižní, že se webová stránka *stane* knihou.
 
-Next-book není služba - ve smyslu startupu to není žádné *Medium.com pro knihy*. Není to ani startup (jsme [neziskovka](/non-profit/)). Může být základem takové služby, ale nejprve musí existovat nějaké dobré webové stránky s knihami... nebo webové knihy. Slepice a vejce.
+Next-book není služba – ve smyslu startupu to není žádné *Medium.com pro knihy*. Není to ani startup (jsme [neziskovka](/non-profit/)). Může být základem takové služby, ale nejprve musí existovat nějaké dobré webové stránky s knihami... nebo webové knihy. Slepice a vejce.
 
-Poslední věc: co dělá webovou stránku knižní? Odpověď je jednoduchá: všechny věci, které dělají web knižním, a *ještě něco navíc*. Mevíme, co nás čeká v budoucnosti. (Abychom to trochu prozkoumali, přečetli jsme spoustu knih o čtení knih.)
+Poslední věc: co dělá webovou stránku knižní? Odpověď je jednoduchá: všechny věci, které dělají web knižním, a *ještě něco navíc*. Nevíme, co nás čeká v budoucnosti. (Abychom to trochu prozkoumali, přečetli jsme spoustu knih o čtení knih.)
 
 ## Sada nástrojů
 
@@ -65,13 +65,13 @@ Next-book je sada několika knihoven. Tři nejdůležitější z nich jsou:
 * [publisher] vezme webovou stránku ve formátu HTML a vytvoří vázanou webovou knihu (integruje metadata, přidává navigační informace atd.).
 * [interface] poskytuje uživatelské rozhraní v knize (TOC, konfigurace, záložky, offline režim atd.)
 
-Kromě toho máme konfigurovatelný převodník epub na next-book (github) a zkoumáme možnosti poskytování cloudové synchronizace pro čtenáře napříč jejich knihami (github).
+Kromě toho máme konfigurovatelný [převodník epub na next-book] a zkoumáme možnosti poskytování cloudové synchronizace pro čtenáře napříč jejich knihami (github).
 
 ## Funkce
 
 Popisovat software pomocí funkcí není zdravé, ale pomáhá to představivosti. Tak jsme jich tu několik sepsali:
 
-* režim soustředěného čtení ("trvalé stránkování")
+* režim soustředěného čtení („trvalé stránkování“)
 * bezproblémový offline režim
 * rámec pro vizuální přizpůsobení uživatele (barevné schéma, velikost písma) i s pokročilými styly
 * robustní CSS pro podporu nádherných návrhů knih
@@ -85,3 +85,4 @@ Popisovat software pomocí funkcí není zdravé, ale pomáhá to představivost
 [boilerplate]: http://github.com/next-book/boilerplate/
 [publisher]: http://github.com/next-book/publisher/
 [interface]: http://github.com/next-book/interface/
+[převodník epub na next-book]: https://github.com/next-book/epub2nb
