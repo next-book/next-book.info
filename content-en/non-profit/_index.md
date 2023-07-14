@@ -31,8 +31,8 @@ team:
     role: graphic designer
     portrait: /images/matej.jpg
     desc: |
-      **I'm writing my medallion**  
-      I'm waiting until I get my PhD to mention it.
+      **Exploring the frontiers of e-books**  
+      The design and typography of contemporary e-books is stuck in the state of consumer goods. In books on the web, on the other hand, I sense a disruptive potential to return graphic design back into the text and to revive the intimate book-reader relationship.
   - title: Jan Martinek
     role: developer, chairman of the association
     portrait: /images/jan.png
