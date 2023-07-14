@@ -7,7 +7,7 @@ perex: |
   Působíte v knihovně nebo vás prostě jen zajímá webové publikování a rádi byste se pobavili o možnostech nebo navázali spolupráci? Dejte nám vědět.
 
   Rádi se s vámi potkáme naživo nebo přes videohovor. Napište nám na [chci@next-book.info](mailto:chci@next-book.info).
-
+---
 
 
 ## Pár projektů už máme za sebou
