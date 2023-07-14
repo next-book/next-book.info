@@ -4,7 +4,7 @@ showMeBooks: Check out some web books
 knowMore: I want to know more
 patreonizePlease: Support us at Patreon
 ngo:
-  title: We’re a tech non-profit.
+  title: We’re a tech non-profit
   text: We support the *book ecosystem* by developing an *open platform* for publishing and reading books in a *web browser*.
   vision: |
     When people ask “Don't you miss something when reading a book in digital?” our answer is **“Yes!”** Therefore we want:
