@@ -33,8 +33,8 @@ team:
     role: grafický designér
     portrait: /images/matej.jpg
     desc: |
-      **Píšu svůj medailonek**  
-      Každopádně myslím, že zrovna ten Kafka by se dal vyřešit ještě čistěji…
+      **Pátrám po hranicích e-knih**  
+      Design a typografie současných e-knih zamrznul u spotřebního zboží. V knihách na webu naopak cítím disruptivní potenciál, jak textu vrátit grafickou úpravu i znovu oživit intimní vztah kniha—čtenář*ka.
   - title: Jan Martinek
     role: vývojář, předseda spolku
     portrait: /images/jan.png
