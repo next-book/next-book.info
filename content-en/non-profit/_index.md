@@ -45,6 +45,12 @@ team:
     desc: |
       **An enjoyable read on the web? That'll be great!**  
       I like being part of this foolish idea to weave a meaningful e-book format in amongst the clutter that prevails in this area so far. And she every strong idea is foolish to begin with.
+  - title: Laďka Zbiejczuk Suchá
+    role: researcher
+    portrait: /images/ladka.jpg
+    desc: |
+      **I connect our work to research and practice**  
+      For me, webbooks are a means of designing, experimenting and thinking about (alternative) futures of books and reading.
   - title: Your Name
     role: 
     portrait: /images/missing.png
