@@ -47,6 +47,12 @@ team:
     desc: |
       **Příjemné čtení na webu? To bude velký!**  
       Líbí se mi být součástí téhle foolish myšlenky na vklínění smysluplného e-knižního formátu mezi nepořádek, který v této oblasti zatím převládá. A ona každá silná myšlenka je v začátku foolish.
+  - title: Laďka Zbiejczuk Suchá
+    role: výzkumnice
+    portrait: /images/ladka.jpg
+    desc: |
+      **Propojuji spolek s výzkumem a praxí**  
+      Webové knihy jsou pro mě prostředek pro navrhování, experimentování a přemýšlení o (alternativní) budoucnosti knih a čtení.
   - title: Jméno Příjmení
     role: 
     portrait: /images/missing.png

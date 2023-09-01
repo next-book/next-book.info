@@ -49,5 +49,5 @@ newsletter:
   title: We write about e-reading, platform development, research and industry news
   desc: In an irregular newsletter we will let you know what's new - and we’ll include some books.
   legal: By subscribing you agree to the processing of your email.
-  not-sure: Not sure? Check *the archives*.
+  not-sure: Not sure? Check [the archives](https://www.next-book.info/en/newsletter/).
 ---

@@ -58,5 +58,5 @@ newsletter:
   title: Píšeme o e-čtení, vývoji platformy, výzkumech i novinkách v odvětví
   desc: V nepravidelném newsletteru vám dáme vědět co je u nás nového – včetně knih.
   legal: Přihlášením k odběru souhlasíte se zpracováním vašeho e-mailu.
-  not-sure: Nejste si jisti? Mrkněte *do archivu*.
+  not-sure: Nejste si jisti? Mrkněte [do archivu](https://www.next-book.info/en/newsletter/).
 ---
